@@ -1,0 +1,26 @@
+<html>
+<body>
+<form action="query.php" method="get">
+Please enter the ID here:
+<INPUT TYPE="text" size=200 NAME="id">
+<INPUT TYPE="submit" VALUE="submit" name="submit">
+</form>
+
+<?php
+if (isset($_GET['id'])){
+   
+mysql_connect("localhost", "www-user2", "secure_password12") or
+die(mysql_error());
+    mysql_select_db("test") or die(mysql_error());
+    $id = $_GET['id'];
+    $query= "SELECT name FROM not_important_table WHERE id=".$id."";
+
+    $result = mysql_query($query)
+    or die(mysql_error());
+	   while($row=mysql_fetch_array($result)) {
+       echo $row['name'].'<br/>';
+   }
+}
+?>
+</body>
+</html>
