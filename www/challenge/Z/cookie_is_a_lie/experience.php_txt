@@ -1,0 +1,28 @@
+<html>
+<body>
+<form action="experience.php" method="get">
+Please enter the ID here:
+<INPUT TYPE="text" size=20 NAME="id">
+<INPUT TYPE="submit" VALUE="submit" name="submit">
+</form>
+ 
+<?php
+if (isset($_GET['id'])&&isset($_GET['submit'])){
+    mysql_connect("localhost", "www-user", "cube") or die(mysql_error());
+    mysql_select_db("test") or die(mysql_error());
+    $id = $_GET['id'];
+    $id=str_replace('<','',$id);
+    $id=str_replace('>','',$id);
+    $id=str_replace(';','',$id);
+    $query= "SELECT * FROM experience WHERE id=".$id."";
+    $result = mysql_query($query)
+    or die(mysql_error());
+    $row = mysql_fetch_array($result);
+    $filename = str_replace('<','',$row['filename']);
+    $filename = str_replace('>','',$filename);	
+    echo '<a href='.$filename.'>Click here to view the file.</a>';
+    echo '<br>';
+}
+?>
+</body>
+</html>
