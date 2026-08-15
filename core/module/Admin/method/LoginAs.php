@@ -96,9 +96,13 @@ final class Admin_LoginAs extends GWF_Method
 	
 	private function sendAlertMail(GWF_User $initiator, GWF_User $target, GWF_User $to)
 	{
+		if (!$to->hasValidMail()) {
+			return;
+		}
+
 		$email = new GWF_Mail();
 		$email->setSender(GWF_BOT_EMAIL);
-		$email->setReceiver($to);
+		$email->setReceiver($to->getValidMail());
 		$email->setSubject($this->module->langUser($to, 'mailt_impersonation', array(
 			$initiator->displayUsername(),
 			$target->displayUsername()
