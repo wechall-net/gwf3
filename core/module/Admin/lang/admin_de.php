@@ -203,16 +203,16 @@ $lang = array(
 	'btn_add' => 'Add group',
 	
 	#v2.09 (impersonation_alert)
-	'mailt_impersonation' => GWF_SITENAME.': %s logged in as %s',
+	'mailt_impersonation' => GWF_SITENAME.': %s hat sich als %s authentifiziert',
 	'mailb_impersonation' =>
-		"Dear %s,\n".
+		"Hallo %s,\n".
 		"\n".
-		"The admin user %s just used ´LoginAs´ to authenticate as %s.\n".
+		"Admin %s hat sich gerade mit Admin Rechten als Nutzer %s authentifiziert.\n".
 		"\n".
-		"If you are this user you probably do not have to worry,\n".
-		"especially if you recently reported a problem within ".GWF_SITENAME."\n".
-		"If this is not the case and you are worried, please contact us!\n".
-		"\n".
-		'Kind Regards,'.PHP_EOL.
-		'The '.GWF_SITENAME.' Robot'.PHP_EOL,
+		"Wenn du dieser Benutzer bist, brauchst du dir wahrscheinlich keine Sorgen zu machen,\n".
+		"vor allem, wenn du kürzlich ein Problem bei ".GWF_SITENAME." gemeldet hast.\n".
+		"Sollte dies nicht der Fall sein und du dir Sorgen machst, wende dich bitte an uns!\n".
+		"\n" .
+		'Freundliche Grüße,\n' .
+		'Das ' . GWF_SITENAME . ' Team',
 );
