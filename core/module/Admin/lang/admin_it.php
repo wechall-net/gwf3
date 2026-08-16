@@ -21,7 +21,6 @@ $lang = array(
 	'ft_search' => 'Cerca nella tabella utenti.',
 	'ft_edit_group' => 'Modifica Gruppo %s',
 	'ft_add_to_group' => 'Aggiungi un utente a questo gruppo',
-	'ft_add_group' => 'Crea un nuovo gruppo',
 
 	# Errors
 	'err_mod_not_installed' => 'Il modulo non è installato.',
@@ -156,7 +155,6 @@ $lang = array(
 	'btn_rem_from_group' => 'Rimuovi dal gruppo',
 	'btn_user_groups' => 'Modifica i gruppi di %s',
 	'btn_add_to_grp' => 'Aggiungi al gruppo',
-	'btn_add_group' => 'Aggiungi gruppo',
 
 	# Tooltips
 	'tt_int' => 'Valore intero compreso tra %s e %s.',
