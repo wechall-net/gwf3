@@ -212,7 +212,7 @@ $lang = array(
 		"The admin user %s just used ´LoginAs´ to authenticate as %s.\n".
 		"\n".
 		"If you are this user you probably do not have to worry,\n".
-		"especially if you recently reported a problem within ".GWF_SITENAME."\n".
+		"especially if you recently reported a problem within ".GWF_SITENAME.".\n".
 		"If this is not the case and you are worried, please contact us!\n".
 		"\n".
 		'Kind Regards,'.PHP_EOL.
