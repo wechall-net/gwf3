@@ -21,7 +21,6 @@ $lang = array(
 	'ft_search' => 'Search in the user table.',
 	'ft_edit_group' => 'Edit Group %s',
 	'ft_add_to_group' => 'Add a user to this group',
-	'ft_add_group' => 'Create a new group',
 
 	# Errors
 	'err_mod_not_installed' => 'This Module is not installed.',
@@ -156,7 +155,6 @@ $lang = array(
 	'btn_rem_from_group' => 'Remove From Group',
 	'btn_user_groups' => 'Edit %s`s groups',
 	'btn_add_to_grp' => 'Add to group',
-	'btn_add_group' => 'Add group',
 
 	# Tooltips
 	'tt_int' => 'Integer value between %s and %s.',
@@ -212,7 +210,7 @@ $lang = array(
 		"The admin user %s just used ´LoginAs´ to authenticate as %s.\n".
 		"\n".
 		"If you are this user you probably do not have to worry,\n".
-		"especially if you recently reported a problem within ".GWF_SITENAME."\n".
+		"especially if you recently reported a problem within ".GWF_SITENAME.".\n".
 		"If this is not the case and you are worried, please contact us!\n".
 		"\n".
 		'Kind Regards,'.PHP_EOL.
