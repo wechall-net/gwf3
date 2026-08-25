@@ -2,6 +2,7 @@
 <head>
 	<title>{$page_title}</title>
 	<link rel="canonical" href="{$canonical}" />
+	<link rel="alternate" type="application/rss+xml" title="WeChall RSS" href="{$root}index.php?mo=WeChall&amp;me=RSS" />
 	<meta name="robots" content="index, follow" />
 	{$meta}
 	<meta name="generator" content="GWFv{$smarty.const.GWF_CORE_VERSION}" />
