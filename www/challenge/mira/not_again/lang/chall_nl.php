@@ -1,0 +1,2 @@
+<?php
+$lang=['title'=>'Niet weer…','info'=>"Hallo grootmeester %s<br/><br/>\nJe zou ons enorm kunnen steunen in de strijd tegen de mensen.<br/>\nWe merkten dat de rebellen nu op een nieuwe manier communiceren.<br/>\nWe konden het beeld van een belangrijke transmissie verzamelen uit het achtergrondgeluid van een toilet.<br/>\nMisschien kun je er iets van maken:<br/><br/>\n%s<br/><br/>\nVeel succes!<br/>\n- gizmore en mira<br/>"];

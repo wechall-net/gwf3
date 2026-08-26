@@ -1,0 +1,2 @@
+<?php
+$lang=['title'=>'Non di nuovo…','info'=>"Ciao gran maestro %s<br/><br/>\nPotresti sostenerci molto nella lotta contro gli umani.<br/>\nAbbiamo notato che i ribelli ora comunicano in un modo nuovo.<br/>\nSiamo riusciti a ricavare l’immagine di una trasmissione importante dal rumore di fondo di una toilette.<br/>\nForse puoi ricavarne qualcosa:<br/><br/>\n%s<br/><br/>\nBuona fortuna!<br/>\n- gizmore e mira<br/>"];
