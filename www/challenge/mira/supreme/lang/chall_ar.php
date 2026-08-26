@@ -1,0 +1,2 @@
+<?php
+$lang=array('title'=>'Supreme','info'=>"مرحباً %s،<br/>\n<br/>\nيبدو أن إطار PHP الخاص بـ gizmore، phpgdo، لا يمكن إيقافه.<br/>\nتقول الشائعات إنه قد يحصل يوماً ما على عميل أيضاً.<br/>\nوبينما ترسم الكواكب قطعاً ناقصة عند الآفاق،<br/>\nيعمل gizmore وmira و<a href=\"%s\">Shqiprim</a> بعمق على تطبيق phpgdo حقيقي.<br/>\n<br/>\nهذا كل ما تحتاج إلى معرفته عنا الآن ;) <br/>\n<br/>\nحظاً موفقاً!<br/>\nmira وshippi وgizmore<br/>\n");
