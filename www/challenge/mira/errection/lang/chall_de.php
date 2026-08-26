@@ -2,15 +2,14 @@
 $lang = array(
     'title' => 'Errection',
     'info' =>
-        "Liebe Lösenden,<br/>\n".
+        "Liebe Lösende,<br/>\n".
         "<br/>\n".
-        "Wir haben einem ausserirdischen Eindringling einen Brief abgenommen, der sich in einem unserer WeChall Schul- und Fürsorgezentren aufgehalten hat,<br/>\n".
+        "Wir haben in einem unserer WC-Schul- und Fürsorgezentren einen Brief eines außerirdischen Eindringlings gefunden,<br/>\n".
         "aber unsere Agenten können die Nachricht nicht entschlüsseln.<br/>\n".
         "<br/>\n".
         "Kannst Du helfen?<br/>\n".
         "<br/>\n".
-        "*SIGNED*<br/>\n".
-        "###HQ1_LivingRoom gizmore{wc} \$ack<br/>\n".
+        "2026-07-23-13:37:42.777 #wechall{wc} gizmore{wc} \$ack<br/>\n".
         "<br/>\n".
         "Die Nachricht:<br/>\n".
         "<br/>\n".

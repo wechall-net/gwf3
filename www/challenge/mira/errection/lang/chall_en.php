@@ -9,8 +9,7 @@ $lang = array(
         "<br/>\n".
         "Can you help us?<br/>\n".
         "<br/>\n".
-        "*SIGNED*<br/>\n".
-        "###HQ1_LivingRoom gizmore{wc} \$ack<br/>\n".
+        "2026-07-23-13:37:42.777 #wechall{wc} gizmore{wc} \$ack<br/>\n".
         "<br/>\n".
         "The Message:<br/>\n".
         "<br/>\n".
