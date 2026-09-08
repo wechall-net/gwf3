@@ -278,7 +278,7 @@ final class GWF_ForumSubscription extends GDO
 
 		foreach ($posts as $post)
 		{
-			$post instanceof GWF_ForumPost;
+			if (!($post instanceof GWF_ForumPost)) { continue; }
 			$last_poster = $post->getPosterName();
 			$msg_block .=
 				'FROM: '.$post->getPosterName().PHP_EOL.
@@ -308,6 +308,7 @@ final class GWF_ForumSubscription extends GDO
 		if (false === ($options = GWF_ForumOptions::getUserOptions($user)))
 		{
 			GWF_Log::logCron('[ERROR] User '.$username.' has no valid forum options.');
+			return false;
 		}
 		
 		$token = $options->getVar('fopt_token');
