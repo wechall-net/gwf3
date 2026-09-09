@@ -308,7 +308,7 @@ final class GWF_ForumSubscription extends GDO
 		if (false === ($options = GWF_ForumOptions::getUserOptions($user)))
 		{
 			GWF_Log::logCron('[ERROR] User '.$username.' has no valid forum options.');
-			return false;
+			return;
 		}
 		
 		$token = $options->getVar('fopt_token');
