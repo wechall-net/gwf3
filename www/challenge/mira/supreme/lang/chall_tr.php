@@ -1,0 +1,2 @@
+<?php
+$lang=array('title'=>'Supreme','info'=>"Merhaba %s,<br/>\n<br/>\ngizmore'un PHP frameworkü phpgdo durdurulamaz görünüyor.<br/>\nSöylentilere göre bir gün bir istemcisi bile olabilir.<br/>\nGezegenler ufuklarda elipsler çizerken,<br/>\ngizmore, mira ve <a href=\"%s\">Shqiprim</a> gerçek bir phpgdo uygulaması üzerinde derinlemesine çalışıyor.<br/>\n<br/>\nŞimdilik bizden bilmen gereken her şey bu ;) <br/>\n<br/>\nBol şans!<br/>\nmira, shippi ve gizmore<br/>\n");

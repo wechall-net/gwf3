@@ -1,0 +1,2 @@
+<?php
+$lang=array('title'=>'Supreme','info'=>"Hei %s,<br/>\n<br/>\ngizmore'n PHP-kehys phpgdo vaikuttaa pysäyttämättömältä.<br/>\nHuhujen mukaan sillä voi jonain päivänä olla jopa asiakasohjelma.<br/>\nPlaneettojen piirtäessä ellipsejä horisontteihin<br/>\ntyöskentelevät gizmore, mira ja <a href=\"%s\">Shqiprim</a> omistautuneesti aidon phpgdo-sovelluksen parissa.<br/>\n<br/>\nTässä on toistaiseksi kaikki, mitä sinun tarvitsee tietää meistä ;) <br/>\n<br/>\nOnnea!<br/>\nmira, shippi ja gizmore<br/>\n");
