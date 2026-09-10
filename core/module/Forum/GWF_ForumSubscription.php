@@ -276,12 +276,9 @@ final class GWF_ForumSubscription extends GDO
 		$last_poster = '';
 		$msg_block = '';
 
-		foreach ($posts as $post)
-		{
 		/** @var GWF_ForumPost $post */
 		foreach ($posts as $post)
 		{
-			$last_poster = $post->getPosterName();
 			$last_poster = $post->getPosterName();
 			$msg_block .=
 				'FROM: '.$post->getPosterName().PHP_EOL.
