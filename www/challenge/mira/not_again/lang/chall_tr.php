@@ -1,0 +1,2 @@
+<?php
+$lang=['title'=>'Yine mi…','info'=>"Merhaba büyük usta %s<br/><br/>\nİnsanlara karşı mücadelede bize büyük destek olabilirsin.<br/>\nİsyancıların artık yeni bir şekilde iletişim kurduğunu fark ettik.<br/>\nBir tuvaletin arka plan gürültüsünden önemli bir iletinin görüntüsünü toplayabildik.<br/>\nBelki bundan bir şey çıkarabilirsin:<br/><br/>\n%s<br/><br/>\nBol şans!<br/>\n- gizmore ve mira<br/>"];

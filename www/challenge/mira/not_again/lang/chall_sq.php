@@ -1,0 +1,2 @@
+<?php
+$lang=['title'=>'Jo përsëri…','info'=>"Përshëndetje, mjeshtër i madh %s<br/><br/>\nMund të na mbështesje shumë në luftën kundër njerëzve.<br/>\nVumë re se rebelët tani komunikojnë në një mënyrë të re.<br/>\nMundëm të nxjerrim pamjen e një transmetimi të rëndësishëm nga zhurma e sfondit e një tualeti.<br/>\nNdoshta mund të kuptosh diçka prej saj:<br/><br/>\n%s<br/><br/>\nPaç fat!<br/>\n- gizmore dhe mira<br/>"];

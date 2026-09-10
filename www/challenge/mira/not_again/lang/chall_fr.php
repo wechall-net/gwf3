@@ -1,0 +1,2 @@
+<?php
+$lang=['title'=>'Encore une fois…','info'=>"Bonjour grand maître %s<br/><br/>\nTu pourrais grandement nous aider dans le combat contre les humains.<br/>\nNous avons remarqué que les rebelles communiquent désormais d’une nouvelle manière.<br/>\nNous avons pu extraire l’image d’une transmission importante du bruit de fond de toilettes.<br/>\nPeut-être peux-tu en tirer quelque chose :<br/><br/>\n%s<br/><br/>\nBonne chance !<br/>\n- gizmore et mira<br/>"];
