@@ -100,7 +100,7 @@ final class Module_WeChall extends GWF_Module
 		
 		GWF_Website::addJavascriptOnload('wcjsInit();');
 		
-		GWF_Website::setPageTitlePre('[WeChall] ');
+		GWF_Website::setPageTitlePre('[' . GWF_SITENAME . '] ');
 		GWF_Website::setMetaTags(WC_HTML::lang('mt_wechall'));
 		GWF_Website::setMetaDescr(WC_HTML::lang('md_wechall'));
 		GWF_Website::addJavascript(GWF_WEB_ROOT_NO_LANG . 'js/module/WeChall/wc.js?v=5.1');
