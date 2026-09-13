@@ -201,10 +201,11 @@ function warscore_function($socket, $pid)
 	{
 		warscore_error($socket, 'Cannot determine remote address!');
 	}
-	$client_addr = explode(':', $client_addr);
+	$client_addr = preg_split('/:(?=\d+$)/', $client_addr);
 	$client_ip = $client_addr[0];
 	$client_port = $client_addr[1];
-	
+	warscore_debug("IP=$client_ip, port=$client_port");
+
 	warscore_find_warboxes($socket, $client_ip, $boxes);
 	
 	if (false === ($first_line = fgets($socket)))
