@@ -132,7 +132,7 @@ if (false === ($server_socket = @stream_socket_server($stream_url, $errno, $errs
 
 function warscore_debug($message)
 {
-	#echo '['.date('c').'] ('.getmypid().') '.$message.PHP_EOL;
+	echo '['.date('c').'] warserver.php ('.getmypid().') '.$message.PHP_EOL;
 }
 
 function warscore_die($message)
