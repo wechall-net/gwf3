@@ -47,9 +47,10 @@ $bind_port = 4141;
 $server_certificate = null;
 $server_certificate_key = null;
 $server_certificate_passphrase = null;
+$send_proxy = false;
 
 # Parse arguments
-$options = getopt('2c:dh:k:l:p:s');
+$options = getopt('2c:dh:k:l:p:sx');
 if (isset($options['2'])) // use protocol version 2
 {
 	$protocol_version = 2;
@@ -81,6 +82,10 @@ if (isset($options['p'])) // bind port
 if (isset($options['s']))
 {
 	$use_ssl = true;
+}
+if (isset($options['x']))
+{
+	$send_proxy = true;
 }
 
 
@@ -162,6 +167,7 @@ function warscore_success($socket, $message)
 function warscore_function($socket, $pid)
 {
 	global $protocol_version;
+	global $send_proxy;
 
 	# Init GWF
 	$gwf = new GWF3(getcwd(), array(
@@ -195,12 +201,45 @@ function warscore_function($socket, $pid)
 	$wechall->includeClass('WC_Warflags');
 	$wechall->includeClass('sites/warbox/WCSite_WARBOX');
 
-	$client_addr = stream_socket_get_name($socket, true);
+	$client_addr = false;
+
+	if ($send_proxy)
+	{
+		$data = fread($socket, 16);
+		$magic = "\x0d\x0a\x0d\x0a\x00\x0d\x0a\x51\x55\x49\x54\x0a";
+		if (strpos($data, $magic) !== 0) {
+			warscore_error($socket, 'Proxy Protocol V2 enabled, but data did not match!');
+		}
+
+		$family = ord($data[13]);
+		$payload_len = unpack('nlen', substr($data, 14, 2))['len'];
+
+		if ($payload_len > 0)
+		{
+			$data = fread($socket, $payload_len);
+
+			if ($family === 0x11)
+			{
+				$client_addr = inet_ntop(substr($data, 0, 4)) . ':';
+				$client_addr .= unpack('nport', substr($data, 8, 2))['port'];
+			}
+			elseif ($family === 0x21)
+			{
+				$client_addr = inet_ntop(substr($data, 0, 16)) . ':';
+				$client_addr .= unpack('nport', substr($data, 32, 2))['port'];
+			}
+		}
+	}
+	else
+	{
+		$client_addr = stream_socket_get_name($socket, true);
+	}
 	warscore_debug("client_addr: $client_addr");
 	if ($client_addr === false)
 	{
 		warscore_error($socket, 'Cannot determine remote address!');
 	}
+	$client_addr = preg_replace('/^::ffff:/i', '', $client_addr); // strip away prefix for ipv4 addresses embedded in ipv6 addresses, like ::ffff:51.20.162.29:60720
 	$client_addr = preg_split('/:(?=\d+$)/', $client_addr);
 	$client_ip = $client_addr[0];
 	$client_port = $client_addr[1];
