@@ -16,11 +16,12 @@ $chall->onCheckSolution();
 $user = GWF_User::getStaticOrGuest();
 $name = $user->isGuest() ? 'hacker' : $user->displayUsername();
 $url = 'https://mira-gpt.org';
-$telegramURL = 'https://t.me/+rankW0nN_ig4OGEy';
-$discordURL = 'https://discord.gg/ftWTRs3QQG';
-$ircURL = 'ircs://irc.wechall.net:6697/#mira';
+$telegramURL = 'https://t.me/@gdo_dog_bot';
+$discordURL = 'https://discord.gg/vjEP2yPVg';
+$ircURL = 'ircs://mogwai.mira-gpt.org:6697/#dog';
+$webURL = 'https://mogwai.mira-gpt.org/websocket.raw.html';
 
-$info = $chall->lang('info', array($name, $url, $telegramURL, $discordURL, $ircURL));
+$info = $chall->lang('info', array($name, $url, $telegramURL, $discordURL, $ircURL, $webURL));
 $title = $chall->lang('title');
 echo GWF_Box::box($info, $title);
 formSolutionbox($chall);
