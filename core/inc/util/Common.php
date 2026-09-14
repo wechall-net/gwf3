@@ -162,16 +162,18 @@ final class Common
 		return substr($str, -strlen($end)) === $end;		
 	}
 
-	/**
-	 * Return true if a string starts with another string.
-	 * @param $str the string to test.
-	 * @param $start the expected start of the string.
-	 * @return boolean - true if $str starts with $start or false
-	 * */
-	public static function startsWith($str, $start)
-	{
-		return substr($str, 0, strlen($start)) === $start;		
-	}
+    /**
+     * Return true if a string starts with another string.
+     *
+     * @param string $str the string to test.
+     * @param string $start the expected start of the string.
+     * @return boolean - true if $str starts with $start or false
+     *
+     */
+    public static function startsWith($str, $start)
+    {
+        return substr($str, 0, strlen($start)) === $start;
+    }
 
 	/**
 	 * return a substring of string until a specified character sequence.
