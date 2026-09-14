@@ -120,7 +120,7 @@ final class Forum_Reply extends GWF_Method
 		$title = $this->replyThread === true ? $this->thread->getVar('thread_title') : $this->post->getVar('post_title');
 		if (!Common::startsWith($title, 'RE: '))
 		{
-			$title = 'RE: '.$title;
+			$title = Common::stripMessage('RE: ' . $title, $this->module->getMaxTitleLen() ?? 128);
 		}
 		return $title;
 		#return GWF_HTML::display($title);
