@@ -263,7 +263,7 @@ final class Module_Forum extends GWF_Module
 		if ($len < 3) {
 			return $this->lang('err_title_short');
 		} else if ($len > $this->getMaxTitleLen()) {
-			return $this->lang('err_title_long', $this->getMaxTitleLen());
+			return $this->lang('err_title_long', [$this->getMaxTitleLen()]);
 		}else {
 			return false;
 		}
