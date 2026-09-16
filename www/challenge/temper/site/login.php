@@ -4,7 +4,7 @@ include '../secret.php';
 chdir('../../../');
 require 'protected/config.php';
 require_once '../gwf3.class.php';
-$gwf = new GWF3('../', array(
+$gwf = new GWF3('./', array(
     'init' => true, # Init?
     'bootstrap' => false, # Init GWF_Bootstrap?
     'website_init' => true, # Init GWF_Website?
