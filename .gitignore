@@ -21,25 +21,9 @@
 /www/protected/logs
 /www/protected/installog
 /www/protected/config_*
-/www/protected/tgc.gizmore.org.pem
-/core/module/WeChall/lang/wechall/_wc_es_OLD.php
-/core/module/Dog/dog_modules/dog_module_dev/*
 
 # PhpStorm project directory
 /.idea
-
-# /core/disabled_modules/Lamb/
-/core/disabled_modules/Lamb/www
-
-# /core/disabled_modules/Lamb/lamb_bin/
-/core/disabled_modules/Lamb/lamb_bin/lamb_pass.php
-
-# /core/disabled_modules/Lamb/lamb_module/Shadowlamb/
-/core/disabled_modules/Lamb/lamb_module/Shadowlamb/GameMasters.php
-/core/disabled_modules/Lamb/lamb_module/Shadowlamb/data
-
-# /core/disabled_modules/Lamb/lamb_module/Shadowlamb/city/
-/core/disabled_modules/Lamb/lamb_module/Shadowlamb/city/Nysoft
 
 # /core/inc/3p/PHPMailer/
 /core/inc/3p/PHPMailer/*.git
@@ -65,19 +49,6 @@
 
 # /core/module/Dog/dog_plugins/
 /core/module/Dog/dog_plugins/dog_plugin_secret
-
-# /core/module/Lamb/
-/core/module/Lamb/www
-
-# /core/module/Lamb/lamb_bin/
-/core/module/Lamb/lamb_bin/lamb_pass.php
-
-# /core/module/Lamb/lamb_module/Shadowlamb/
-/core/module/Lamb/lamb_module/Shadowlamb/GameMasters.php
-/core/module/Lamb/lamb_module/Shadowlamb/data
-
-# /core/module/Lamb/lamb_module/Shadowlamb/city/
-/core/module/Lamb/lamb_module/Shadowlamb/city/Nysoft
 
 # /www/challenge/FREMES/
 /www/challenge/FREMES/fremes.php
@@ -268,8 +239,6 @@
 /www/tpl/konz/presse
 
 www/install/.htaccess
-www/protected/db_backup.sh
-www/gwf_cronjob.php
 www/tpl/tamagochi/bower_components
 vendor
 
@@ -494,3 +463,5 @@ www/challenge/warchall/live_rfi/www/temp/
 /www/challenge/time_to_reset2/.htaccess
 /www/challenge/time_to_reset2/reset_hellooo.php
 /www/challenge/warchall/begins/test.php
+
+www/challenge/warchall/choose_your_path3/solution.php
