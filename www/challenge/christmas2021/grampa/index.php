@@ -13,7 +13,7 @@ $chall->showHeader();
 $chall->onCheckSolution();
 
 echo "<!-- BEGIN OF CHALLENGE -->\n";
-$accepted = 'https://github.com/gizmore/gwf3/tree/master/www/challenge/christmas2021/grampa/';
+$accepted = 'https://github.com/wechall-net/gwf3/tree/master/www/challenge/christmas2021/grampa/';
 echo GWF_Box::box($chall->lang('info', [$accepted]), $chall->lang('title'));
 echo "<!-- END OF CHALLENGE -->\n";
 

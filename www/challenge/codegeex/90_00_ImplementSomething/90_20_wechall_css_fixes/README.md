@@ -3,7 +3,7 @@
 In this video we will install and analyze the
 [WeChall](https://www.wechall.net)
 website, which is written in 
-[gwf3](https://github.com/gizmore/gwf3)
+[gwf3](https://github.com/wechall-net/gwf3)
 .
 ----
 
