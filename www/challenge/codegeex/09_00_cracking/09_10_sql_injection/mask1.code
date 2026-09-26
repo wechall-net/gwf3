@@ -25,7 +25,9 @@ if (isset($_POST['mask1']))
 	$pass = md5($_POST['password']);
 	$query = "SELECT * FROM users WHERE username = '$user' AND password = '$pass'";
     $result = mysqli_query($link, $query);
+    GWF_Debug::setMailOnError(false);
     $userdata = mysqli_fetch_assoc($result);
+    GWF_Debug::setMailOnError(true);
     if ($userdata)
     {
     echo <<< EOE
