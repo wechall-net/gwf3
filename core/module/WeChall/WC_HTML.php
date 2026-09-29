@@ -283,7 +283,7 @@ final class WC_HTML
 //		
 //	}
 	
-	public static function displayHeaderOnline(Module_WeChall $module, $max=20)
+	public static function displayHeaderOnline(Module_WeChall $module, $max=20, $wrap=true)
 	{
 		$sessions = GWF_Session::getOnlineSessions();
 		$back = '';
@@ -323,12 +323,14 @@ final class WC_HTML
 #        $text .= '<a href="/profile/WeChall" title="Anon#4338 - Support Crew">, WeChall(0xf01d)</a>'; # When we will be satisfied with world-media, we go 4338, if we are fed up and goto war, we go 4339.
 		
 // 		$back .= '<div class="wc_head_bigbox" style="max-width:30%;">';
-		$back .= '<div class="wc_head_bigbox" style="float:none;">';
+		if ($wrap) {
+			$back .= '<div id="wc_heartbeat" class="wc_head_bigbox" style="float:none;">';
+		}
 		$back .= '<div class="wc_head_title"><a href="'.GWF_WEB_ROOT.'users/with/All/by/user_lastactivity/DESC/page-1">'.$module->lang('head_online', array($online)).'</a></div>';
 		$back .= '<div class="wc_head_online">';
 		
 		
-		return $back.substr($text,2).$more.'</div></div>'.PHP_EOL;
+		return $back.substr($text,2).$more.'</div>'.($wrap ? '</div>' : '').PHP_EOL;
 	}
 	
 	private static function onlineMoreAnchor(Module_WeChall $module)

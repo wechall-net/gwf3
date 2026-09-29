@@ -7,11 +7,22 @@ final class Heart_Beat extends GWF_Method
 		GWF3::setConfig('log_request', false);
 		
 		$_GET['ajax'] = 1;
+		if (isset($_GET['wc_header']))
+		{
+			if (false !== ($module = GWF_Module::loadModuleDB('WeChall', false, true, true)))
+			{
+				$module->includeClass('WC_HTML');
+				return WC_HTML::displayHeaderOnline($module, 20, false);
+			}
+		}
+
 		$cut = time()-GWF_ONLINE_TIMEOUT;
+		// The current session's timestamp is not committed until request shutdown.
+		$sid = (int) GWF_Session::getSessSID();
 		$user = new GWF_User();
 		$table = GDO::table('GWF_Session');
 		$profiles = '';
-		if (false === ($result = $table->select('sess_user,user_name,user_options,user_level', "sess_time>=$cut", 'user_name ASC', array('user'))))
+		if (false === ($result = $table->select('sess_user,user_name,user_options,user_level', "sess_time>=$cut OR sess_id=$sid", 'user_name ASC', array('user'))))
 		{
 			return;
 		}
