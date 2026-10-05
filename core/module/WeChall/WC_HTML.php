@@ -324,7 +324,8 @@ final class WC_HTML
 		
 // 		$back .= '<div class="wc_head_bigbox" style="max-width:30%;">';
 		if ($wrap) {
-			$back .= '<div id="wc_heartbeat" class="wc_head_bigbox" style="float:none;">';
+			$url = htmlspecialchars($module->getMethodURL('Heartbeat', '&ajax=1'), ENT_QUOTES);
+			$back .= '<div id="gwf_heartbeat" class="wc_head_bigbox" style="float:none;" data-heartbeat-url="'.$url.'">';
 		}
 		$back .= '<div class="wc_head_title"><a href="'.GWF_WEB_ROOT.'users/with/All/by/user_lastactivity/DESC/page-1">'.$module->lang('head_online', array($online)).'</a></div>';
 		$back .= '<div class="wc_head_online">';

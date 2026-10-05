@@ -1,9 +1,8 @@
 function gwf_heartbeat(ms)
 {
-	var wcHeader = document.getElementById('wc_heartbeat') !== null;
-	var heartbeatId = wcHeader ? 'wc_heartbeat' : 'gwf_heartbeat';
-	var endpoint = wcHeader ? 'mo=WeChall&me=Heartbeat' : 'mo=Heart&me=Beat';
-	var url = GWF_WEB_ROOT+'index.php?'+endpoint+'&time='+new Date().getTime();
+	var target = document.getElementById('gwf_heartbeat');
+	var endpoint = target && target.getAttribute('data-heartbeat-url');
+	var url = (endpoint || GWF_WEB_ROOT+'index.php?mo=Heart&me=Beat')+'&time='+new Date().getTime();
 	setTimeout('gwf_heartbeat('+ms+');', ms);
-	ajaxUpdate(heartbeatId, url);
+	ajaxUpdate('gwf_heartbeat', url);
 }
