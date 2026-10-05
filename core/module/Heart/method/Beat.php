@@ -7,15 +7,6 @@ final class Heart_Beat extends GWF_Method
 		GWF3::setConfig('log_request', false);
 		
 		$_GET['ajax'] = 1;
-		if (isset($_GET['wc_header']))
-		{
-			if (false !== ($module = GWF_Module::loadModuleDB('WeChall', false, true, true)))
-			{
-				$module->includeClass('WC_HTML');
-				return WC_HTML::displayHeaderOnline($module, 20, false);
-			}
-		}
-
 		$cut = time()-GWF_ONLINE_TIMEOUT;
 		// The current session's timestamp is not committed until request shutdown.
 		$sid = (int) GWF_Session::getSessSID();
