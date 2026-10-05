@@ -2,7 +2,8 @@
 <head>
 	<title>{$page_title}</title>
 	{$meta}
-	<script type="text/javascript" src="{$root}js/jquery-1.6.2.min.js"></script>
+	<script type="text/javascript" src="{$root}js/jquery-3.7.1.min.js"></script>
+	<script type="text/javascript" src="{$root}js/jquery-migrate-3.6.0.min.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="{$root}tpl/default/css/gwf3.css" />
 

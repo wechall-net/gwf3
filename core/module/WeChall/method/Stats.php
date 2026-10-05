@@ -155,8 +155,8 @@ final class WeChall_Stats extends GWF_Method
 		$this->setPageTitles();
 		
 		GWF_Website::addJavascriptOnload('wcjsStatsJQuery();');
-		GWF_Website::addJavascript(GWF_WEB_ROOT.'js/jquery-ui-1.8.5.custom.min.js');
-		GWF_Website::addCSS(GWF_WEB_ROOT.'tpl/wc4/css/ui-lightness/jquery-ui-1.8.5.custom.css');
+		GWF_Website::addJavascript(GWF_WEB_ROOT.'js/jquery-ui-1.14.2.min.js');
+		GWF_Website::addCSS(GWF_WEB_ROOT.'tpl/wc4/css/ui-lightness/jquery-ui-1.14.2.css');
 		
 		if ($this->user1 === false) {
 			$form_action = GWF_WEB_ROOT.'stats';
