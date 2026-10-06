@@ -53,9 +53,9 @@ function Mugshot(options)
 		
 		_prepareLarge(img, ms, msi);
 		
-		$("<img/>").attr("src", href_x).load(function() {
+		$("<img/>").on('load', function() {
 			_enlargeB(img, this.width, this.height);
-		});
+		}).attr("src", href_x);
 		
 		return false;
 	};

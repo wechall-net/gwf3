@@ -8,13 +8,16 @@
 	var methods = {
 		'init': function() {
 		    return this.each(function(){
-		    	$(this).load(function(){
-			    	$this = $(this);
-			    	$this.data('org_w', this.width);
-		    		$this.data('org_h', this.height);
-		    		$this.data('old_w', $this.width());
-		    		$this.data('old_h', $this.height());
-		    	});
+			$(this).one('load', function(){
+				var $this = $(this);
+				$this.data('org_w', this.width);
+				$this.data('org_h', this.height);
+				$this.data('old_w', $this.width());
+				$this.data('old_h', $this.height());
+			});
+			if (this.complete && this.naturalWidth) {
+				$(this).trigger('load');
+			}
 		    });
 		},
 		

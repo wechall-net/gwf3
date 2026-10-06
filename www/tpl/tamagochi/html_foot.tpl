@@ -11,7 +11,7 @@
 	<script src="{$root}tpl/tamagochi/bower_components/angular-ui/build/angular-ui.js"></script>
 	<script src="{$root}tpl/tamagochi/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 	<script src="{$root}tpl/tamagochi/bower_components/angular-material/angular-material.js"></script>
-	<script src="{$root}tpl/tamagochi/bower_components/jquery/dist/jquery.js"></script>
+	<script src="{$root}js/jquery-3.7.1.min.js"></script>
 
 	<!-- All hail to the hypnotoad 0-o -->
 

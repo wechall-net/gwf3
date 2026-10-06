@@ -83,11 +83,14 @@ function Thumbnails() //id_div, class_img, displaycount, width, height, zoom, im
 		
 		for (var i in images)
 		{
-			images[i].load(function(){
+			images[i].one('load', function(){
 				$(this).click(function(){thumbs.restore($(this));});
 				$(this).mouseout(function(){thumbs.stopZoom($(this));});
 				$(this).mouseover(function(){thumbs.startZoom($(this));});
 			});
+			if (images[i][0].complete && images[i][0].naturalWidth) {
+				images[i].trigger('load');
+			}
 			images[i].tinyzoom('init');
 			if ( (i < c_x) || (i >= max_x) )
 			{
