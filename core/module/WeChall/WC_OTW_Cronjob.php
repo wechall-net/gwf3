@@ -30,6 +30,13 @@ class WC_OTW_Cronjob
         $module->includeClass('WC_Warbox');
 
         $box_data = GWF_HTTP::getFromURL('http://status.labs.overthewire.org/wechall.json');
+
+        if ($box_data === false)
+        {
+            echo "[-] Network Connection Error\n";
+            return;
+        }
+
         $box_data = json_decode($box_data, true);
         foreach ($box_data as $data)
         {
