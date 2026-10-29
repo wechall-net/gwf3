@@ -398,7 +398,7 @@ final class WC_HTML
 				return GWF_HTML::err('ERR_MODULE_MISSING', array('Heart'));
 			}
 			$back .= '<div id="foot_boxes" class="cf">'.PHP_EOL;
-			$codeUrl = 'https://github.com/gizmore/gwf3';
+			$codeUrl = 'https://github.com/wechall-net/gwf3';
 			$back .= '<div class="foot_box">'.self::lang('footer_1', array(date('Y'), $codeUrl)).'</div>'.PHP_EOL;
 			$back .= '<div class="foot_box">'.self::lang('footer_2', array($module->cfgUserrecordCount(), GWF_Time::displayDate($module->cfgUserrecordDate()), $module->cfgPagecount())).'</div>'.PHP_EOL;
 			$back .= $debug ? '<div class="foot_box">'.self::debugFooter().'</div>'.PHP_EOL : '';

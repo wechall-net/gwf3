@@ -1,9 +1,9 @@
 <?php $l = $tVars['license']; ?>
 <h1><?php echo $l->lang('pt_license'); ?></h1>
 <?php
-$link1 = 'https://github.com/gizmore/gwf3';
+$link1 = 'https://github.com/wechall-net/gwf3';
 $link2 = $link1;
-$link3 = 'https://github.com/gizmore/gwf3/commits/master';
+$link3 = 'https://github.com/wechall-net/gwf3/commits/main';
 $items = $l->lang('wc_license');
 foreach ($items as $head => $text)
 {
