@@ -202,7 +202,7 @@ function wcProfileRegats(array $regats, $sort_url)
 		$site = $regat->getSite();
 		$color = GWF_Color::interpolatBound(0, 1, $site->calcPercent($regat), 0xff0000, 0x008800);
 		echo GWF_Table::rowStart('color:#'.$color.';');
-		echo sprintf('<td>%s</td>', $site->displayLink());
+		echo sprintf('<td>%s</td>', $site->displayLink(true, true));
 		echo sprintf('<td class="gwf_num">%s</td>', $site->calcScore($regat));
 		echo sprintf('<td>%s</td>', $regat->displayOnsiteProfileLink($site));
 		echo sprintf('<td class="gwf_num">%s</td>', $regat->displayPercent($site->getOnsiteScore()));

@@ -33,7 +33,7 @@ if ($user !== false) {
 <table>
 	<thead>
 		<tr>
-			<th colspan="2" id="wc_site_detail_head"><?php echo $site->displayLogo(32, $tLang->lang('hover_logo', array($site->displayName()))).$site->displayLink(); ?></th>
+			<th colspan="2" id="wc_site_detail_head"><?php echo $site->displayLogo(32, $tLang->lang('hover_logo', array($site->displayName()))).$site->displayLink(true, true); ?></th>
 		</tr>
 	</thead>
 	<?php 

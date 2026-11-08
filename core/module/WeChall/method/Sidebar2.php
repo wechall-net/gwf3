@@ -113,7 +113,7 @@ final class WeChall_Sidebar2 extends GWF_Method
 		foreach ($sites as $site)
 		{
 			$site instanceof WC_Site;
-			$box .= '<div>'.$site->displayLink().'</div>'.PHP_EOL;
+			$box .= '<div>'.$site->getLink(true, true).'</div>'.PHP_EOL;
 		}
 		return $this->sidebox($this->module->lang('rp_sites', array($count)), $box);
 	}

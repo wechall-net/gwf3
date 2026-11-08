@@ -20,9 +20,9 @@ function wcProfileFavSites($userid)
 	foreach ($sites as $site)
 	{
 		$site instanceof WC_Site;
-		$back .= gwfProfileRow($site->getLink());
+		$back .= gwfProfileRow($site->getLink(true, true));
 	}
-	
+
 	return $back;
 }
 
@@ -68,7 +68,7 @@ function wcProfileRegats(array $regats, $sort_url, $priv=false, $hide_score=fals
 			$percent = $regat->displayPercent($site->getOnsiteScore());
 		}
 		echo GWF_Table::rowStart(true, '', '', 'color:#'.$color.';');
-		echo sprintf('<td>%s</td>', $site->displayLink());
+		echo sprintf('<td>%s</td>', $site->displayLink(true, true));
 		echo sprintf('<td class="gwf_num">%s</td>', $score);
 		echo sprintf('<td>%s</td>', $regat->displayOnsiteProfileLink($site));
 		echo sprintf('<td class="gwf_num">%s</td>', $percent);

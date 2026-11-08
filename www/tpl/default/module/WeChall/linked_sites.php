@@ -43,7 +43,7 @@ if (count($tVars['linked']) > 0)
 		$btn_update = sprintf('<input type="submit" name="update[%s]" value="%s" />', $siteid, $tLang->lang('btn_update'));
 		echo GWF_Table::rowStart();
 		echo GWF_Table::column($site->displayStatus());
-		echo GWF_Table::column($site->displayIcon(1.0).'&nbsp;'.$site->displayLink());
+		echo GWF_Table::column($site->displayIcon(1.0).'&nbsp;'.$site->displayLink(true, true));
 		echo GWF_Table::column($regat->getVar('regat_challsolved'), 'gwf_num');
 		echo GWF_Table::column($site->getVar('site_challcount'), 'gwf_num');
 		echo GWF_Table::column($site->displayAutoUpdate());

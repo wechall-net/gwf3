@@ -1,7 +1,7 @@
 <?php
 $site = $tVars['site']; $site instanceof WC_Site;
 $logo = $site->displayLogo(42, $tLang->lang('hover_logo', array($site->displayName())));
-$link = $site->displayLink();
+$link = $site->displayLink(true, true);
 $title = $tVars['page_title'];
 ?>
 <h1><?php echo "$logo $title ($link)"; ?></h1>

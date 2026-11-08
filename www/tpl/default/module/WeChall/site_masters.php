@@ -32,7 +32,7 @@ foreach ($tVars['masters'] as $master)
 	echo sprintf('<td class="ri">%s</td>', $user->displayCountryFlag());
 	echo sprintf('<td><a href="%s">%s</a></td>', GWF_WEB_ROOT.'profile/'.$user->urlencode('user_name'), $user->displayUsername());
 //	echo sprintf('<td class="ce">%s</td>', $site->display('site_name'));
-	echo sprintf('<td class="ce">%s</td>', $site->displayLink());
+	echo sprintf('<td class="ce">%s</td>', $site->displayLink(true, true));
 	echo sprintf('<td class="gwf_date">%s</td>', $master->displayFirstDate());
 	echo sprintf('<td class="gwf_date">%s</td>', $master->displayDate());
 	echo sprintf('<td class="gwf_date">%s</td>', $master->displayTrackTime());
