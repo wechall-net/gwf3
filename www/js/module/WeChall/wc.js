@@ -553,12 +553,24 @@ function wcjsNotify()
 		url: GWF_WEB_ROOT+'index.php?mo=WeChall&me=UnreadCounter&ajax=true',
 		success: function(data)
 		{
-			if (data.charAt(0) === '0')
+			if (typeof data !== 'string')
+			{
+				return;
+			}
+			data = data.trim();
+			if (data === '' || data.charAt(0) === '0' || data.charAt(0) !== '{')
 			{
 //				alert(data);
 				return;
 			}
-			wcjsNotifyB(eval('('+data+');'));
+			try
+			{
+				wcjsNotifyB(JSON.parse(data));
+			}
+			catch (e)
+			{
+				console.error('wcjsNotify invalid JSON:', e);
+			}
 		}
 	});
 }
