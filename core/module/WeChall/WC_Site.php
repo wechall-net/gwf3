@@ -204,9 +204,13 @@ class WC_Site extends WC_SiteBase
 		return substr($back, 2);
 	}
 
-	public function getLink()
+	public function getLink($nofollow=false, $noopener=false, $noreferrer=false)
 	{
-		return GWF_HTML::anchor($this->getURL(), $this->getSitename(), WC_HTML::lang('site_'.$this->getStatus()), 'siteanchor');
+		$rel = '';
+		$rel .= $nofollow ? 'nofollow' : '';
+		$rel .= $noopener ? ' noopener' : '';
+		$rel .= $noreferrer ? ' noreferrer' : '';
+		return GWF_HTML::anchor($this->getURL(), $this->getSitename(), WC_HTML::lang('site_'.$this->getStatus()), 'siteanchor', trim($rel));
 	}
 
 	/**
@@ -455,9 +459,9 @@ class WC_Site extends WC_SiteBase
 		return $this->getLang()->displayName();
 	}
 
-	public function displayLink()
+	public function displayLink($nofollow=false, $noopener=false, $noreferrer=false)
 	{
-		return $this->getLink();
+		return $this->getLink($nofollow, $noopener, $noreferrer);
 	}
 
 	public function displayVoteValue($value)

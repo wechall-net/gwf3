@@ -136,7 +136,7 @@ final class GWF_HTML
 		return sprintf('<%s%s%s%s>%s</%s>', $name, $id, $class, $style, $inner_html, $name).PHP_EOL;
 	}
 
-	public static function anchor($url, $text=NULL, $title=NULL, $class=NULL)
+	public static function anchor($url, $text=NULL, $title=NULL, $class=NULL, $rel=NULL)
 	{
 		if ($text === NULL)
 		{
@@ -145,7 +145,8 @@ final class GWF_HTML
 		$class = $class === NULL ? '' : " class=\"$class\"";
 		$url = htmlspecialchars($url);
 		$title = $title === NULL ? '' : ' title="'.htmlspecialchars($title).'"';
-		return sprintf('<a%s href="%s"%s>%s</a>', $class, $url, $title, htmlspecialchars($text));
+		$rel = $rel ? ' rel=' . htmlspecialchars($rel) . '"': '';
+		return sprintf('<a%s%s href="%s"%s>%s</a>', $class, $rel, $url, $title, htmlspecialchars($text));
 	}
 
 	public static function selected($bool)

@@ -204,7 +204,7 @@ final class WC_HTML
 		for ($i = 0; $i < 4; $i++)
 		{
 			if ($i >= $count) { break; }
-			$back .= $sites[$i]->getLink();
+			$back .= $sites[$i]->getLink(true, true);
 		}
 		$back .= '</div>';
 
@@ -212,7 +212,7 @@ final class WC_HTML
 		for ($i = 4; $i < 8; $i++)
 		{
 			if ($i >= $count) { break; }
-			$back .= $sites[$i]->getLink();
+			$back .= $sites[$i]->getLink(true, true);
 		}
 		$back .= '</div>';
 
@@ -222,8 +222,8 @@ final class WC_HTML
 //		$back = '';
 //		foreach ($sites as $site)
 //		{
-////			$back .= ', '.$site->getLink();
-//			$back .= $site->getLink();
+////			$back .= ', '.$site->getLink(true, true);
+//			$back .= $site->getLink(true, true);
 //			if (++$i > $amount) {
 //				break;
 //			}

@@ -23,7 +23,7 @@ if (count($tVars['warboxes']) > 0)
 			$old_id = $site->getID();
 			$headers = array(
 				array($site->displayLogo(16)),
-				array($site->displayLink()),
+				array($site->displayLink(true, true)),
 				array('IP'),
 				array('Login'),
 				array('Password'),
