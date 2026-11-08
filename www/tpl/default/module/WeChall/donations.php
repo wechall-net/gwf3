@@ -98,13 +98,13 @@ Sum:    €  272,00
 Goal:   €  726,00
 </pre>
 
-<pre>Donations 2026:    5 donation
-Sum:    €  492,03
+<pre>Donations 2026:    6 donation
+Sum:    €  558,69
 Goal:   €  726,00
 </pre>
 
-<pre>Totals:           55 donations
-Sum:    € 3424,40
+<pre>Totals:           56 donations
+Sum:    € 3491,06
 Goal:   € 3396,00
 </pre>
 
@@ -184,6 +184,7 @@ Goal:   € 3396,00
 <li>----- 2026 -----</li>
 <li><span class="dodate">27.Jan.2026</span> – <em><&quot;New year, new opportunity to give. Donating 137 as I am not yet 1337. We’ll see next year!&quot;</em> – <a class="donor" href="/profile/Hertz">Hertz</a></li>
 <li><span class="dodate">18.Feb.2026</span> – <em>&quot;happy new year WeChall&quot;</em> – <a class="donor" href="/profile/Xaav">Xaav</a></li>
+<li><span class="dodate">29.Oct.2026</span> – <em>&quot;Have a spooky Halloween 🎃&quot;</em> – <a class="donor" href="/profile/livinskull">livinskull</a></li>
 <li><span class="dodate">1.Nov.2026</span> – <em>&quot;I encourage you to experience as many wargames as possible, whether they are classic, mid-generation, or modern platforms.&quot;</em> – <a class="donor" href="/profile/rayaseiren">rayaseiren</a></li>
 <li><span class="dodate">3.Nov.2026</span> – <em>&quot;137 more to create some momentum!&quot;</em> – <a class="donor" href="/profile/Hertz">Hertz</a></li>
 <li><span class="dodate">7.Nov.2026</span> – <em>&quot;cheers to the maintainers!&quot;</em> – <a class="donor" href="/profile/wekito">wekito</a></li>
