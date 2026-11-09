@@ -9,7 +9,12 @@ final class Dog_Log
 {
 	public static function server(Dog_Server $server, Dog_IRCMsg $irc_msg)
 	{
-		echo date("H:i:s") . ' ' . $server->getTLD() . ' ' . $irc_msg->toConsoleString(stream_isatty(STDOUT)) . PHP_EOL;
+		// phpcs:disable
+		$fancy = version_compare(phpversion(), '7.2.0', '>=')
+			? stream_isatty(STDOUT)
+			: posix_isatty(STDOUT);
+		// phpcs:enable
+		echo date("H:i:s") . ' ' . $server->getTLD() . ' ' . $irc_msg->toConsoleString($fancy) . PHP_EOL;
 
 		if ($server->isLogging())
 		{
