@@ -118,7 +118,13 @@ final class Dog_IRCMsg
 	}
 	
 	private static function irc2ansi($s) {
+		if (version_compare(phpversion(), '7.4.0', '<')) {
+			throw new RuntimeException('PHP >= 7.4 required for fancy output');
+		}
+		// disable >=7.4 required, we checked for it
+		// phpcs:disable
 		$chars = mb_str_split($s);
+		// phpcs:enable
 		$arr = array();
 
 		$bold = 1;
@@ -182,8 +188,9 @@ final class Dog_IRCMsg
 			if (preg_match('/\x01ACTION (.*)?\x01/i', $msg, $matches) === 1) {
 				$msg = $matches[1];
 			}
-			
-			if ($fancy) {
+
+			// irc2ansi needs PHP >= 7.4 due do mb_str_split
+			if ($fancy && version_compare(phpversion(), '7.4.0', '>=')) {
 				$msg = Dog_IRCMsg::irc2ansi($msg);
 			} else {
 				$msg = Dog_IRCMsg::stripirc($msg);
