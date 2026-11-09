@@ -9,7 +9,7 @@
  * @author gizmore
  * @since 17.Feb.
  */
-final class API_CGX extends GWF_Method
+final class WeChall_API_CGX extends GWF_Method
 {
 	
 	public function execute()

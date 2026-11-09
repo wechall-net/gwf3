@@ -153,9 +153,6 @@ final class GWF_Debug
 			case E_WARNING: case E_USER_WARNING: case E_CORE_WARNING: $errnostr = 'PHP Warning'; break;
 			case E_USER_NOTICE: case E_NOTICE: $errnostr = 'PHP Notice'; break;
 			case E_USER_ERROR: $errnostr = 'PHP Error'; break;
-			case E_STRICT: $errnostr = 'PHP Strict Error'; break;
-			# if(PHP5.3) case E_DEPRECATED: case E_USER_DEPRECATED: $errnostr = 'PHP Deprecated'; break;
-			# if(PHP5.2) case E_RECOVERABLE_ERROR: $errnostr = 'PHP Recoverable Error'; break;
 			case E_COMPILE_WARNING: case E_COMPILE_ERROR: $errnostr = 'PHP Compiling Error'; break;
 			case E_PARSE: $errnostr = 'PHP Parsing Error'; break;
 

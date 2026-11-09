@@ -32,8 +32,8 @@ final class GWF_Template
 	{
 		if (self::$_smarty === NULL) 
 		{
-			# Setup smarty config
 			require_once GWF_SMARTY_PATH;
+
 			$smarty = new Smarty();
 			$smarty->setTemplateDir(GWF_WWW_PATH.'tpl/');
 			$dir = rtrim(GWF_SMARTY_DIRS, '/').'/';
@@ -41,9 +41,6 @@ final class GWF_Template
 			$smarty->setCacheDir($dir.'cache');
 			$smarty->setConfigDir($dir.'cfg');
 			$smarty->addPluginsDir(GWF_CORE_PATH.'inc/smartyplugins');
-
-			# Assign common template vars
-//			$smarty->assign('db', gdo_db());
 			$smarty->assign('gwff', GWF_SmartyFile::instance());
 			$smarty->assign('gwmm', GWF_SmartyModuleMethod::instance());
 			$smarty->assign('root', GWF_WEB_ROOT);
