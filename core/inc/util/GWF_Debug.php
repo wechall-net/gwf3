@@ -301,15 +301,15 @@ final class GWF_Debug
 	public static function backtrace($message='', $html=true)
 	{
 		# Fix full path disclosure
-		$message = self::shortpath($message);
+		$cleanMessage = self::shortpath($message);
 
 		# Append PRE header.
 		$back = $html ? ('<pre class="gwf_backtrace">'.PHP_EOL) : '';
 
 		# Append general title message.
-		if ($message !== '')
+		if ($cleanMessage !== '')
 		{
-			$back .= $html ? '<em>'.$message.'</em>' : $message;
+			$back .= $html ? '<em>'.$cleanMessage.'</em>' : $cleanMessage;
 		}
 
 		$implode = array();
