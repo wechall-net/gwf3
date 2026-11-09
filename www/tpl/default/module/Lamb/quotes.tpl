@@ -11,8 +11,8 @@ array($lang->lang('th_quot_username'), 'quot_username', 'ASC')
 {foreach $quotes as $quote}
 {GWF_Table::rowStart()}
 {GWF_Table::column($quote['quot_id'], 'gwf_num')}
-{GWF_Table::column($quote['quot_text']|htmlspecialchars)}
-{GWF_Table::column($quote['quot_username']|htmlspecialchars)}
+{GWF_Table::column($quote['quot_text']|escape:'html')}
+{GWF_Table::column($quote['quot_username']|escape:'html')}
 {GWF_Table::rowEnd()}
 {/foreach}
 {GWF_Table::end()}

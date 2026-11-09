@@ -28,9 +28,9 @@ array($lang->lang('created_by'), '', 'ASC')
 {GWF_Table::column($page['languages'])}
 {GWF_Table::column($page['page_date']|date)}
 {if $page['page_author']==='0'}
-{GWF_Table::column({$page['page_author_name']|htmlspecialchars})}
+{GWF_Table::column({$page['page_author_name']|escape:'html'})}
 {else}
-{GWF_Table::column("<a href=\"/profile/{$page['page_author_name']|htmlspecialchars}\">"|cat:{$page['page_author_name']}|cat:"</a>")}
+{GWF_Table::column("<a href=\"/profile/{$page['page_author_name']|escape:'html'}\">"|cat:{$page['page_author_name']}|cat:"</a>")}
 {/if}
 {GWF_Table::rowEnd()}
 {/foreach}
