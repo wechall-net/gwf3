@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<ruleset name="PHP_CodeSniffer">
+    <description>PHP coding standard</description>
+
+    <file>core</file>
+
+    <exclude-pattern>core/inc/3p</exclude-pattern>
+
+    <config name="installed_paths" value="vendor/phpcompatibility/php-compatibility" />
+    <config name="testVersion" value="7.1-"/>
+
+    <arg name="colors" />
+    <arg name="parallel" value="16" />
+    <arg value="np"/>
+    <arg name="extensions" value="php" />
+
+    <!-- Don't hide tokenizer exceptions -->
+    <rule ref="Internal.Tokenizer.Exception">
+        <type>error</type>
+    </rule>
+
+<!--    <rule ref="PSR1" />-->
+<!--    <rule ref="PSR2" />-->
+
+    <rule ref="PHPCompatibility"/>
+</ruleset>
