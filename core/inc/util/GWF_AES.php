@@ -62,11 +62,13 @@ final class GWF_AES
      * It is recommended to call this with a funny IV.
      * Legacy function using mcrypt.
      *
-     * @deprecated unsafe
+     * @deprecated unsafe and no longer supported since PHP 7.1
      */
     public static function encrypt4(string $data, string $key, string $iv): string
     {
+        // phpcs:disable
         return @mcrypt_encrypt(MCRYPT_RIJNDAEL_256, $key, $data, MCRYPT_MODE_CBC, hash('SHA256', $iv, true));
+        // phpcs:enable
     }
 
     /**
@@ -78,11 +80,15 @@ final class GWF_AES
      * @param string $iv
      *
      * @return string data
-     * @deprecated unsafe
+     * @deprecated unsafe and no longer supported since PHP 7.1
      */
     public static function decrypt4(string $data, string $key, string $iv): string
     {
+        // mcrpyt is long dead, ignore the warning, as this is not used in *practice*
+        // kept for reference of non-patched challenge
+        // phpcs:disable
         return @mcrypt_decrypt(MCRYPT_RIJNDAEL_256, $key, $data, MCRYPT_MODE_CBC, hash('SHA256', $iv, true));
+        // phpcs:enable
     }
 
 }
