@@ -1,6 +1,6 @@
 <div>
 	<div>
-		<h3><a href="{$href_history|htmlspecialchars}">&lt;&lt;</a>&nbsp;{$lang->lang('previously_played')}</h3>
+		<h3><a href="{$href_history|escape:'html'}">&lt;&lt;</a>&nbsp;{$lang->lang('previously_played')}</h3>
 {foreach from=$history item=h}
 		{include file="tpl/default/module/Slaytags/songbox.tpl" song=$h playing=false left=-1}
 {/foreach}

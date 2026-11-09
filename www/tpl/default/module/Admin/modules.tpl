@@ -26,7 +26,7 @@
 			<td><a href="{$mod['edit_url']}">{$configure}</a></td>
 			
 			{if $mod['admin_url'] !== '#'}
-			<td><a href="{$mod['admin_url']|htmlspecialchars}">{$adminsect}</a></td>
+			<td><a href="{$mod['admin_url']|escape:'html'}">{$adminsect}</a></td>
 			{else}
 			<td></td>
 			{/if}
