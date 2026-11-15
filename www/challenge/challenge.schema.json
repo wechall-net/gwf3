@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wechall.net/schema/challenge.schema.json",
+  "title": "WCChallenge definition",
+  "description": "Static challenge configuration consumed by www/challenge/WCChallenge.php.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["title", "score", "solution"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Optional stable challenge identifier."
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Challenge title and database lookup title."
+    },
+    "score": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10,
+      "description": "Challenge difficulty/score from 1 to 10."
+    },
+    "url": {
+      "type": "string",
+      "description": "Optional legacy/display URL."
+    },
+    "creators": {
+      "type": "array",
+      "description": "WeChall usernames of the challenge authors.",
+      "items": {"type": "string", "minLength": 1}
+    },
+    "tags": {
+      "type": "array",
+      "description": "Topical challenge labels, for example Coding, Crypto, PHP, Web, or Stegano.",
+      "items": {"type": "string", "minLength": 1}
+    },
+    "solution": {
+      "$ref": "#/$defs/solution"
+    },
+    "placeholders": {
+      "type": "object",
+      "description": "Static replacement values for translation placeholders.",
+      "additionalProperties": {
+        "type": ["string", "number", "boolean"]
+      }
+    },
+    "translations": {
+      "type": "object",
+      "description": "Locale mappings or relative YAML translation file paths.",
+      "additionalProperties": {
+        "oneOf": [
+          {"type": "string"},
+          {
+            "type": "object",
+            "additionalProperties": true
+          }
+        ]
+      }
+    },
+    "input_maxlength": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "info_box": {
+      "type": "boolean"
+    },
+    "solution_box": {
+      "type": "boolean"
+    },
+    "warchall_ads": {
+      "type": "boolean"
+    }
+  },
+  "$defs": {
+    "solution": {
+      "oneOf": [
+        {"const": false},
+        {
+          "type": "string",
+          "description": "Inline solution value. New challenges should use a local require solution."
+        },
+        {
+          "type": "object",
+          "required": ["type"],
+          "properties": {
+            "type": {
+              "enum": ["plaintext", "global", "hash", "file", "require"]
+            },
+            "value": {
+              "type": ["string", "number", "boolean"]
+            },
+            "path": {
+              "type": "string",
+              "minLength": 1
+            },
+            "algorithm": {
+              "type": "string",
+              "description": "PHP hash algorithm, for example md5 or sha256."
+            },
+            "extract": {
+              "oneOf": [
+                {"type": ["string", "integer"]},
+                {"type": "array", "items": {"type": ["string", "integer"]}}
+              ]
+            },
+            "trim": {
+              "type": "boolean"
+            },
+            "case_sensitive": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false,
+          "allOf": [
+            {
+              "if": {"properties": {"type": {"const": "plaintext"}}},
+              "then": {"required": ["value"]}
+            },
+            {
+              "if": {"properties": {"type": {"enum": ["file", "require"]}}},
+              "then": {"required": ["path"]}
+            },
+            {
+              "if": {"properties": {"type": {"const": "hash"}}},
+              "then": {
+                "anyOf": [
+                  {"required": ["value"]},
+                  {"required": ["path"]}
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
