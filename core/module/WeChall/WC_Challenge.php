@@ -70,6 +70,18 @@ final class WC_Challenge extends GDO
 	public function getDate() { return $this->getVar('chall_date'); }
 	public function getScore() { return $this->getVar('chall_score'); }
 	public function getTitle() { return $this->getVar('chall_title'); }
+	public function trans($key, array $args=array())
+	{
+		if (!class_exists('WCChallenge') && defined('GWF_WWW_PATH') && is_file(GWF_WWW_PATH.'challenge/WCChallenge.php'))
+		{
+			require_once GWF_WWW_PATH.'challenge/WCChallenge.php';
+		}
+		if (class_exists('WCChallenge'))
+		{
+			return WCChallenge::trans($this, $key, $args);
+		}
+		return $this->lang($key, $args);
+	}
 	public function getName() { return $this->getTitle(); }
 	public function getVotecount() { return $this->getVar('chall_votecount'); }
 	public function hasTag($tag) { return false !== strpos($this->getVar('chall_tags'),",$tag,"); }
@@ -732,13 +744,13 @@ final class WC_Challenge extends GDO
 			echo $error;
 			return false;
 		}
+		if ($this->isSpacesRemoved()) {
+			$answer = str_replace(' ', '', $answer);
+		}
 		
 		if ($this->isHashedPassword()) {
 			if ($this->isCaseI()) {
 				$answer = mb_strtolower($answer);
-			}
-			if ($this->isSpacesRemoved()) {
-				$answer = str_replace(' ', '');
 			}
 			for ($i = 0; $i < 313370612; $i++) {
 				$answer = mb_strtolower(sha1($answer));

@@ -153,6 +153,7 @@ $lang = array(
 	'tt_challs_from' => '%s %s Hádanky vytvořené uživatelem %s',
 
 	# Form Titles
+	'source_code_hint' => 'Příslušný zdrojový kód je pro tuto výzvu k dispozici.',
 	'ft_solution' => 'Tvoje řešení %s',
 	'ft_edit_chall' => 'Edituj tuto hádanku',
 	'ft_link_site' => 'Přidej stránku ke svému účtu',

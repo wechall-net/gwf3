@@ -156,6 +156,7 @@ $lang = array(
 	'tt_challs_from' => 'Challenges de %s %s apportés par %s',
 
 	# Form Titles
+    'source_code_hint' => 'Le code source concerné est disponible pour ce challenge.',
 	'ft_solution' => 'Votre solution pour %s',
 	'ft_edit_chall' => 'Editer ce Challenge',
 	'ft_link_site' => 'Associer un Site a votre Compte',
