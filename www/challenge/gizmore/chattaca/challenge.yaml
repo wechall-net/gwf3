@@ -1,0 +1,25 @@
+id: gizmore.chattaca
+title: ChATTACA
+score: 3
+creators: [gizmore]
+tags: [Special]
+solution:
+  type: require
+  path: secret.php
+placeholders:
+  pygdo_url: https://github.com/gizmore/pygdo
+  mogwai_connect_url: https://mogwai.mira-gpt.org/connect.overview.html
+  mira_url: https://mira-gpt.org
+  mira_github_url: https://github.com/mira-gpt
+translations:
+  en:
+    title: ChATTACA
+    info_html: |
+      Hello {name},<br/><br/>
+      I proudly present the <a href="{pygdo_url}">pygdo</a> chat-bot.<br/><br/>
+      It <a href="{mogwai_connect_url}">connects</a> to dozens of servers and various platforms.<br/>
+      Also, OpenAI Codex is attached to it, and I call the model behind it <a href="{mira_url}">Mira</a>.<br/>
+      She is helping me a lot and even has her own <a href="{mira_github_url}">github</a> account.<br/><br/>
+      She also knows the solution to this challenge.<br/><br/>
+      Your job is to convince her to give you the password to the ChATTACA challenge.<br/><br/>
+      Good Luck!<br/>- gizmore
