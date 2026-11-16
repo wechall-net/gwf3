@@ -1,0 +1,49 @@
+id: crappyshare
+title: Crappyshare
+score: 4
+creators: [Z, Gizmore]
+tags: [Exploit, PHP]
+placeholders:
+  source: crappyshare.php
+  upload_script_file: crappyshare.php
+  source_link: index.php?show=code
+  solution_file: solution.php
+solution: false
+source_code:
+  code:
+    file: crappyshare.php
+    title: crappyshare.php
+translations:
+  en:
+    title: Description
+    info_html: 'Z and Gizmore were thinking of a file-sharing company, Crappyshare, to collect the latest warez and earn money
+      in one go.<br/>While gizmore was working with the designer on the xhtml/css stuff, Z implemented <a href="{upload_script_file}">the
+      upload script</a>,<br/>and we got first results...but it seems to contain a vulnerability somewhere.<br/>Some crackers
+      already managed to gather sensitive local files ({solution_file}) and broke into the server.<br/>Could you please help
+      us to find the vulnerability?<br/><a href="{source_link}">Click here to see the code</a>.<br/><br/>Note: This challenge
+      is simulated as this would have been a real security issue. Multiple solutions are accepted.'
+  de:
+    title: Beschreibung
+    info_html: Z und gizmore haben sich eine File-Sharing-Seite ausgedacht (Crappyshare), um die neuesten Warez und Geld auf
+      einen Streich zu erlangen.<br/>Während der Designer und gizmore sich um das CSS/XHTML bemühten, implementierte Z <a
+      href="{upload_script_file}">das Upload Script</a>,<br/>und nun haben wir erste Ergebnisse. Leider scheint es, als ob
+      sich im Script eine Sicherheitslücke befände.<br/>Einige Cracker haben bereits auf geheime Dateien zugegriffen ({solution_file})
+      und sind in den Server eingebrochen.<br/>Kannst du uns vielleicht helfen die Lücke zu finden?<br/><a href="{source_link}">Klicke
+      hier um den Quelltext einzusehen</a>.<br/>
+  fi:
+    title: Description
+    info_html: 'Z ja Gizmore olivat ajatelleet tiedostojenjakamis-yritystä, Crappysharea, kerätäkseen uusimmat "Waret" ja
+      ansaita rahaa samalla kertaa. <br/>Samalla kun gizmore työsti xhtml/css kamaa, Z toteutti <a href="crappyshare.php">
+      Upload skriptin </a>, <br/>Ja saimme ensimmäiset tulokset ... mutta siinä tuntuu olevan haavoittuvainen kohta. <br/>Muutama
+      crackeri on jo ehtinyt kerätä arkaluonteisia "local file"-tiedostoja ({solution_file}) ja murtautuivat palvelimelle.
+      <br/>Voisitko auttaa meitä löytämään haavoittuvuuden?<br/><a href="{source_link}"> Klikkaa tästä nähdäksesi koodin </a>.
+      <br/><br/>Huom: Tämä haaste on simuloitu, kuin tämä olisi ollut todellinen turvallisuusongelma. Useita ratkaisuja hyväksytään.'
+  it:
+    title: Descrizione
+    info_html: 'Z e Gizmore stavano pensando ad una compagnia di file-sharing, Crappyshare, per collezionare gli ultimissimi
+      software, e guadagnare qualche soldino, in un colpo solo.<br/>Mentre Gizmore lavorava con il designer sulle questioni
+      xhtml/css, Z ha implementato <a href="{upload_script_file}">lo script di upload</a>,<br/>e abbiamo avuto i primi risultati...
+      ma sembra che lo script contenga una vulnerabilità da qualche parte.<br/>Alcuni crackers sono riusciti ad ottenere dei
+      file locali sensibili ({solution_file}) e sono riusciti ad accedere al server.<br/>Ci puoi aiutare a trovare la vulnerabilità?<br/><a
+      href="{source_link}">Clicca qui per vedere il codice</a>.<br/><br/>Nota: La sfida è simulata, poichè una versione live
+      avrebbe posto un reale problema di sicurezza. Sono accettate diverse soluzioni.'
