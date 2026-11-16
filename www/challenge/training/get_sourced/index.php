@@ -1,106 +1,25 @@
 <?php
-chdir("../../../");
-define('GWF_PAGE_TITLE', 'Training: Get Sourced');
-require_once("challenge/html_head.php");
-require(GWF_CORE_PATH.'module/WeChall/solutionbox.php');
-if (false === ($chall = WC_Challenge::getByTitle('Training: Get Sourced'))) {
-	$chall = WC_Challenge::dummyChallenge('Training: Get Sourced');
+require_once dirname(__DIR__, 2).'/WCChallenge.php';
+WCChallenge::run(__DIR__, array(
+    'challenge_post_content' => function($translations) {
+        return '<p style="color:#e5e5e5;">'.$translations['info2_html'].'</p>';
+    },
+), array(
+    'challenge_after' => 'trainingGetSourcedComment',
+    'after_footer' => 'trainingGetSourcedEnd',
+));
+
+function trainingGetSourcedComment($translations)
+{
+    $comment = htmlspecialchars($translations['comment'], ENT_QUOTES, 'UTF-8');
+    return '<!-- '.$comment.' -->'.PHP_EOL;
 }
-$chall->showHeader();
-$chall->onCheckSolution();
-?>
-<div class="box box_c">
-	<p><?php echo $chall->lang('info'); ?></p>
-	<p style="color:#e5e5e5;"><?php echo $chall->lang('info2'); ?></p>
-</div>
-<!-- <?php echo $chall->lang('comment'); ?> -->
-<?php
-formSolutionbox($chall);
-require_once("challenge/html_foot.php");
-?>
-<!-- <?php echo $chall->lang('comment'); ?> -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                          
-                                                                                                                                                                                                                                                       <!-- <?php echo $chall->lang('solution'); ?> -->                                                                                                                                                                                                                                                                                                            
+function trainingGetSourcedEnd($translations)
+{
+    $solution = htmlspecialchars($translations['solution'], ENT_QUOTES, 'UTF-8');
+    return '<!-- '.htmlspecialchars($translations['comment'], ENT_QUOTES, 'UTF-8').' -->'.
+        str_repeat(PHP_EOL, 37).
+        str_repeat(str_repeat(' ', 74).PHP_EOL, 48).
+        str_repeat(' ', 247).'<!-- '.$solution.' -->'.str_repeat(' ', 247).PHP_EOL;
+}
