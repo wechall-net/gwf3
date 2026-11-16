@@ -1,17 +1,5 @@
 <?php
 $secret = require('secret.php');
-chdir('../../../');
-define('GWF_PAGE_TITLE', 'Table Names II');
-require_once('challenge/html_head.php');
-require(GWF_CORE_PATH.'module/WeChall/solutionbox.php');
-
-if (false === ($chall = WC_Challenge::getByTitle(GWF_PAGE_TITLE)))
-{
-	$chall = WC_Challenge::dummyChallenge(GWF_PAGE_TITLE, 6, 'challenge/nurfed/more_table_names/index.php', $secret['flag']);
-}
-$chall->showHeader();
-$chall->onCheckSolution();
-
 if (false !== Common::getGet('login'))
 {
 	$username = Common::getGetString('username', '');
@@ -19,7 +7,7 @@ if (false !== Common::getGet('login'))
 	
 	if (preg_match('/statistics|tables|columns|table_constraints|key_column_usage|partitions|schema_privileges|schemata|database|schema\(\)/i', $username.$password))
 	{
-		echo GWF_HTML::error(GWF_PAGE_TITLE, $chall->lang('on_match'));
+		echo GWF_HTML::error(GWF_PAGE_TITLE, $chall->trans('on_match'));
 	}
 	else
 	{
@@ -36,13 +24,13 @@ if (false !== Common::getGet('login'))
 		$query = "SELECT * FROM {$secret['database']}.{$secret['table_name']} WHERE username='$username' AND password='$password'";
 		if (false === ($result = ($db->queryFirst($query, false))))
 		{
-			echo GWF_HTML::error(GWF_PAGE_TITLE, $chall->lang('on_login_fail'));
+		echo GWF_HTML::error(GWF_PAGE_TITLE, $chall->trans('on_login_fail'));
 		}
 		else
 		{
 			$user = isset($result['username']) ? $result['username'] : '';
 			$message = isset($result['message']) ? $result['message'] : '';
-			echo GWF_HTML::message(GWF_PAGE_TITLE, $chall->lang('on_logged_in', array(GWF_HTML::display($user), GWF_HTML::display($message))));
+		echo GWF_HTML::message(GWF_PAGE_TITLE, $chall->trans('on_logged_in', array('username' => GWF_HTML::display($user), 'message' => GWF_HTML::display($message))));
 		}
 	}
 }
@@ -50,11 +38,9 @@ if (false !== Common::getGet('login'))
 ?>
 <div class="box box_c">
 <form action="challenge.php" method="get">
-<div><?php echo $chall->lang('username'); ?>: <input type="text" name="username" value="" /></div>
-<div><?php echo $chall->lang('password'); ?>: <input type="text" name="password" value="" /></div>
-<div><input type="submit" name="login" value="<?php echo $chall->lang('login'); ?>" /></div>
+<div><?php echo $chall->trans('username'); ?>: <input type="text" name="username" value="" /></div>
+<div><?php echo $chall->trans('password'); ?>: <input type="text" name="password" value="" /></div>
+<div><input type="submit" name="login" value="<?php echo $chall->trans('login'); ?>" /></div>
 </form>
 </div>
 <?php
-echo $chall->copyrightFooter();
-require_once('challenge/html_foot.php');
