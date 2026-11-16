@@ -1,0 +1,23 @@
+id: railsbin
+title: Railsbin
+score: 5
+creators: [Gizmore]
+tags: [Exploit]
+solution:
+  type: require
+  path: railsbin.solution.php
+placeholders:
+  railsbin_source_url: https://github.com/gizmore/railsbin
+  railsbin_demo_url: http://railsbin.wechall.net
+translations:
+  en:
+    title: Railsbin
+    info_html: |
+      The years are passing by, and it is christmas vacation time again.<br/>
+      I was playing a lot with ruby and needed a pastebin service with an API for my bot.<br/>
+      So... I simply created one myself, within a few hours, using good old RubyOnRails.<br/>
+      The project named <a href="{railsbin_source_url}">railsbin</a> is open source, but has a few security problems.<br/>
+      Can you exploit the demo site?<br/>
+      The demo is available at <a href="{railsbin_demo_url}">railsbin.wechall.net</a>.<br/>
+      The solution is the password hash of user solution.<br/><br/>
+      Happy Challenging!<br/>gizmore
