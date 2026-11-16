@@ -1,0 +1,47 @@
+id: training.encodings1
+title: 'Training: Encodings I'
+score: 1
+solution: false
+placeholders:
+  jpk: '{GWF_WEB_ROOT}tools/JPK'
+  challenge_trailer: |-
+    <br/>
+    <br/>
+    <pre>
+    10101001101000110100111100110100
+    00011101001100101111100011101000
+    10000011010011110011010000001101
+    11010110111000101101001111010001
+    00000110010111011101100011110111
+    11100100110010111001000100000110
+    00011110011110001111010011101001
+    01011100100000101100111011111110
+    10111100100100000111000011000011
+    11001111100111110111110111111100
+    10110010001000001101001111001101
+    00000110010111000011110011111100
+    11110011111010011000011110010111
+    0100110010111100100101110
+    </pre>
+translations:
+  en:
+    title: 'Training: Encodings I'
+    info_html: 'We intercepted this message from one challenger to another, maybe you can find out what they were talking
+      about.<br/>To help you on your progress I coded a small java application, called <a href="{jpk}">JPK</a>.<br/>Note:
+      The message is most likely in english.'
+  de:
+    info_html: 'Wir haben eine Nachricht zwischen zwei Spielern abgefangen. Vielleicht kannst du damit etwas anfangen.<br/>Um
+      dir beim Challenge-Lösen zu helfen habe ich ein &quot;kleines&quot; Java Programm geschrieben: <a href="{jpk}">JPK</a>.<br/>Notiz:
+      Die Nachricht ist wahrscheinlich in Englisch.'
+  fi:
+    info_html: 'Olemme siepanneet tämän viestin, joka oli tarkoitettu yhdeltä haastajista toiselle haastajalle, ehkä sinä
+      keksit mistä he puhuivat.<br/>Auttaakseni sinua edistymisessässi, koodasin pienen Java-sovelluksen, nimeltään <a href="{jpk}">JPK</a>.<br/>Huomautus:
+      Teksti on todennäköisesti englantia.'
+  fr:
+    info_html: 'Nous avons intercepté ce message d''un challenger à un autre, peut-être peux-tu découvrir de quoi parlent-ils.<br/>Pour
+      vous aider dans votre progression j''ai codé une petite application java appelée <a href="{jpk}">JPK</a>.<br/>Note:
+      Ce message est en anglais.'
+  it:
+    info_html: 'Abbiamo intercettato un messaggio scambiato da due utenti; forse puoi capire di cosa stanno parlando.<br/>Per
+      aiutarti ho scritto un piccola applicazione Java, chiamata <a href="{jpk}">JPK</a>.<br/>Nota: Il messaggio è probabilmente
+      in inglese.'
