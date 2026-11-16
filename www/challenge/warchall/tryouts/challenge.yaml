@@ -1,0 +1,42 @@
+id: warchall.tryouts
+title: 'Warchall: Tryouts'
+score: 5
+creators: [matrixman]
+tags: [Linux, Exploit, Warchall]
+solution:
+  type: require
+  path: tryouts_solution.php
+input_maxlength: 14
+warchall_ads: true
+placeholders:
+  war_url: '{GWF_WEB_ROOT}challenge/warchall/begins/index.php'
+  home: <i>/home/level/matrixman/13_tryouts</i>
+translations:
+  en:
+    title: Tryouts
+    info_html: |
+      The challenge site veteran {user:matrixman} is challenging you to exploit his first warchall challenge which you can find in {home} on the box.<br/>
+      Of course you need to create your <a href="{war_url}">warchall account</a> if you haven't done so already.<br/>
+      Do not try random things on your target as it is pretty straightforward.<br/><br/>
+      Happy Challenging!
+  de:
+    title: Die Versuchung
+    info_html: |
+      Der Challenge Seiten Veteran {matrixman} fordert Dich heraus seine erste Warchall Challenge zu lösen welche du in {home} auf der Box finden kannst.<br/>
+      Natürlich brauchst du einen <a href="{war_url}">Warchall Account</a> falls Du noch keinen hast.<br/>
+      Versuch' keine zufälligen Dinge. Es ist doch sehr offensichtlich!<br/><br/>
+      Viel Spaß!
+  fr:
+    title: Remuer Que
+    info_html: |
+      {matrixman}, le vétéran des sites de challenge vous met au défi d'exploiter son premier challenge warchall que vous pourrez trouver dans {home} sur la box.<br/>
+      Bien sûr, vous devez créer votre <a href="{war_url}">compte warchall</a> si vous ne l'avait pas déjà fait.<br/>
+      N'essayez pas des choses au hasard sur votre cible parce qu'il est assez simple.<br/><br/>
+      Bon challenge!
+  it:
+    title: 'Tryouts '
+    info_html: |
+      Il veterano di siti di sfide {matrixman} ti sta sfidando a sfruttare una delle vulnerabilità presenti nella sua prima sfida sulla warchall, disponibile nella cartella {home} sulla macchina.<br/>
+      Ovviamente devi creare un <a href="{war_url}">account warchall</a> se non l'hai già fatto.<br/>
+      Non cercare di eseguire cose a caso sul tuo bersaglio, visto che ciò che devi fare è abbastanza palese.<br/><br/>
+      Buon divertimento!
