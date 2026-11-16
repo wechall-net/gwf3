@@ -1,0 +1,25 @@
+id: van_eck
+title: Van Eck
+score: 4
+creators: [gizmore, tehron]
+tags: [Math, Coding]
+placeholders:
+  yt: https://www.youtube.com/watch?v=etMJxB-igrc
+solution:
+  type: require
+  path: solution.php
+  extract: [1]
+  case_sensitive: false
+translations:
+  en:
+    title: Van Eck
+    info_html: |-
+      Hello {name},<br/>
+      <br/>
+      In this programming challenge you have to find the x in van_eck(x),<br/>
+      where a resulting value of {n} occurs the first time.<br/>
+      <br/>
+      To get you started you might want to watch <a href="{yt}">this eckgy video</a>.<br/>
+      <br/>
+      Keep your cores busy and beaver.<br/>
+      - gizmore and tehron
