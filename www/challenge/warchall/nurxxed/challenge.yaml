@@ -1,0 +1,21 @@
+id: warchall.nurxxed
+title: 'Warchall: Nurxxed'
+score: 6
+creators: [nurfed]
+tags: [PHP, Exploit, Warchall]
+solution:
+  type: require
+  path: www/config.php
+input_maxlength: 14
+warchall_ads: true
+placeholders:
+  home: http://nurxxed.warchall.net
+  flag: http://nurxxed.warchall.net/config.php
+translations:
+  en:
+    title: Nurxxed
+    info_html: |
+      It is christmas eve 2013. Nobody loves you and you decide to test your exploiting skills on php unserialize.<br/><br/>
+      The new challenge is named <a href="{home}">Nurxxed</a> and is hosted on the warchall box.<br/>
+      Your precious flag is in <a href="{flag}">config.php</a>.<br/><br/>
+      Happy Exploiting!<br/>nurfed
