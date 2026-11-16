@@ -1,0 +1,30 @@
+id: training.net.nodns
+title: 'Training: No DNS'
+score: 1
+creators: [gizmore]
+tags: [Training, Network]
+solution: false
+solution_box: false
+translations:
+  en:
+    title: No DNS
+    info_html: |-
+      Hello Hacker,<br/>
+      <br/>
+      In this little training challenge you have to request <a href="{url}">{url}</a>.<br/>
+      <br/>
+      I hope this info is enough.<br/>
+      <br/>
+       - gizmore<br/><br/>Shouts go out to the wechall admins; dloser, tehron and livinskull :)
+    err_host: You have to make a request to &quot;%s&quot;.
+  de:
+    title: No DNS
+    info_html: |-
+      Hallo Hacker,<br/>
+      <br/>
+      In dieser kleinen Training-Challenge must Du eine Anfrage an <a href="{url}">{url}</a> senden.<br/>
+      <br/>
+      Ich hoffe diese Informationen sind ausreichend.<br/>
+      <br/>
+       - gizmore<br/><br/>Vielen Dank an die WeChall Admins; dloser, tehron and livinskull :)
+    err_host: Du musst eine Anfrage an &quot;%s&quot; senden.
