@@ -1,0 +1,66 @@
+id: Jinx.chessy
+title: Chessy Hawks
+score: 3
+creators: [Jinx]
+tags: [Stegano, Encoding]
+solution:
+  type: require
+  path: solution.php
+placeholders:
+  image: chessy_hawks.gif
+translations:
+  en:
+    title: Chessy Hawks
+    info_html: |-
+      Today something weird happened to you.<br/>
+      You took a walk in the park and found a USB stick on a chessboard, together with weird numerals on the playfield.<br/>
+      You instantly wondered if they are related to each other, and took both the stick and a sketch of the board home.<br/>
+      Your thoughts were right. The stick seems encrypted and the chessboard probably reveals the password:<br/>
+      <br/>
+      <img src="{image}" title="Your sketch of the chessboard" alt="Chessboard Riddle" /><br/>
+      <br/>
+      Enjoy!
+  de:
+    title: Chessy Hawks
+    info_html: |-
+      Heute ist Dir etwas merkwürdiges passiert.<br/>
+      Bei einem Spaziergang durch den Park hast du einen USB Stick auf einem der Schachbretter gefunden, zusammen mit Merkwürdigen Zahlen auf dem Spielfeld.<br/>
+      Sofort hast Du dich gefragt ob diese im Zusammenhang mit dem Stick stehen. Du fertigst eine Skizze an und nimmst den Stick und die Zeichnung mit nach Hause.<br/>
+      Deine Gedanken waren richtig. Der Stick scheint verschlüsselt zu sein und das Schachbrett gibt wahrscheinlich das Passwort Preis:<br/>
+      <br/>
+      <img src="{image}" title="Deine Skizze vom Schachbrett" alt="Schachbrett Rätsel" /><br/>
+      <br/>
+      Viel Spaß!
+  es:
+    title: Chessy Hawks
+    info_html: |-
+      Hoy te ha sucedido algo extraño.<br/>
+      Estabas dando un paseo por el parque y encontraste una memoria USB sobre un tablero de ajedrez, junto con unos extraños números en los cuadros.<br/>
+      Al instante te preguntaste si estaban relacionados entre sí, y te llevaste la memoria USB y un croquis del tablero a casa.<br/>
+      Tus pensamientos eran correctos. La memoria USB parece estar encriptada y el tablero de ajedrez probablemente te mostrará la contraseña:<br/>
+      <br/>
+      <img src="{image}" title="Tú croquis del tablero" alt="Reto Tablero" /><br/>
+      <br/>
+      ¡Disfruta!
+  fr:
+    title: Chessy Hawks
+    info_html: |-
+      Aujourd'hui, quelque chose de bizarre est arrivé.<br/>
+      Vous preniez l'air dans le parc, quand soudainement vous avez trouvé une clé USB posé sur un jeu d’échecs avec des numéros bizarres.<br/>
+      Vous vous êtes instantanément demandé si les objets étaient liés entres-eux, puis vous les avez rapportés chez vous.<br/>
+      Vous aviez raison. La clé USB semble être chiffrée et le damier doit probablement détenir le mot de passe:<br/>
+      <br/>
+      <img src="{image}" title="L'esquisse du jeu d'échecs" alt="L'énigme du jeu d'échecs" /><br/>
+      <br/>
+      Amusez-vous!
+  it:
+    title: 'Chessy Hawks '
+    info_html: |-
+      Oggi ti è successo qualcosa di strano.<br/>
+      Mentre stavi facendo una passeggiata nel parco, hai trovato una penna USB vicino ad una scacchiera, insieme ad alcuni iscrizioni presenti sulla scacchiera stessa.<br/>
+      Ti sei subito chiesto se le due cose fossero collegate: per questo hai preso la penna ed uno sketch della scacchiera per studiarli meglio a casa tua.<br/>
+      Infatti, avevi ragione. La penna sembra essere criptata e la scacchiera contiene, molto probabilmente, la chiave necessaria per decriptarla:<br/>
+      <br/>
+      <img src="{image}" title="Lo sketch della scacchiera" alt="Indovinello della scacchiera" /><br/>
+      <br/>
+      Divertiti!
