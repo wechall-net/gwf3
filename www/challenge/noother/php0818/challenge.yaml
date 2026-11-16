@@ -1,0 +1,35 @@
+id: noother.php0818
+title: PHP 0818
+score: 3
+creators: [noother]
+tags: [Exploit, PHP]
+placeholders:
+  live: php0818.php
+solution: false
+solution_box: false
+source_code:
+  source:
+    file: php0818.php
+    title: PHP0818
+    direct: true
+translations:
+  en:
+    title: PHP 0818
+    info_html: |
+      PHP is weird!<br/>
+      Enter your magic number at the <a href="{live}">live script in action</a>.<br/>
+      <br/>
+      Happy Challenging!
+    btn_submit: Send Number
+    your_magic_number: Your magic number
+    err_wrong: Your magic number is obviously wrong!
+  it:
+    title: 'PHP 0818 '
+    info_html: |
+      PHP è strano!<br/>
+      Inserisci il numero magico nello <a href="{live}">script in azione</a>.<br/>
+      <br/>
+      Buon divertimento!
+    btn_submit: Invia numero
+    your_magic_number: Il tuo numero magico
+    err_wrong: Il numero magico è ovviamente sbagliato!

@@ -15,7 +15,7 @@ if (isset($_POST['answer']))
 	}
 	else
 	{
-		echo GWF_HTML::error('PHP 0818', $chall->lang('err_wrong'), false);
+		echo GWF_HTML::error('PHP 0818', $chall->trans('err_wrong'), false);
 	}
 }
 function noother_says_correct($number)
@@ -41,8 +41,8 @@ function noother_says_correct($number)
 ?>
 <div class="box box_c">
 	<form action="php0818.php" method="post" enctype="application/x-www-form-urlencoded">
-		<div><?php echo $chall->lang('your_magic_number'); ?>: <input type="text" name="number" value="" size="10" /></div>
-		<div><input type="submit" name="answer" value="<?php echo $chall->lang('btn_submit'); ?>" /></div>
+		<div><?php echo $chall->trans('your_magic_number'); ?>: <input type="text" name="number" value="" size="10" /></div>
+		<div><input type="submit" name="answer" value="<?php echo $chall->trans('btn_submit'); ?>" /></div>
 	</form>
 </div>
 <?php
