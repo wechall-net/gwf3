@@ -17,7 +17,7 @@ function salesman_fail(WC_Challenge $chall)
 {
 	GWF_Session::set('WCC_TR_CU_LEVEL_HAS_PB', false);
 	GWF_Session::set('WCC_TR_CU_LEVEL', 1);
-	return $chall->lang('err_reset');
+	return $chall->trans('err_reset');
 }
 
 function salesman_has_problem()
@@ -59,17 +59,17 @@ function salesman_check_answer(WC_Challenge $chall, $answer)
 				$chall->onChallengeSolved(GWF_Session::getUserID());
 				$level = 1;
 				GWF_Session::set('WCC_TR_CU_LEVEL', $level);
-				return $chall->lang('msg_solved');
+				return $chall->trans('msg_solved');
 			}
 			GWF_Session::set('WCC_TR_CU_LEVEL', $level);
-			return $chall->lang('msg_next_level', array($level));
+			return $chall->trans('msg_next_level', array($level));
 		}
 		else {
 			return salesman_fail($chall);
 		}
 	}
 	else {
-		return $chall->lang('err_no_prob');
+		return $chall->trans('err_no_prob');
 	}
 }
 
@@ -82,7 +82,7 @@ function salesman_check_answer_B(WC_Challenge $chall, $answer)
 	
 	if (0 === preg_match_all('/((\\d+)([A-Z]+))/i', $answer, $matches))
 	{
-		echo $chall->lang('err_format').PHP_EOL;
+		echo $chall->trans('err_format').PHP_EOL;
 		return false;
 	}
 	
@@ -103,13 +103,13 @@ function salesman_check_answer_B(WC_Challenge $chall, $answer)
 		$amt = $amounts[$i];
 		
 		if (!is_numeric($amt)) {
-			echo $chall->lang('err_item_num', array($name)).PHP_EOL;
+			echo $chall->trans('err_item_num', array('item_name' => $name)).PHP_EOL;
 			continue;
 		}
 		
 		$amt = (int) $amt;
 		if ($amt < 0) {
-			echo $chall->lang('err_item_num', array($name)).PHP_EOL;
+			echo $chall->trans('err_item_num', array('item_name' => $name)).PHP_EOL;
 			continue;
 		}
 		
@@ -120,14 +120,14 @@ function salesman_check_answer_B(WC_Challenge $chall, $answer)
 		}
 		
 		if ($stocks[$name] > $stock) {
-			echo $chall->lang('err_item_stock', array($stocks[$name], $name, $stock)).PHP_EOL;
+			echo $chall->trans('err_item_stock', array('item_amount' => $stocks[$name], 'item_name' => $name, 'available_stock' => $stock)).PHP_EOL;
 			continue;
 		}
 		
 		$amount += $amt;
 
 		if (!array_key_exists($name, $list)) {
-			echo $chall->lang('err_item', array($name)).PHP_EOL;
+			echo $chall->trans('err_item', array('item_name' => $name)).PHP_EOL;
 			continue;
 		}
 		
@@ -140,13 +140,13 @@ function salesman_check_answer_B(WC_Challenge $chall, $answer)
 	
 	$correct_amt = salesman_itemcount();
 	if ($amount !== $correct_amt) {
-		echo $chall->lang('err_item_count', array($amount, $correct_amt)).PHP_EOL;
+		echo $chall->trans('err_item_count', array($amount, $correct_amt)).PHP_EOL;
 		$correct = false;
 	}
 	
 	$correct_price = GWF_Session::get('WCC_TR_CU_PRICE');
 	if ($price !== $correct_price) {
-		echo $chall->lang('err_price', array($price, $correct_price)).PHP_EOL;
+		echo $chall->trans('err_price', array('submitted_price' => $price, 'solution' => $correct_price)).PHP_EOL;
 		$correct = false;
 	}
 	
@@ -154,7 +154,7 @@ function salesman_check_answer_B(WC_Challenge $chall, $answer)
 	$start = GWF_Session::get('WCC_TR_CU_TIME');
 	$needed = $now - $start;
 	if ($needed > WCC_TR_CU_TIMEOUT) {
-		echo $chall->lang('err_timeout', array(sprintf('%.02f', $needed), WCC_TR_CU_TIMEOUT)).PHP_EOL;
+		echo $chall->trans('err_timeout', array(sprintf('%.02f', $needed), WCC_TR_CU_TIMEOUT)).PHP_EOL;
 		$correct = false;
 	}
 	
