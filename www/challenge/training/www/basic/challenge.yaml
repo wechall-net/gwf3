@@ -1,0 +1,80 @@
+id: training.www.basic
+title: 'Training: WWW-Basics'
+score: 1
+creators: [Gizmore]
+tags: [HTTP, Training]
+solution: false
+solution_box: false
+translations:
+  en:
+    title: 'Training: WWW-Basics'
+    info_html: As you know, a popular part of the internet is called the World-Wide-Web.<br/>The www consists of http servers,
+      which serve html documents and other content types.<br/>Your mission here is easy. Setup a www server on your computer,
+      make it accessible by the outside, and serve the file {url}.<br/>The content of the file has to be exactly:<br/>{content}<br/>The
+      content has to be exact {length} bytes in length.<br/><br/>As soon as you have set it up you can choose the port your
+      server is using, 80 by default, and hit the button.<br/><br/>Enjoy!
+    content: My name is {name} and iChall.
+    btn_go: I have set it up. Please check my server.
+    err_file_not_found: Your webserver seems to be unreachable.
+    err_wrong: Your served content ({response_length} bytes)<br/>{response}<br/>differs from the wanted ({content_length}
+      bytes)<br/>{content}<br/>Please fix that!
+  de:
+    title: 'Training: WWW-Grundwissen'
+    info_html: 'Wie Du weisst besteht der populäre Teil des Internets aus dem &quot;World-Wide-Web&quot;.<br/>Das www besteht
+      aus HTTP Servern, welche HTML Dokumente oder anderen Inhalt ausliefern.<br/>Deine Aufgabe hier ist einfach. Setze einen
+      HTTP Server auf, mache ihn aus dem Internet erreichbar und liefere diese Datei aus: {url}.<br/>Der Inhalt dieser Datei
+      soll exakt lauten:<br/>{content}<br/>Die Datei muss genau {length} Bytes groß sein.<br/><br/>Sobald Du diesen Server
+      aufgesetzt hast kannst du einen Port wählen, 80 normalerweise, und den Knopf drücken.<br/><br/>Viel Spaß!'
+    content: Mein Name ist {name} und ich kann hacken.
+    btn_go: Ich habe fertig. Bitte prüfe meinen Server.
+    err_file_not_found: Dein Webserver ist anscheinend nicht aus dem Internet erreichbar.
+    err_wrong: Der Inhalt deiner Datei ({response_length} bytes)<br/>{response}<br/>weicht von dem gewünschten ab ({content_length}
+      bytes)<br/>{content}<br/>Bitte repariere das!
+  es:
+    title: 'Entrenamiento: WWW-Basics'
+    info_html: Como sabes, una conocida parte de internet es llamada Worl-Wide-Web.<br/>El www consiste en servidores http,
+      los cuales sirven documentos html y otros tipos de contenidos.<br/>Tu misión aqui es fácil. Crea un servidor www en
+      tu ordenador, hazlo accesible desde el exterior, y sirve el archivo {url}.<br/>El contenido del archivo tiene que ser
+      exactamente:<br/>{content}<br/>El contenido tiene que ser exactamente {length} bytes de longitud.<br/><br/>Tan pronto
+      como lo hayas creado puedes elegir el puerto que tu servidor esta usando, 80 por defecto, y pulsa el botón.<br/><br/>¡Disfruta!!
+    content: Mi nombre es {name} y iChall.
+    btn_go: Servidor creado. Por favor prueba mi servidor.
+    err_file_not_found: Tu servidor parece no estar disponible.
+    err_wrong: Tu contenido ({response_length} bytes)<br/>{response}<br/>es distinto del pedido ({content_length} bytes)<br/>{content}<br/>'Por
+      favor arreglalo!
+  fr:
+    title: 'Training: WWW-Basics'
+    info_html: Comme vous le savez, une part populaire d\internet est appelé le World-Wide-Web.<br/>Le www est constitué de
+      serveurs http, lesquels servent des documents html et d'autres type de contenu.<br/>Votre mission est facile. Mettez
+      en place un serveur www sur votre ordinateur, rendez-le accessible de l'exterieur, et servez le fichier {url}.<br/>Le
+      contenu de ce fichier doit être exactement:<br/>{content}<br/>Le contenu doit avoir exactement {length} octets de longueur.<br/><br/>Aussitôt
+      que vous l'avez mis en place, vous pouvez choisir le port de votre serveur à utiliser, 80 par défaut, et pressez le
+      bouton.<br/><br/>Enjoy!
+    content: My name is {name} and iChall.
+    btn_go: Je l'ai mis en place. Vérifiez mon serveur s'il vous plait.
+    err_file_not_found: Votre serveur semble être injoignable.
+    err_wrong: Votre contenu déservi ({response_length} octets)<br/>{response}<br/>diffère de ce qui est demandé ({content_length}
+      octets)<br/>{content}<br/>Corrigez le s'il vous plait!
+  it:
+    title: WWW - Basi del WWW
+    info_html: 'Come saprai, una parte molto popolare di Internet è chiamata: World-Wide-Web.<br/>Il WWW consiste di server
+      HTTP, che servono documenti HTML e altri formati.<br/>La tua missione è semplice. Intalla un server WWW sul tuo computer,
+      rendilo accessibile all''esterno, e rendi accessibile il file {url}.<br/>Il contenuto del file deve essere esattamente:<br/>{content}<br/>Il
+      contenuto deve avere una dimensione di {length} bytes.<br/><br/>Una volta installato il server, puoi inserire la porta
+      che il server sta utilizzando, 80 per default, e cliccare invia.<br/><br/>Buon divertimento!'
+    content: Il mio nome è {name} e iChall.
+    btn_go: Ho installato il server. Controllalo.
+    err_file_not_found: Il tuo webserver sembra irraggiungibile.
+    err_wrong: Il contenuto letto dal tuo server ({response_length} bytes)<br/>{response}<br/> differisce da quello voluto
+      ({content_length} bytes)<br/>{content}<br/>. Per favore, sistema il tutto e riprova!
+  tr:
+    title: 'Eğitim: WWW-Temelleri'
+    info_html: Bildiğiniz gibi &quot;World Wide Web&quot; İnternetin popüler parçası olduğunu.<br/>Www HTML belgeleri veya
+      başka bir içerik sunmak HTTP sunucuları, oluşur.<br/>Burada Senin görevin basittir. HTTP sunucusu üzerinde yer alan
+      internet onu erişilebilir yapmak ve bu dosyayı teslim:{url}.<br/>Bu dosyanın içeriği tam olmalıdır:<br/>{content}<br/>Dosyası
+      tam olmalıdır {length} Olmak üzere boyut olarak bayt.<br/><br/><br/>Bu sunucuyu kurduktan sonra , bir bağlantı noktasını
+      seçin, genellikle 80 ve düğmesine basabilirsiniz<br/>iyi Eğlenin!
+    content: Benim adım {name} ve ben doğrayın.
+    btn_go: Ben hazırım. Benim sunucu kontrol edin .
+    err_file_not_found: Sizin web sunucusu görünüşte Internet'ten erişilebilir değil.
+    err_wrong: Dosyanızın içeriği ({response_length} bytes)<br/>{response}<br/>
