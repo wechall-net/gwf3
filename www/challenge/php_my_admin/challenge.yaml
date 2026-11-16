@@ -1,0 +1,40 @@
+id: php_my_admin
+title: PHP My Admin
+score: 4
+creators: [Gizmore]
+tags: [Research]
+solution: false
+solution_box: false
+translations:
+  en:
+    title: PHP My Admin
+    info_html: |
+      Your mission here is easily explained:<br/>
+      Find the hidden PHPMyAdmin page which is used by the admins to maintain the database on the wechall server.<br/>
+      <p style="color:#fefefe">You don't need a hint, do you?</p>
+      We are awaiting your success.<br/>
+      Good Luck!
+  de:
+    title: PHP Mein Verwalter
+    info_html: |
+      Deine Aufgabe hier ist leicht erklärt:<br/>
+      Du sollst die &quot;PHPMyAdmin&quot; Webseite aufspüren die von den Admins benutzt wird um die Datenbank zu verwalten.<br/>
+      <p style="color:#fefefe">Du brauchst doch wohl keinen Hinweis, oder?</p>
+      Wir hoffen auf Deinen Erfolg.<br/>
+      Viel Glück!
+  fr:
+    title: PHP My Admin
+    info_html: |
+      Votre mission est simple:<br/>
+      Trouvez la page PHPMyAdmin cachée qui est utilisée par les admins pour maintenir la base de données sur le serveur de wechall.<br/>
+      <p style="color:#fefefe">Vous n'avez pas besoin d'indices, n'est-ce pas ?</p>
+      Nous attendons votre succès.<br/>
+      Bonne chance!
+  it:
+    title: 'PHP My Admin '
+    info_html: |
+      La tua missione è semplice:<br/>
+      Trova la pagina nascosta di PHPMyAdmin, utilizzata dagli amministratori per gestire il database del server di WeChall.<br/>
+      <p style="color:#fefefe">Non ti serve alcun aiutino, vero?</p>
+      Aspettiamo il tuo successo.<br/>
+      Buona fortuna!
