@@ -1,0 +1,14 @@
+id: gizmore.unwritten
+title: Unwritten
+score: 3
+creators: [gizmore]
+tags: [Crypto, Stegano]
+solution:
+  type: require
+  path: secret.php
+placeholders:
+  image: <img src="data/data.jpg" height="137"/>
+translations:
+  en:
+    title: Unwritten
+    info_html: <!-- Nothing here, move along -->{image}
