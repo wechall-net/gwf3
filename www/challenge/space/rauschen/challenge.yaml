@@ -1,0 +1,47 @@
+id: space.rauschen
+title: Rauschen
+score: 2
+creators: [space]
+tags: [Stegano, Special]
+placeholders:
+  challenge_post_content: <br/><img src="rauschen.png" alt="rauschen.png" /><br/>
+solution:
+  type: require
+  path: solution.php
+  case_sensitive: false
+translations:
+  en:
+    title: Rauschen
+    info_html: |
+      Your older brother grew up in the 90'ies... he showed you a picture with a hidden solution, but it looks like rauschen.
+  de:
+    title: Rauschen
+    info_html: Dein älterer Bruder ist in den 90ern aufgewachsen... er zeigte dir ein Bild mit einer versteckten Lösung, aber
+      es sieht aus wie Rauschen.
+  es:
+    title: Ruido
+    info_html: Tu hermano mayor creció en los años 90... te mostró una imagen con una solución oculta, pero parece ruido.
+  fi:
+    title: Kohina
+    info_html: Vanhempi veljesi kasvoi 90-luvulla... hän näytti sinulle kuvan, jossa on piilotettu ratkaisu, mutta se näyttää
+      kohinalta.
+  fr:
+    title: Bruit
+    info_html: Ton grand frère a grandi dans les années 90... il t'a montré une image avec une solution cachée, mais cela
+      ressemble à du bruit.
+  hu:
+    title: Zaj
+    info_html: A bátyád a 90-es években nőtt fel... mutatott neked egy képet rejtett megoldással, de úgy néz ki, mint zaj.
+  it:
+    title: Rumore
+    info_html: Tuo fratello maggiore è cresciuto negli anni '90... ti ha mostrato un'immagine con una soluzione nascosta,
+      ma sembra rumore.
+  pl:
+    title: Szum
+    info_html: Twój starszy brat dorastał w latach 90... pokazał ci obraz z ukrytym rozwiązaniem, ale wygląda jak szum.
+  ru:
+    title: Шум
+    info_html: Твой старший брат вырос в 90-х... он показал тебе изображение со скрытым решением, но оно выглядит как шум.
+  tr:
+    title: Gürültü
+    info_html: Ağabeyin 90'larda büyüdü... sana gizli bir çözüm içeren bir resim gösterdi, ama gürültü gibi görünüyor.
