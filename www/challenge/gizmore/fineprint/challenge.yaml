@@ -1,0 +1,56 @@
+id: gizmore.fineprint
+title: Fineprint
+score: 2
+creators: [Gizmore]
+tags: [Exploit, Training]
+solution:
+  type: require
+  path: secret.php
+placeholders:
+  fineprint_url: https://fineprint.chappy-bot.net
+  secret_file: secret.php
+translations:
+  en:
+    title: Fineprint
+    info_html: |
+      Hello {name}.<br/><br/>
+      We did have a good year for our Html2Pdf rendering service.<br/>
+      However, we have to punish competitors to raise our revenue.<br/><br/>
+      Your mission is to read &quot;{secret_file}&quot; on the <a href="{fineprint_url}">Fineprint server</a>.<br/><br/>
+      Good luck!<br/>- gizmore
+  de:
+    title: Das Kleingedruckte
+    link: The Fineprint Server
+    info_html: |
+      Hallo {name}<br/><br/>
+      Letztes Jahr hat unser Html2Pdf Konverter gute Gewinne eingefahren.<br/>
+      Wie auch immer, letzten Endes,... müssen wir leider die Konkurrenz bestrafen um unser Ergebnis weiter zu verbessern.<br/><br/>
+      Deine Mission ist "{secret_file}" auf dem <a href="{fineprint_url}">Fineprint</a>-Server auszulesen.<br/><br/>
+      Viel Erfolg!<br/> - gizmore
+  es:
+    title: La letra pequeña
+    link: El servidor Fineprint
+    info_html: |
+      Hola {name}<br/><br/>
+      El año pasado, nuestro convertidor Html2Pdf obtuvo buenos beneficios.<br/>
+      Sin embargo, al final del día... lamentablemente tenemos que castigar a la competencia para seguir mejorando nuestra puntuación.<br/><br/>
+      Tu misión es leer "{secret_file}" en el <a href="{fineprint_url}">servidor Fineprint</a>.<br/><br/>
+      ¡Buena suerte!<br/>  - gizmore
+  fr:
+    title: Les petits caractères
+    link: Le serveur Fineprint
+    info_html: |
+      Bonjour {name}<br/><br/>
+      L'année dernière, notre convertisseur Html2Pdf a réalisé de bons bénéfices.<br/>
+      Cependant, en fin de compte... malheureusement, nous devons punir la concurrence pour continuer à améliorer notre score.<br/><br/>
+      Votre mission est de lire "{secret_file}" sur le <a href="{fineprint_url}">serveur Fineprint</a>.<br/><br/>
+      Bonne chance !<br/> - gizmore
+  it:
+    title: La stampa fine
+    link: The Fineprint Server
+    info_html: |
+      Salve {name}<br/><br/>
+      L'anno scorso il nostro convertitore Html2Pdf ha realizzato buoni profitti.<br/>
+      Tuttavia, alla fine della giornata... purtroppo dobbiamo punire la concorrenza per continuare a migliorare il nostro punteggio.<br/><br/>
+      La tua missione è leggere "{secret_file}" sul <a href="{fineprint_url}">server Fineprint</a>.<br/><br/>
+      Buona fortuna!<br/> - gizmore
