@@ -1,0 +1,61 @@
+id: are_you_serial
+title: Are you serial
+score: 2
+creators: [Gizmore]
+tags: [PHP]
+solution: false
+solution_box: false
+source_code:
+  code.php:
+    file: code.php
+    title: code.php
+  insecure.inc.php:
+    file: insecure.inc.php
+    title: insecure.inc.php
+  SERIAL_LoginForm.php:
+    file: SERIAL_LoginForm.php
+    title: SERIAL_LoginForm.php
+  SERIAL_LogoutForm.php:
+    file: SERIAL_LogoutForm.php
+    title: SERIAL_LogoutForm.php
+  SERIAL_Solution.php:
+    file: SERIAL_Solution.php
+    title: SERIAL_Solution.php
+  SERIAL_User.php:
+    file: SERIAL_User.php
+    title: SERIAL_User.php
+translations:
+  en:
+    title: Are You Serial?
+    info_html: |
+      We are serialsly trying to build a secure website.<br/>
+      This time, we have it secure and extensible, and of course you can see all the sourcecode again:<br/>
+      <br/>
+      {a1}<br/>
+      {a2}<br/>
+      {a3}<br/>
+      {a4}<br/>
+      {a5}<br/>
+      {a6}<br/>
+      <br/>
+      As always, code you see is <a href="{code}">code in use</a>.<br/>
+    msg_wb: Welcome back, {username}, your userlevel is {userlevel}.
+    ft_login: Login
+    ft_logout: Logout
+  it:
+    title: Sei seriale?
+    info_html: |
+      Siamo serialmente cercando di costruire un sito sicuro.<br/>
+      Questa volta l'abbiamo costruito sicuro ed estensibile e, naturalmente, puoi dare un occhiata al sorgente:<br/>
+      <br/>
+      {a1}<br/>
+      {a2}<br/>
+      {a3}<br/>
+      {a4}<br/>
+      {a5}<br/>
+      {a6}<br/>
+      <br/>
+      Come sempre, il codice che vede è il <a href="{code}">codice in uso</a>.<br/>
+    msg_wb: Bentornato, {username}, il tuo livello utente è {userlevel}.
+    ft_login: 'Login '
+    ft_logout: 'Logout '

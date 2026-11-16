@@ -41,16 +41,16 @@ GWF_Debug::setMailOnError(false);
 if (false !== ($user = unserialize(Common::getCookie('serial_user', ''))))
 {
 	# Show welcome screen
-	echo GWF_HTML::message('Serial Challenger', $chall->lang('msg_wb', array(htmlspecialchars($user->getUsername()), $user->getPassword(), $user->getUserlevel())));
+	echo GWF_HTML::message('Serial Challenger', $chall->trans('msg_wb', array(htmlspecialchars($user->getUsername()), $user->getPassword(), $user->getUserlevel())));
 	
 	# Show logout form
-	echo $form_logout->serial_formz()->templateY($chall->lang('ft_logout'));
+	echo $form_logout->serial_formz()->templateY($chall->trans('ft_logout'));
 }
 # Guest
 else
 {
 	# Show login form
-	echo $form->serial_formz()->templateY($chall->lang('ft_login'));
+	echo $form->serial_formz()->templateY($chall->trans('ft_login'));
 }
 # --- 8< --- 8< --- SNIP --- 8< --- 8< --- #
 
