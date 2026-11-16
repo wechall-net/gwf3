@@ -27,7 +27,11 @@ $jpg_file = file_get_contents($jpg_path);
 
 $solution = WC_CryptoChall::generateSolution(require_once 'challenge/training/stegano/attachment/secret.php', true, false);
 
-$zip_path = GWF_PATH.'extra/temp/steganoattach/'.GWF_Session::getSessID().'.zip';
+$zip_dir = GWF_PATH.'extra/temp/steganoattach/';
+if (!is_dir($zip_dir) && !mkdir($zip_dir, 0775, true)) {
+	die('zip directory error');
+}
+$zip_path = $zip_dir.GWF_Session::getSessID().'.zip';
 $zip = new GWF_ZipArchive();
 if (false === $zip->open($zip_path, GWF_ZipArchive::CREATE)) {
 	die('zip error 1');
