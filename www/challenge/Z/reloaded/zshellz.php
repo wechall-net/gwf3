@@ -25,7 +25,7 @@ if (false === ($chall = WC_Challenge::getByTitle($title)))
 
 $prompt = '>';
 $zshellz = array(
-	ZRELOAD_LOCALHOST => array($chall->lang('your_box'), array('root@trinity_localhost#')),
+	ZRELOAD_LOCALHOST => array($chall->trans('your_box'), array('root@trinity_localhost#')),
 //	ZRELOAD_REMOTE => array('Remote Shell', 'root@10.2.2.2#'),
 //	ZRELOAD_MSSQL => array('ms sql database server', 'c:\\'),
 );
@@ -378,7 +378,7 @@ function zreload_func_help($shellid, $args)
 	{
 		$chall = WC_Challenge::dummyChallenge('Z - Reloaded', 6, '/challenge/Z/reloaded', false);
 	}
-	return $chall->lang('cmd_help');
+	return $chall->trans('cmd_help');
 }
 
 function zreload_func_clear($shellid, $args)
