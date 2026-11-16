@@ -1,0 +1,26 @@
+id: oleg.extractme
+title: eXtract Me
+score: 2
+creators: [oleg]
+tags: [Encoding]
+placeholders:
+  zip: r.zip
+solution:
+  type: require
+  path: oleg_solution.php
+translations:
+  en:
+    title: eXtract Me
+    info_html: |
+      Yo dog, I heard you like <a href="{zip}">zips</a> so we put a <a href="{zip}">zip</a> in your <a href="{zip}">zip</a> so you can unzip unzipped zips.<br/>
+      Enjoy!
+  de:
+    title: End-Pack Mich
+    info_html: |
+      Yo dog, Ich hab' gehört du magst <a href="{zip}">Zippers</a> also haben wir nen <a href="{zip}">Zipper</a> in Dein <a href="{zip}">Zipper</a> gepackt, damit du auspacken kannst während du unzippst.<br/>
+      Viel Spass!
+  it:
+    title: 'eXtract Me '
+    info_html: |
+      Yo dog, i heard you like <a href="{zip}">zips</a> so we put a <a href="{zip}">zip</a> in your <a href="{zip}">zip</a> so you can unzip unzipped zips.<br/>
+      Enjoy!
