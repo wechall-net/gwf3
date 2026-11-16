@@ -1,0 +1,24 @@
+id: dloser.brownos
+title: The BrownOS
+score: 7
+creators: [dloser]
+tags: [Unknown]
+solution:
+  type: require
+  path: solution.php
+  case_sensitive: false
+translations:
+  en:
+    title: The BrownOS
+    subtitle: Cheat Sheet
+    info_html: Reports have come in about a new kind of operating system that Gizmore is developing. Scans have detected an
+      extra open port on wechall.net that might be related to this. Additionally, one of our dumpster divers has found part
+      of what appears to be a cheat sheet for something called "BrownOS".<br/><br/>Please investigate the service at wc3.wechall.net
+      port 61221.<br/>
+    cheatsheet_html: |
+      <pre>FF: End Of Code marker
+
+      BrownOS[&lt;syscall&gt; &lt;argument&gt; FD &lt;rest&gt; FD] -&gt; BrownOS[&lt;rest&gt; &lt;result&gt; FD]
+
+      Quick debug: 05 00 FD 00 05 00 FD 03 FD FE FD 02 FD FE FD FE
+      For example: QD ?? FD  or  ?? ?? FD QD FD</pre>
