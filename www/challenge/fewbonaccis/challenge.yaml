@@ -1,0 +1,46 @@
+id: fewbonaccis
+title: Few Bonaccis
+score: 1
+creators: [gizmore]
+tags: [Coding, Math]
+solution: false
+solution_box: false
+translations:
+  en:
+    title: Few Bonaccis
+    info_html: |-
+      Hello {name},<br/>
+      <br/>
+      You and a coworker are talking about programming, in particular the fibonacci sequence.<br/>
+      You tell him fibonacci is solved, and there is a closed form to compute any number in O(1), etc...<br/>
+      He argues that you could not even create a microservice that computes fibonacci correctly in a reasonable time.<br/>
+      <br/>
+      You take the challenge and implement a microservice at the URL below.<br/>
+      You agree that your coworker will implement a script to test your service, and he may not modify it, once it is implemented.<br/>
+      The script will query your httpd a few times, and each request shall only take 2.618 seconds max.<br/>
+      Your service has to return the MD5 of the Nth fibonacci number.<br/>
+      <br/>
+      Example: http://your.host.ip/fib.pl?n=100 => d8400bceb05dfe785afcd2da4fdb010e<br/>
+      <br/>
+      Good Luck!<br/>
+       - gizmore
+    err_wrong: Your coworker was right!
+  de:
+    title: Few Bonaccis
+    info_html: |2-
+          Hallo {name},<br/>
+      <br/>
+      Sie und ein Kollege unterhalten sich über das Programmieren, insbesondere über die Fibonacci-Folge.<br/>
+      Sie sagen ihm, dass Fibonacci gelöst ist und dass es eine geschlossene Form gibt, um jede Zahl in O(1) zu berechnen, usw...<br/>
+      Er argumentiert, dass Sie nicht einmal einen Microservice erstellen könnten, der Fibonacci in einer vernünftigen Zeit korrekt berechnet.<br/>
+      <br/>
+      Sie nehmen die Herausforderung an und implementieren einen Microservice unter der unten angegebenen URL.<br/>
+      Sie vereinbaren, dass Ihr Kollege ein Skript implementiert, um Ihren Dienst zu testen, und dass er es nicht mehr ändern darf, sobald es implementiert ist.<br/>
+      Das Skript wird Ihren httpd einige Male abfragen, und jede Anfrage darf nur maximal 2,618 Sekunden dauern.<br/>
+      Ihr Dienst muss den MD5-Wert der N-ten Fibonacci-Zahl zurückgeben.<br/>
+      <br/>
+      Beispiel: http://your.host.ip/fib.pl?n=100 => d8400bceb05dfe785afcd2da4fdb010e<br/>
+      <br/>
+      Viel Glück!<br/>
+       - gizmore
+    err_wrong: Ihr Kollege hatte Recht!
