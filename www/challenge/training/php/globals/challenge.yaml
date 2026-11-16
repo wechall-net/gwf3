@@ -1,0 +1,58 @@
+id: training.php.globals
+title: 'Training: Register Globals'
+score: 2
+creators: [Gizmore]
+tags: [Exploit, PHP, Training]
+placeholders:
+  script: globals.php
+solution: false
+solution_box: false
+source_code:
+  source:
+    file: globals.php
+    title: globals.php
+translations:
+  en:
+    title: PHP - Register Globals
+    info_html: 'This challenge is a relict of old PHP times, where <a href="http://php.net/manual/en/security.globals.php">register
+      globals</a> has been enabled by default, which often lead to security issues.<br/>Again, your job is to login as admin,
+      and you are given the sourcecode.<br/><br/>Here is the link to the <a href="{script}">vulnerable script</a>.<br/>I have
+      also setup a test account: test:test<br/><br/>Enjoy!'
+    err_failed: This user/password combination is unknown.
+    msg_welcome_back: Welcome back, {username}.<br/>Your userlevel is {userlevel}.
+    th_username: Username
+    th_password: Password
+    btn_send: Send
+  de:
+    title: PHP - Register Globals
+    info_html: Diese Challenge ist ein Relict aus alten PHP Zeiten, wo <a href="http://php.net/manual/en/security.globals.php">register
+      globals</a> standardmäßig aktiviert war. Dies hat oft zu Sicherheitsproblemen geführt.<br/>Wieder einmal ist deine Aufgabe
+      Dich als Admin einzuloggen, und hier ist der Link zum <a href="{script}">verwundbaren Script</a>.<br/>Ich habe auch
+      einen Test Account angelegt; test:test<br/><br/>Viel Spass!
+    err_failed: Die Benutzer/Passwort Kombination ist unbekannt.
+    msg_welcome_back: Willkommen zurück, {username}.<br/>Dein Benutzerlevel ist {userlevel}.
+    th_username: Benutzer
+    th_password: Passwort
+    btn_send: Einloggen
+  fr:
+    title: PHP - Register Globals
+    info_html: 'Ce challenge est une relique des temps anciens de PHP, où les <a href="http://www.php.net/manual/fr/security.globals.php">register
+      globals</a> étaient activés par défaut, lesquels conduisaient à des failles de sécurité.<br/>Encore une fois, votre
+      travail est de vous connecter en tant qu''admin.<br/><br/>Voici un lien vers le <a href="{script}">script vulnérable</a>.<br/>J''ai
+      aussi mise en place un compte test : test:test<br/><br/>Enjoy!'
+    err_failed: Le couple user/password est inconnu.
+    msg_welcome_back: Bon retour, {username}.<br/>Votre niveau d'utilisateur est {userlevel}.
+    th_username: Username
+    th_password: Password
+    btn_send: Send
+  it:
+    title: 'PHP - Register Globals '
+    info_html: 'Questa sfida è un relitto dei tempi andati, dove <a href="http://php.net/manual/en/security.globals.php">register
+      globals</a> era attivato per default, cosa che spesso portava a problemi di sicurezza.<br/>Il tuo compito è ancora quello
+      di effettuare il login come admin.<br/><br/>Ecco il link allo <a href="{script}">script vulnerabile</a>.<br/>Ho anche
+      creato un account di test: test:test<br/><br/>Buon divertimento!'
+    err_failed: Questa combinazione utente/password è sconosciuta.
+    msg_welcome_back: Bentornato, {username}.<br/>Il tuo livello utente è {userlevel}.
+    th_username: Nome utente
+    th_password: 'Password '
+    btn_send: Invia
