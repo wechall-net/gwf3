@@ -1,0 +1,15 @@
+id: christmas2021.hippety
+title: 2021 Christmas Hippety
+score: 2
+creators: [gizmore]
+tags: [Stegano]
+solution:
+  type: require
+  path: solution.php
+translations:
+  en:
+    title: 2021 Christmas Hippety
+    info_html: |
+      The {user:EasterBunny} is <a href="hoppety.php" onclick="this.href='hop.php'">angry</a>, because he hates winter and has to wait so long for easter season and the sun.<br/>
+      Can you calm him down?.<br/><br/>
+      We wish you a merry Christmas 2021!<br/>
