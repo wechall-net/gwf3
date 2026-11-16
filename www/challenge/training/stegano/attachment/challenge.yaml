@@ -1,0 +1,27 @@
+id: training.stegano.attachment
+title: Stegano Attachment
+score: 2
+creators: [Gizmore]
+tags: [Stegano, Image, Training]
+solution: false
+placeholders:
+  attachment: attachment.php
+translations:
+  en:
+    title: Attachment
+    info_html: |
+      Hello challenger,<br/>
+      <br/>
+      You got mail and a <a href="{attachment}">nice attachment</a>.<br/>
+      Your unique solution which is bound to your session is in there too.<br/>
+      <br/>
+      Enjoy!
+  it:
+    title: Allegato
+    info_html: |
+      Ciao giocatore,<br/>
+      <br/>
+      Hai ricevuto una E-Mail ed un <a href="{attachment}">curioso allegato</a>.<br/>
+      La tua soluzione è unica ed è legata alla sessione; la troverai nella E-Mail inviata.<br/>
+      <br/>
+      Buon divertimento!
