@@ -1,0 +1,21 @@
+id: warchall.live_rce
+title: 'Warchall: Live RCE'
+score: 6
+creators: [gizmore]
+tags: [PHP, Exploit, Warchall]
+solution:
+  type: require
+  path: www/solution.php
+input_maxlength: 14
+warchall_ads: true
+placeholders:
+  home: http://rce.warchall.net
+  warchall: '{GWF_WEB_ROOT}challenge/warchall/begins/index.php'
+translations:
+  en:
+    title: Live RCE
+    info_html: |
+      phiper and nurfed fixed this challenge and made it a solveable relict.<br/>
+      We hope you enjoy!<br/><br/>
+      Access the <a href="{home}">challenge here on warchall</a>. Visit the <a href="{warchall}">Warchall challenge page</a>.<br/><br/>
+      Happy Exploiting<br/>phiber and nurfed
