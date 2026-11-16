@@ -1,0 +1,17 @@
+id: christmas2021.grampa
+title: 2021 Christmas Grampa
+score: 3
+creators: [gizmore]
+tags: [Coding, Stegano]
+solution:
+  type: require
+  path: solution.php
+translations:
+  en:
+    title: 2021 Christmas Grampa
+    info_html: |
+      Santa speaks many languages and is receiving a lot of letters this year.<br/>
+      But he gets old!<br/><br/>
+      The problem is that he will need glasses.<br/>
+      Do you need glasses as well?<br/><br/>
+      Please help Santa. <a href="{help}">Help!</a><br/>
