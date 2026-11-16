@@ -1,0 +1,54 @@
+id: space.pytong
+title: Py-Tong
+score: 2
+creators: [space]
+tags: [Exploit, Python]
+placeholders:
+  source: index.php?highlight=christmas
+  warchall: '{GWF_WEB_ROOT}challenge/warchall/begins/index.php'
+solution:
+  type: require
+  path: pytong_solution.php
+source_code:
+  source:
+    file: pytong.py
+    title: pytong.py
+    language: python
+translations:
+  en:
+    title: Py-Tong
+    info_html: |
+      A fellow hacker is challenging you to exploit a simple python script.<br/>
+      To exploit it live, create your <a href="{warchall}">Warchall account</a> and try your luck there.<br/>
+      To see what it is about you can view the <a href="{source}">source</a> in this challenge directory.<br/><br/>
+      It is a wrapper which is needed for SETREGID and finally gives the solution.<br/>
+      Note: It is not required to trigger a race condition, but it should work as well.<br/>
+      Note: You have to use the binary &quot;pytong&quot;, not pytong.py.<br/><br/>
+      Happy Challenging!
+  de:
+    title: Py-Tong
+    info_html: |
+      Ein Nachwuchs-Hacker fordert Dich heraus ein simples Python Script zu exploiten.<br/>
+      Um die Lücke Live auszunutzen musst du einen Shell Account auf der <a href="{warchall}">Warchall Box</a> anlegen und Dein Glück dort versuchen.<br/>
+      Um zu sehen worum es geht kannst du hier <a href="{source}">den Quelltext ansehen</a>.<br/><br/>
+      Notiz: Es ist nicht notwendig eine Race Condition zu provozieren, dies sollte aber dennoch funktionieren.<br/>
+      Notiz: Zum Ausbeuten der Lücke musst du das &quot;pytong&quot; Programm ausführen, nicht das pytong.py Script. Dieses Programm ist ein Wrapper welches unter SETREGID läuft und dir dann die Lösung ausspuckt.<br/><br/>
+      Happy Challenging!
+  es:
+    title: Py-Tong
+    info_html: |
+      Un amigo hacker esta retando a explotar un simple script de python.<br/>
+      Para explotarlo en vivo, tienes que crear tu <a href="{warchall}">cuenta de Warchall</a> y probar tu suerte allí.<br/>
+      Para ver de que se trata puedes <a href="{source}">ver el código fuente aquí</a>.<br/><br/>
+      Nota: No se requiere hacer una condición de carrera, pero debería funcionar así.<br/>
+      Nota: You have to use the binary &quot;pytong&quot; not the pytong.py. It is a wrapper which is needet for SETREGID and finally gives the solution.<br/><br/>
+      ¡Buena Suerte!
+  it:
+    title: 'Py-Tong '
+    info_html: |
+      Un compagno hacker ti sta sfidando per sfruttare un semplice script python.<br/>
+      Per fare ciò, devi creare un <a href="{warchall}">account sulla Warchall Box</a> e sbizzarrirti lì.<br/>
+      Per vedere di cosa si tratta, puoi visualizzare <a href="{source}">il sorgente dello script qui</a>.<br/><br/>
+      Nota: Non è necessario ricorrere ad una race condition, ma anche quest'ultima dovrebbe funzionare.<br/>
+      Nota: Devi usare il file binario &quot;pytong&quot; non il file pytong.py. Quest'ultimo è un wrapper necessario per SETREGID e per visualizzare la soluzione, una volta risolta la sfida.<br/><br/>
+      Buon divertimento!
