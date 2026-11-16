@@ -1,0 +1,19 @@
+title: Babbage and Coldplay
+score: 3
+solution: false
+translations:
+  en:
+    title: Babbage and Coldplay
+    info_html: |
+      We got <a href="{href}" title="Babbage and Coldplay">a recording</a> of the newcomer band, &quot;Babbage and Coldplay&quot;.<br/>
+      Can you find out if it contains any hidden message, so we can safely ship it to the customers?
+  de:
+    title: Babbage and Coldplay
+    info_html: |
+      Wir haben <a href="{href}" title="Babbage and Coldplay">Studioaufnahmen</a> von der Newcomer-Band &quot;Babbage and Coldplay&quot; erhalten.<br/>
+      Kannst du herausfinden ob sich darin versteckte Nachrichten befinden, damit wir die Aufnahme möglichst bald verkaufen können?
+  it:
+    title: 'Babbage and Coldplay '
+    info_html: |
+      Abbiamo <a href="{href}" title="Babbage and Coldplay">una registrazione</a> di una banda emergente, &quot;Babbage and Coldplay&quot;.<br/>
+      Puoi verificare se contiene qualche messaggio nascosto, così da poterla poi inviare ai nostri clienti?
