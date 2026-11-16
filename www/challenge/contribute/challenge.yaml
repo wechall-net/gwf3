@@ -1,0 +1,23 @@
+id: contribute
+title: Contribute
+score: 3
+creators: [gizmore]
+tags: [Special]
+solution: false
+solution_box: false
+placeholders:
+  project: https://github.com/wechall-net/gwf3
+translations:
+  en:
+    title: Contribute
+    info_html: |
+      Hello {username}<br/>
+      <br/>
+      We are all working on our latest stuff,<br/>
+      but in this challenge your job is to contribute some code back to the <a href="{project}">WeChall project</a>.<br/>
+      <br/>
+      May it be a new feature, a bugfix, or maybe you create a new challenge for all of us, be-it training or unique.<br/>
+      You probably can also solve this by spreading the words, but this has not happened so far.<br/>
+      <br/>
+      Thanks in advance for your contribution.<br/>
+      The WeChall Admins<br/>
