@@ -1,30 +1,17 @@
 <?php
-# Higlighter Plain
-if (isset($_GET['show']) && $_GET['show'] === 'source')
-{
-	header('Content-Type: text/plain; charset=utf8;');
-	echo file_get_contents('index.php');
-	die();
+# Highlighter Plain
+if (isset($_GET['show']) && $_GET['show'] === 'source') {
+    header('Content-Type: text/plain; charset=utf8;');
+    echo file_get_contents(__FILE__);
+    die();
 }
 
-# Change dir to web root
-chdir('../../../../../');
+# Change dir to web root to print the website header
+require_once dirname(__DIR__, 4).'/WCChallenge.php';
 
-# Print the website header
-define('GWF_PAGE_TITLE', 'Local File Inclusion');
-require_once('challenge/html_head.php');
-if (false === ($chall = WC_Challenge::getByTitle('Training: PHP LFI'))) {
-	$chall = WC_Challenge::dummyChallenge('Training: PHP LFI', 2, 'challenge/training/php/lfi/up/index.php', false);
-}
-$chall->showHeader();
-
-
-# Highlighter BBCode
-if (isset($_GET['highlight']) && $_GET['highlight'] === 'christmas')
-{
-	echo GWF_Message::display('[PHP]'.file_get_contents($_SERVER['SCRIPT_FILENAME']).'[/PHP]');
-	require_once('challenge/html_foot.php');
-	return;
+$highlightSource = isset($_GET['highlight']) && $_GET['highlight'] === 'christmas';
+if ($highlightSource) {
+    unset($_GET['highlight']);
 }
 
 ###############################
@@ -35,49 +22,47 @@ $code_emulate_pnb = '$filename = Common::substrUntil($filename, "\\0");'; # Emul
 $code2 = 'include $filename;';
 ### End of exploit ###
 
-# Show the mission box
-$url = 'index.php?file=';
-$ex = array('welcome', 'news', 'forums');
-$showsrc1 = 'index.php?show=source';
-$showsrc2 = 'index.php?highlight=christmas';
-foreach ($ex as $i => $e) { $ex[$i] = htmlspecialchars($url.$e); }
-echo GWF_Box::box($chall->lang('info', array(GWF_Message::display('[PHP]'.$code.PHP_EOL.$code2.'[/PHP]'), '../solution.php', $showsrc1, $showsrc2, $ex[0], $ex[1], $ex[2])), $chall->lang('title'));
+# Execute the vulnerable script and show the result.
+function trainingPhpLfiAfter($code, $code2, $code_emulate_pnb, $translations, $placeholders, $highlightSource = false) {
+    # Highlighted source is rendered after html_head.php loaded GWF3 classes.
+    if ($highlightSource) {
+        return WCChallenge::sourceCode(__FILE__);
+    }
 
-# Execute the code, using eval.
-GWF_Debug::setDieOnError(false);
-GWF_Debug::setMailOnError(false);
-eval($code.$code_emulate_pnb); # eval the first line
+    # Execute the code, using eval.
+    GWF_Debug::setDieOnError(false);
+    GWF_Debug::setMailOnError(false);
+    ob_start();
+    eval($code.$code_emulate_pnb); # Eval the first line.
 
-echo '<div class="box">'.PHP_EOL;
-echo '<div class="box_t">'.$chall->lang('example_title').' ('.htmlspecialchars($filename).')'.'</div>'.PHP_EOL;
-echo '<div class="box_c">'.PHP_EOL;
-if (lfiIsSafeDir($filename) === true) { eval($code2); } # Eval the second line, when safe.
-else { echo GWF_HTML::error('LFI', $chall->lang('err_basedir'), false); }
-echo '</div>'.PHP_EOL;
-echo '</div>'.PHP_EOL;
-GWF_Debug::setMailOnError(true);
-GWF_Debug::setDieOnError(true);
-
-# Show credits box
-if (false !== ($minus = GWF_User::getByName('minus')))
-{
-	echo GWF_Box::box($chall->lang('credits', array($minus->displayProfileLink())));
+    $output = '<div class="box">'.PHP_EOL;
+    $title = $translations['example_title'];
+    $output .= '<div class="box_t">'.htmlspecialchars($title).' ('.htmlspecialchars($filename).')</div>'.PHP_EOL;
+    $output .= '<div class="box_c">'.PHP_EOL;
+    if (lfiIsSafeDir($filename) === true) { eval($code2); } # Eval the second line, when safe.
+    else { $output .= GWF_HTML::error('LFI', $translations['err_basedir'], false); }
+    $output .= ob_get_clean();
+    $output .= '</div>'.PHP_EOL.'</div>'.PHP_EOL;
+    GWF_Debug::setMailOnError(true);
+    GWF_Debug::setDieOnError(true);
+    return $output;
 }
 
-# Show end of website
-echo $chall->copyrightFooter();
-require_once('challenge/html_foot.php');
-
-
-### Safety first ###
-function lfiIsSafeDir($filename)
-{
-	$valid = array(
-		'pages',
-		'pages/../..',
-		'pages/..',
-	);
-	$d = dirname($filename);
-	return in_array($d, $valid, true);
+# Safety first.
+function lfiIsSafeDir($filename) {
+    return in_array(dirname($filename), array('pages', 'pages/../..', 'pages/..'), true);
 }
-?>
+
+WCChallenge::run(dirname(__DIR__), array(
+    'code' => function() use ($code, $code2) {
+        return GWF_Message::display('[PHP]'.$code.PHP_EOL.$code2.'[/PHP]');
+    },
+    'minus' => function() {
+        $minus = GWF_User::getByName('minus');
+        return false === $minus ? '' : $minus->displayProfileLink();
+    },
+), array(
+    'challenge_after' => function($translations, $placeholders) use ($code, $code2, $code_emulate_pnb, $highlightSource) {
+        return trainingPhpLfiAfter($code, $code2, $code_emulate_pnb, $translations, $placeholders, $highlightSource);
+    },
+));
