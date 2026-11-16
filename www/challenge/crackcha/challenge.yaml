@@ -1,0 +1,49 @@
+id: crackcha
+title: Crackcha
+score: 8
+creators: [Gizmore]
+tags: [Cracking, Image, Coding]
+solution: false
+solution_box: false
+placeholders:
+  reset: reset.php
+  problem: problem.php
+  answer: answer.php
+  highscore: highscore.php
+translations:
+  en:
+    title: Crackcha
+    info_html: In this challenge your mission is to crack the WC4_Captcha.<br/><br/>To start cracking, please request <a href="{reset}">{reset}</a>
+      first.<br/>You then have {time} to solve at least {need} captchas.<br/>You can request the next captcha from <a href="{problem}">{problem}</a>.<br/>Submit
+      your answer to <a href="{answer}">{answer}?answer=[letters]</a><br/><br/>There is also a <a href="{highscore}">highscore
+      table</a> for cracking attemps.<br/><br/>Good Luck!
+    th_user: User
+    th_start: Date
+    th_time: Time
+    th_count: Count
+    th_solved: Success
+    th_rate: Rate
+    err_no_answer: You have to submit 5 letters in the answer parameter.
+    err_no_problem: You have to request a new captcha from problem.php first.
+    msg_reset: A new round of crackcha has been started. You have %1$s seconds to break %2$s captchas.
+    msg_insert_high: Your cracking attempt has been inserted into the crackcha highscore table.
+    msg_success: You cracked captcha %1$s of %2$s needed.
+    msg_failed: Your answer (%1$s) was wrong. Correct would have been %2$s.
+  it:
+    title: 'Crackcha '
+    info_html: In questa sfida, il tuo compito è quello di crackare il WC4_Captcha.<br/><br/>Prima di iniziare a crackare,
+      richiedi <a href="{reset}">{reset}</a>.<br/>Da quel momento in poi hai {time} per indovinare almeno {need} captcha.<br/>Puoi
+      richiedere la prossima captcha da <a href="{problem}">{problem}</a>.<br/>Invia la tua risposta a <a href="{answer}">{answer}?answer=[lettere]</a><br/><br/>C'è
+      anche una <a href="{highscore}">tabella dei punteggi</a> per i tentativi di cracking.<br/><br/>Buona fortuna!
+    th_user: Utente
+    th_start: Data
+    th_time: Tempo
+    th_count: Conteggio
+    th_solved: Successo
+    th_rate: Percentuale
+    err_no_answer: Devi inviare 5 lettere nel parametro 'answer'.
+    err_no_problem: Devi richiedere un nuovo captcha da problem.php prima.
+    msg_reset: Un nuovo round di crackcha è iniziato. Hai %1$s secondi per indovinare %2$s captcha.
+    msg_insert_high: Il tuoi tentativo di cracking è stato inserito nella tabella dei punteggi di crackcha.
+    msg_success: Hai crackato captcha %1$s di %2$s richieste.
+    msg_failed: La tua risposta (%1$s) è sbagliata. Quella corretta è %2$s.
