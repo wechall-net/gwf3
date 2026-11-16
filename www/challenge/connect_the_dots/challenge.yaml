@@ -1,0 +1,22 @@
+id: connect_the_dots
+title: Connect the Dots
+score: 3
+creators: [galen]
+tags: [Stegano, Training]
+solution:
+  type: require
+  path: solution.php
+translations:
+  en:
+    title: Connect the Dots
+    info_html: This is a stegano challenge from {user:galen}.<br/>Can you see the solution?
+    img_alt: The Challenge
+  de:
+    img_alt: Das Challenge
+    info_html: Dies ist eine Stegano Challenge von {user:galen}.<br/>Kannst du die Lösung sehen?
+  fi:
+    img_alt: Haaste
+    info_html: Tämä on stegano haaste {user:galen}.<br/>Näetkö ratkaisua?
+  it:
+    img_alt: La sfida
+    info_html: Questa è una sfida di steganografia ideata da {user:galen}.<br/>Puoi vedere la soluzione?
