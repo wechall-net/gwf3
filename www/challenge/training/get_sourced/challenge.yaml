@@ -1,0 +1,33 @@
+id: training.get_sourced
+title: 'Training: Get Sourced'
+score: 1
+solution:
+  type: require
+  path: solution.php
+translations:
+  en:
+    title: 'Training: Get Sourced'
+    info_html: The solution is hidden in this page
+    info2_html: Use <i>View Sourcecode</i> to get it
+    comment: Now this is a comment!
+    solution: 'You are looking for this password: html_sourcecode'
+  de:
+    info_html: Die Lösung ist auf dieser Seite versteckt.
+    info2_html: Benutze <i>Quelltext anzeigen</i> um sie aufzustöbern.
+    comment: Also dies ist ein Kommentar!
+    solution: 'Du suchst nach diesem Passwort: html_sourcecode'
+  fi:
+    info_html: Ratkaisu on piilotettu tämä sivu
+    info2_html: käytä <i>Näytä Lähdekoodi</i> to get it
+    comment: Tässä vasta on kommentti!
+    solution: 'Etsit tätä salasanaa: html_sourcecode'
+  fr:
+    info_html: La solution est cachée dans cette page
+    info2_html: Utilise <i>Voir le code source</i> pour l'obtenir
+    comment: Maintenant c'est un commentaire
+    solution: 'Tu cherches ce password: html_sourcecode'
+  it:
+    info_html: La soluzione è nascosta in questa pagina
+    info2_html: Usa <i>Visualizza Sorgente Pagina</i> per recuperarla
+    comment: Questo è un commento!
+    solution: 'Stai cercando questa password: html_sourcecode'
