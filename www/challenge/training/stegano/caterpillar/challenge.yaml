@@ -1,0 +1,54 @@
+id: training.stegano.caterpillar
+title: 'Training: Caterpillar'
+score: 2
+solution:
+  type: require
+  path: solution.php
+placeholders:
+  image: caterpillar.png
+translations:
+  en:
+    title: Caterpillar
+    info_html: |
+      I have drawn a picture of an caterpillar and hid some text in it.<br/>
+      I am sure you can figure it out, as it is not too hard :)<br/>
+      <br/>
+      <img title="My perfectly drawn image of a caterpillar" alt="The Caterpillar" src="{image}" /><br/>
+      <br/>
+      Happy Challenging!
+  de:
+    title: Raupe
+    info_html: |
+      Ich habe eine Raupe gemalt und einen kurzen Text darin versteckt.<br/>
+      Ich bin sicher du kannst diesen herausfinden, ist auch nicht allzuschwer :)<br/>
+      <br/>
+      <img title="Meine perfekt-gezeichnete Raupe" alt="Die Raupe" src="{image}" /><br/>
+      <br/>
+      Viel Spass!
+  es:
+    title: Oruga
+    info_html: |
+      He hecho un dibujo de una Oruga y he escondido algun texto en el.<br/>
+      Estoy seguro que puedes resolverlo, ya que no es muy difícil :)<br/>
+      <br/>
+      <img title="Mi imagen perfectamente dibujada de una Oruga" alt="La Oruga" src="{image}" /><br/>
+      <br/>
+      ¡Buena suerte!
+  fr:
+    title: Chenille
+    info_html: |
+      J'ai dessiné une chenille et j'ai caché du texte dans ce dessin.<br/>
+      Je suis sûr que tu peux le trouver vu que ce n'est pas très difficile :)<br/>
+      <br/>
+      <img title="Mon parfait dessin de le chenille" alt="Le chenille" src="{image}" /><br/>
+      <br/>
+      Bon défi!
+  it:
+    title: 'Caterpillar '
+    info_html: |
+      Ho creato l'immagine di un bruco ed ho nascosto del testo in essa.<br/>
+      I am sure you can figure it out, as it is not too hard :)<br/>
+      <br/>
+      <img title="La mia perfetta immagine di un bruco" alt="Il bruco" src="{image}" /><br/>
+      <br/>
+      Buon divertimento!
