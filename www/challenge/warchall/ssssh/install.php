@@ -1,19 +1,3 @@
 <?php
-chdir("../../../");
-require_once("challenge/html_head.php");
-define('GWF_PAGE_TITLE', 'SSH... Z is sleeping');
-$title = GWF_PAGE_TITLE;
-html_head("Install: $title");
-if (!GWF_User::isAdminS()) {
-	return htmlSendToLogin("Better be admin !");
-}
-$solution = require_once 'challenge/warchall/ssssh/solution.php';
-$score = 3;
-$url = "challenge/warchall/ssssh/index.php";
-$creators = "Z";
-$tags = 'Linux,Exploit';
-
-WC_Challenge::installChallenge($title, $solution, $score, $url, $creators, $tags, true);
-
-require_once("challenge/html_foot.php");
-?>
+require_once dirname(__DIR__, 2).'/WCChallenge.php';
+WCChallenge::install(__DIR__);
