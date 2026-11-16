@@ -1,0 +1,59 @@
+id: training.programming.knapsaak
+title: The Travelling Customer
+score: 4
+creators: [Gizmore]
+tags: [Coding, Training]
+placeholders:
+  problem: problem.php
+  answer: answer.php
+  xkcd1: http://xkcd.com/287/
+  xkcd2: http://xkcd.com/399/
+solution: false
+solution_box: false
+translations:
+  en:
+    title: The Travelling Customer
+    info_html: 'In this programming challenge you need to solve the following problem:<br/>You are represented a pricelist,
+      an itemamount and a sum, as well as the stock parameter.<br/>Your job is to select <i>itemamount</i> items which will
+      result in the sum.<br/>You may not select more items than <i>stock</i> from each type.<br/><br/>Example:<br/>Chips=4<br/>Eggs=2<br/><br/>Items=5<br/>Sum=14<br/>Stock=3<br/>Level=1<br/><br/>An
+      accepted answer would be: 2Chips3Eggs<br/><br/>Visit <a href="{problem}">{problem}</a> to request a new problem.<br/>Send
+      your answers to <a href="{answer}">{answer}?answer=[answer]</a> with the format NItemnameNItemname.<br/>You need to
+      solve {count} problems and your timelimit for each problem is {timeout} seconds.<br/><br/>Good Luck!'
+    credits_title: Credits
+    credits_html: Thanks go out to XKCD, the author of <a href="{xkcd1}">{xkcd1}</a> and <a href="{xkcd2}">{xkcd2}</a>.<br/>The
+      comics there are a great inspiration.
+    err_item: 'Unknown Item: {item_name}'
+    err_price: Your total price is {submitted_price} but you need {solution}.
+    err_item_count: Your response uses {answer} known items but you need {solution}.
+    err_reset: You restart at level 1.
+    err_timout: You needed {elapsed} seconds but you only have {timeout}.
+    err_item_num: Your submitted amount for item {item_name} is invalid. It has to be >= 1.
+    err_item_stock: You want to purchase {item_amount} {item_name}`s, but there are only {available_stock} {item_name}`s available.
+    err_no_prob: You did not request a problem. It might be that you did not send your cookie correctly.
+    err_format: Your input format is invalid. Try ?answer=3Chicken4Coke.
+    err_timeout: Your timelimit for one problem is {count} seconds, but you needed {timeout} seconds.
+    msg_next_level: Correct. You are now on level {level}.
+    msg_solved: Correct. You have solved the challenge.
+    credits_body: Thanks go out to XKCD, the author of {comic_url}.<br/>The comics there are a great inspiration.
+  it:
+    title: 'The Travelling Customer '
+    info_html: 'In questa sfida di programmazione devi risolvere il seguente problema:<br/>Ti viene presentata un menù, un
+      NumOggetti e una Somma, insieme ad un parametro di Stock.<br/>Il tuo compito consiste nel selezionare <i>NumOggetti</i>
+      oggetti spendendo la somma data.<br/>Non potrai scegliere più di <i>Stock</i> oggetti di ogni tipo.<br/><br/>Esempio:<br/>Patatine=4<br/>Uova=2<br/><br/>NumOggetti=5<br/>Somma=14<br/>Stock=3<br/>Livello=1<br/><br/>Una
+      risposta accettabili sarebbe: 2Patatine3Uova<br/><br/>Visita <a href="{problem}">{problem}</a> per richiedere un nuovo
+      problema.<br/>Invia le tue risposte a <a href="{answer}">{answer}?answer=[risposta]</a> con il formato NNomeoggettoNNomeoggetto.<br/>Devi
+      risolvere {count} problemi ed il tempo limite per ogni problema è {timeout} secondi.<br/><br/>Buona fortuna!'
+    err_item: 'Oggetto sconosciuto: {item_name}'
+    err_price: Il tuo prezzo totale è {submitted_price} ma ti serve {solution}.
+    err_item_count: La tua risposta utilizza {answer} oggetti conosciuti ma te ne servono {solution}.
+    err_reset: Devi ripartire dal livello 1.
+    err_timout: Hai impiegato {elapsed} secondi ma ne avevi a disposizione solo {timeout}.
+    err_item_num: Il totale inviato per l'oggetto {item_name} è invalido. Deve essere >= 1.
+    err_item_stock: Vuoi comprare {item_amount} {item_name}, ma ci sono solo {available_stock} {item_name} disponibili.
+    err_no_prob: Non hai ancora richiesto un problema. Può essere che tu abbia inviato in modo erroneo il cookie di identificazione.
+    err_format: Il formato di input è invalido. Prova ?answer=3Polli4Fanta.
+    err_timeout: Il tempo limite per il problema è di {count} secondi, ma ne hai impiegati {timeout} secondi.
+    msg_next_level: Corretto. Ora sei al livello {level}.
+    msg_solved: Corretto. Hai risolto la sfida.
+    credits_title: Crediti
+    credits_body: Grazie a XKCD, l'autore di {comic_url}.<br/>Le strisce comiche sono di grande ispirazione.
