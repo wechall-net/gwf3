@@ -17,7 +17,7 @@ if ($_SERVER['HTTP_HOST'] === $domain)
 }
 else
 {
-	echo GWF_HTML::error('No DNS',  $chall->lang('err_host', [$domain]));
+	echo GWF_HTML::error('No DNS',  $chall->trans('err_host', [$domain]));
 }
 
 echo $chall->copyrightFooter();
