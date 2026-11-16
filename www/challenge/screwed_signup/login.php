@@ -18,24 +18,24 @@ if (isset($_POST['login']))
 
 ?>
 
-<div class="box box_c"><a href="register.php"><?php echo $chall->lang('btn_register'); ?></a></div>
+<div class="box box_c"><a href="register.php"><?php echo $chall->trans('btn_register'); ?></a></div>
 
-<?php htmlTitleBox($chall->lang('login_title'), $chall->lang('login_info')); ?>
+<?php htmlTitleBox($chall->trans('login_title'), $chall->trans('login_info')); ?>
 
 
 <form action="" method="post">
 	<?php #Session::CSRF(); ?>
 	<table>
 		<tr>
-			<td><?php echo $chall->lang('th_username'); ?>:</td>
+			<td><?php echo $chall->trans('th_username'); ?>:</td>
 			<td><input type="text" name="username" value="" /></td>
 		</tr>
 		<tr>
-			<td><?php echo $chall->lang('th_password'); ?>:</td>
+			<td><?php echo $chall->trans('th_password'); ?>:</td>
 			<td><input type="text" name="password" value="" /></td>
 		</tr>
 		<tr>
-			<td><input type="submit" name="login" value="<?php echo $chall->lang('btn_login'); ?>" /></td>
+			<td><input type="submit" name="login" value="<?php echo $chall->trans('btn_login'); ?>" /></td>
 			<td></td>
 		</tr>
 	</table>
