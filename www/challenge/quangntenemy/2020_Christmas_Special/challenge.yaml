@@ -1,0 +1,19 @@
+id: quangntenemy.2020_Christmas_Special
+title: 2020 Christmas Special
+score: 5
+creators: [quangntenemy, gizmore]
+tags: [Special, Crypto, Stegano]
+placeholders:
+  image: <img src="wechall-newyear.png" title="wechall-newyear.png" alt="wechall-newyear.png" />
+solution:
+  type: require
+  path: password.php
+translations:
+  en:
+    title: 2020 Christmas Special
+    info_html: |
+      Xmas is near. But an evil force is still lurking in the shadows.<br/>
+      Brave challengers, we need your help. Defeat him and recover the stolen gifts!<br/><br/>
+      {image}<br/><br/>
+      We wish you a Merry Christmas and a Happy New Year!<br/><br/>
+      quangntenemy and gizmore<br/>
