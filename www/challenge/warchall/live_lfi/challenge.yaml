@@ -1,0 +1,26 @@
+id: warchall.live_lfi
+title: 'Warchall: Live LFI'
+score: 4
+creators: [gizmore]
+tags: [Linux, Exploit, Warchall]
+solution:
+  type: require
+  path: www/solution.php
+input_maxlength: 14
+warchall_ads: true
+placeholders:
+  home: http://lfi.warchall.net
+  warchall: '{GWF_WEB_ROOT}challenge/warchall/begins/index.php'
+translations:
+  en:
+    title: Live LFI
+    info_html: |
+      One reason why I wanted the warchall box is to offer more realistic webhacking challenges.<br/>
+      You may now try the <a href="{home}">Live LFI</a> challenge that is hosted on it. Visit the <a href="{warchall}">Warchall challenge page</a>.<br/><br/>
+      Good Luck!
+  it:
+    title: 'Live LFI '
+    info_html: |
+      Uno dei motivi per cui ho creato la warchall box è per offrire delle sfide di webhacking più realistiche.<br/>
+      Ora potrai provare una delle sfide <a href="{home}">Live LFI</a> che sono disponibili su di essa.<br/><br/>
+      Buona fortuna!
