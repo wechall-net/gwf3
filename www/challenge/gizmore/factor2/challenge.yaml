@@ -1,0 +1,21 @@
+id: gizmore.factor2
+title: Factor 2
+score: 2
+creators: [Gizmore]
+tags: [Exploit, Training]
+placeholders:
+  app: app/index.html
+solution: false
+solution_box: false
+translations:
+  en:
+    title: Factor 2
+    info_html: |
+      Hello {name}<br/><br/>
+      We have outsourced an application to an indian programmer and got disappointed.<br/>
+      The application is not multi language capable as agreed, but the worst is...<br/>
+      One of our coworkers could completely <a href="{app}">circumvent the two-factor authentication</a> within minutes.<br/>
+      Can you do this as well?<br/><br/>
+      To prove your success you have to order a special article.<br/><br/>
+      Good luck!<br/>
+      gizmore
