@@ -1,0 +1,30 @@
+id: valentines_gold
+title: Valentine's Gold
+score: 4
+creators: [gizmore, tehron]
+tags: [Math, Coding]
+solution:
+  type: require
+  path: secret.php
+  case_sensitive: false
+translations:
+  en:
+    title: Valentine's Gold
+    info_html: |
+      Hello {name2},<br/><br/>
+      It is Valentine's Day and you want to impress your big love, Valentina.<br/>
+      She is into programming and math, so you want to prove the Goldbach theorem to impress her.<br/>
+      You come up with an idea:<br/>
+      The {name1}'s number!<br/>
+      The {name1}'s number is the number of combinations to build an even number out of two prime summands.<br/>
+      Example:<br/><br/>
+      {name1}s_number(4) = 1 (2+2)<br/>
+      {name1}s_number(6) = 1 (3+3)<br/>
+      {name1}s_number(8) = 1 (3+5)<br/>
+      {name1}s_number(10) = 2 (3+7, 5+5)<br/>
+      {name1}s_number(12) = 1 (5+7)<br/><br/>
+      You analyze a bigger set of numbers to work on your proof...<br/><br/>
+      The solution to this challenge is a hash.<br/>
+      Concatenate all {name1}'s numbers from 4 to 31415926 as a string, and build the md5 hash out of it.<br/><br/>
+      In the example above, from 4 to 12, the solution would be md5('11121');<br/><br/>
+      Have a nice Valentine's Day<br/>- gizmore and tehron
