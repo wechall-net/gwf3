@@ -1,0 +1,25 @@
+id: contribute
+title: Contribute
+score: 3
+creators: [gizmore]
+tags: [Special]
+solution: false
+solution_box: false
+translations:
+  en:
+    title: Contribute
+    info_html: |
+      Hello {username}<br/>
+      <br/>
+      I am working on a new PHP Framework; <a href="{phpgdo}">phpgdo</a><br/>
+      In this challenge your job is to contribute something to one of the <a href="{modules}">gdo modules</a> or <a href="{core}">the core</a>.<br/>
+      <br/>
+      What i would like to see is that you <a href="{installation}">setup a gdo environment</a> on a <a href="{computer}">computer</a> and play with it a bit.<br/>
+      Ideally you would try the unit tests on some modules.<br/>
+      Also, many of the 100+ module repositories lack implementation, tests and design.<br/>
+      <br/>
+      Thanks in advance for your contribution!<br/>
+      gizmore<br/>
+    halloffame: There is <a href="{halloffame_url}">a list of contributors</a> you can visit.
+    modules: There is <a href="{modules_url}">a list of modules</a> you can work on.
+    alternate: <b>Alternatively</b> you can contribute to any of the <a href="{gwf3_url}">gwf3</a> projects, including <a href="{wechall_url}">WeChall</a>.
