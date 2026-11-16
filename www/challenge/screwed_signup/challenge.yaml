@@ -1,0 +1,58 @@
+id: screwed_signup
+title: Screwed Signup
+score: 7
+creators: [Gizmore]
+tags: [Exploit, PHP, MySQL]
+placeholders:
+  login_file: login.php
+  register_file: register.php
+  source_name: screwed_signup.include
+  source: index.php?hl=src
+  login: index.php?hl=Login
+  register: index.php?hl=Register
+solution: false
+solution_box: false
+translations:
+  en:
+    title: Your mission
+    info_html: '... is to login as Admin.<br/>You are given <a href="{source_name}">the source of login and register</a> scripts,
+      also as <a href="{source}">highlighted version</a>.<br/>Not needed are the <a href="{login}">{login_file}</a> and <a
+      href="{register}">{register_file}</a> scripts.'
+    login_title: Screwed Signup - Login
+    login_info: Welcome, guest, please login.
+    register_title: Screwed Signup - Registration
+    register_info: Welcome, guest, please register.
+    btn_login: Login
+    btn_register: Register
+    th_username: Username
+    th_password: Password
+    note_solved: Very well done.<br/>Your account got deleted to avoid coincidence solving.
+  de:
+    title: Deine Aufgabe
+    info_html: '... ist es Dich mit Admin-Rechten anzumelden.<br/>Du kannst <a href="{source_name}">Den Quelltext der Anmeldung</a>
+      einsehen, auch mit <a href="{source}">Syntax Highlighting</a>.<br/>Du benötigst nicht die Quelltexte von <a href="{login}">{login_file}</a>
+      und <a href="{register}">{register_file}</a>.'
+    login_title: Screwed Signup - Anmeldung
+    login_info: Willkommen, Gast. Bitte einloggen.
+    register_title: Screwed Signup - Registrierung
+    register_info: Willkommen, Gast. Bitte registrieren.
+    btn_login: Anmelden
+    btn_register: Registrieren
+    th_username: Benutzer
+    th_password: Passwort
+    note_solved: Sehr gut gemacht.<br/>Dein Account wurde gelöscht um zufälliges Lösen zu verhindern.
+  it:
+    title: La tua missione
+    info_html: '... è di accedere come Admin.<br/>Ti viene dato <a href="{source_name}">il sorgente degli script di login
+      e registrazione</a>, anche come <a href="{source}">versione evidenziata</a>.<br/>Non ti serviranno gli script di <a
+      href="{login}">{login_file}</a> e di <a href="{register}">{register_file}</a>.'
+    login_title: Registrazione maldestra - Login
+    login_info: Benveuto, guest, ti pregiamo di effettuare il login.
+    register_title: Registrazione maldestra - Registrazione
+    register_info: Benveuto, guest, ti pregiamo di effettuare il login.
+    btn_login: 'Login '
+    btn_register: Registrati
+    th_username: Nome utente
+    th_password: 'Password '
+    note_solved: Veramente ben fatto.<br/>Il tuo account è stato cancellato per evitare che qualcuno risolva la sfida per
+      caso tramite il tuo account.
