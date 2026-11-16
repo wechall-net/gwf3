@@ -1,0 +1,18 @@
+id: warchall.choose_your_path3
+title: Choose your Path III
+score: 2
+creators: [cyp]
+tags: [Warchall, Exploit]
+solution:
+  type: require
+  path: solution.php
+input_maxlength: 14
+warchall_ads: true
+translations:
+  en:
+    title: Choose your Path III
+    info_html: |
+      Welcome to the latest sequel of Choose Your Path.<br/>
+      The challenge is hosted on the <a href="/challenge/warchall/begins/index.php">WarChall Box</a>.<br/>
+      {source}
+      Proudly presented by cyp and the warchall staff.
