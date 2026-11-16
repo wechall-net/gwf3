@@ -1,0 +1,17 @@
+id: memorized
+title: Memorized
+score: 7
+creators: [gizmore]
+tags: [Exploit]
+solution:
+  type: require
+  path: password.php
+  case_sensitive: false
+translations:
+  en:
+    title: Memorized
+    info_html: |
+      Hello {name},<br/><br/>
+      An enemy punk band has created a website. I want you to hack them and find the solution.<br/><br/>
+      You can access the site here: <a href="https://ranzgruppe.com/">ranzgruppe.com</a><br/><br/>
+      I hope you won't disappoint me!<br/><br/>Good Luck!<br/>gizmore
