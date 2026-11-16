@@ -1,0 +1,20 @@
+id: training.stegano1
+title: 'Training: Stegano I'
+score: 1
+solution:
+  type: require
+  path: solution.php
+placeholders:
+  challenge_trailer: <br/><img src="stegano1.bmp" width="64" height="64" />
+translations:
+  en:
+    title: 'Training: Stegano I'
+    info_html: This is the most basic image stegano I can think of.
+  de:
+    info_html: Das ist das einfachste Bild-Stegano das mir einfällt...
+  fi:
+    info_html: Tämä on mielestäni helpoin mahdollinen kuva-stegano jonka voin vain kuvitella olevan olemassa.
+  fr:
+    info_html: C'est la méthode de stéganographie la plus basique à laquelle j'ai pensé.
+  it:
+    info_html: Questa è la più semplice sfida steganografica a cui possa pensare.
