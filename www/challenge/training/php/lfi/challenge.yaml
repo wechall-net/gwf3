@@ -1,0 +1,111 @@
+id: training.php.lfi
+title: 'Training: PHP LFI'
+score: 2
+url: challenge/training/php/lfi/up/index.php
+creators: [Gizmore]
+tags: [Exploit, PHP, Training]
+placeholders:
+  solution: ../solution.php
+  example1: index.php?file=welcome
+  example2: index.php?file=news
+  example3: index.php?file=forums
+solution: false
+solution_box: false
+source_code:
+  source:
+    file: up/index.php
+    direct: true
+translations:
+  en:
+    title: PHP - Local File Inclusion
+    info_html: |
+      Your mission is to exploit this code, which has obviously an <a href="http://en.wikipedia.org/wiki/Local_File_Inclusion">LFI vulnerability</a>:<br/>
+      <br/>
+      <code>{code}</code><br/>
+      <br/>
+      There is a lot of important stuff in <a href="{solution}">../solution.php</a>, so please include and execute this file for us.<br/>
+      <br/>
+      Here are a few examples of the script in action (in the box below):<br/>
+      <a href="{example1}">{example1}</a><br/>
+      <a href="{example2}">{example2}</a><br/>
+      <a href="{example3}">{example3}</a><br/>
+      <br/>
+    example_title: The vulnerable script in action
+    err_basedir: This directory is not part of the challenge.
+    credits: Thanks go out to {user:minus} for his alpha testing, great thoughts and motivation!
+    msg_solved: Well done. If you find a local file inclusion, usually the box can get hacked into within minutes.
+  de:
+    title: PHP - Einbinden Lokaler Dateien
+    info_html: |
+      Deine Aufgabe ist es dieses Script zu missbrauchen, welches offensichtlich eine <a href="http://en.wikipedia.org/wiki/Local_File_Inclusion">LFI Schwachstelle</a> aufweist:<br/>
+      <br/>
+      <code>{code}</code><br/>
+      <br/>
+      Es steht etwas Wichtiges in <a href="{solution}">../solution.php</a>, also bitte führe das Script aus und binde die Datei ein.<br/>
+      <br/>
+      Hier sind ein paar Beispiele wie das Script benutzt wird. (Die Ausgabe ist in der Box darunter):<br/>
+      <a href="{example1}">{example1}</a><br/>
+      <a href="{example2}">{example2}</a><br/>
+      <a href="{example3}">{example3}</a><br/>
+      <br/>
+    example_title: Das verwundbare Script in Aktion
+    err_basedir: Dieses Verzeichnis ist nicht Teil dieser Aufgabe.
+    credits: Vielen Dank an {user:minus} für das Alpha-Testing, tolle Ideen und Motivation!
+    msg_solved: Gut gemacht. Wenn du eine LFI Lücke findest kann man oft leicht den Rechner übernehmen.
+  fi:
+    title: PHP - Local File Inclusion
+    info_html: |
+      Sinun tehtäväsi on hyödyntää tätä koodia, joka on ilmeisesti <a href="http://en.wikipedia.org/wiki/Local_File_Inclusion">LFI heikkous</a>:<br/>
+      <br/>
+      <code>{code}</code><br/>
+      <br/>
+      On paljon tärkeää tavaraa <a href="{solution}">../solution.php</a>, joten liitä mukaan ja suorittaa tämän tiedoston meille.<br/>
+      <br/>
+      Seuraavassa on muutamia esimerkkejä skriptin toiminnassa(laatikossa alhaalla):<br/>
+      <a href="{example1}">{example1}</a><br/>
+      <a href="{example2}">{example2}</a><br/>
+      <a href="{example3}">{example3}</a><br/>
+      <br/>
+    example_title: Haavoittuvia skripti toiminnassa
+    err_basedir: Tämä hakemisto ei ole osa haastetta.
+    credits: Kiitos lähteä {user:minus} hänen alfa-testausvaiheessa, suuria ajatuksia ja motivaatiota!
+    msg_solved: Hyvin tehty. Jos löydät paikallisen tiedoston osallisuutta yleensä laatikko voi saada murtautunut muutamassa
+      minuutissa.
+  fr:
+    title: PHP - Local File Inclusion
+    info_html: |
+      Votre mission est d'exploiter ce code, lequel a évidemment une :<a href="http://en.wikipedia.org/wiki/Local_File_Inclusion">faille LFI</a>:<br/>
+      <br/>
+      <code>{code}</code><br/>
+      <br/>
+      Il y a beaucoup de choses importantes dans <a href="{solution}">../solution.php</a>, alors s'il vous plaît vous pourriez inclure et exécuter ce fichier pour nous.<br/>
+      <br/>
+      Voici quelques exemples de ce script en action (dans la boîte ci-dessous):<br/>
+      <a href="{example1}">{example1}</a><br/>
+      <a href="{example2}">{example2}</a><br/>
+      <a href="{example3}">{example3}</a><br/>
+      <br/>
+    example_title: Le script vulnérable en action
+    err_basedir: Ce dossier n'est pas une partie du challenge.
+    credits: Merci à {user:minus} pour ces alpha tests, sa motivation et ses brillantes idées!
+    msg_solved: Bien joué. Si vous trouvez une faille de type local file inclusion, généralement la boîte peut se pirater
+      en quelques minutes.
+  it:
+    title: PHP - Local File Inclusion
+    info_html: |
+      La tua missione è quella di sfruttare questo codice, che ha una ovvia <a href="http://it.wikipedia.org/wiki/Remote_File_Inclusion">vulnerabilità LFI</a>:<br/>
+      <br/>
+      <code>{code}</code><br/>
+      <br/>
+      Ci sono molte cose importanti in <a href="{solution}">../solution.php</a>, per cui includi ed esegui questo file per noi.<br/>
+      <br/>
+      Ecco alcuni esempi dello script in azione (nel box sottostante):<br/>
+      <a href="{example1}">{example1}</a><br/>
+      <a href="{example2}">{example2}</a><br/>
+      <a href="{example3}">{example3}</a><br/>
+      <br/>
+    example_title: Lo script vulnerabile in azione
+    err_basedir: Questa cartella non è parte della sfida.
+    credits: Grazie a {user:minus} per l'alpha testing, le grandi idee e la motivazione!
+    msg_solved: Ben fatto. Se trovi una vulnerabilità come questa, un hacker può prendere il controllo completo della macchina
+      in pochi minuti.
