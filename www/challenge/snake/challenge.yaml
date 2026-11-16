@@ -1,0 +1,125 @@
+id: snake
+title: Snake
+score: 4
+creators: [Gizmore]
+tags: [Java, PHP, Fun]
+solution: false
+solution_box: false
+placeholders:
+  highscore: CGI_Highscore.php
+  snake: http://snake.gizmore.org
+  cgi: http://snake.gizmore.org/CGI_Highscore.php
+translations:
+  en:
+    title: Snake 4 Poors
+    info_html: 'Your mission is to reach exactly {score} points. You can <a href="{highscore}">watch the highscore table here</a>.<br/><br/><b>Game
+      instructions</b>:<br/>- Click the applet to focus, then press P or F4.<br/>- Use cursor left and right to rotate the
+      snake.<br/>- Use cursor up and down to adjust speed a little.<br/>- Do not walk into your own poo.<br/>- Snake will
+      starve if you don`t feed it.<br/>- Eating hemp will switch the movement.<br/>- Collect bonus letters for score multipliers.<br/>-
+      Hemp increases the chance for bonus letters.<br/><br/><b>Notes</b>:<br/>- The game will detect if you have cheated your
+      highscore entry. Your mission is to defeat the cheater detection as well.<br/>- In case you already know <a href="{snake}">the
+      old applet</a>: The cheating detection is more clever here. But you can still try to hack the <a href="{cgi}">old highscore</a>,
+      for an easier version.<br/>- There is no sql injection or any other real flaw, just a cheating detection.<br/>- (Ab)using
+      drugs is not good for your mental health.<br/><br/><b>Credits</b>:<br/>- 3D fruits were created by my friend <i>Lazer</i>.<br/>-
+      Hemp sound was taken with permission from <i>Kapt`n Olga - Molkerei auf der Bounty</i>.<br/>- Gulp eating sound was
+      taken without permission from <i>FTL`s Dungeon Master</i>.<br/>- livinskull (and others) for testing the challenge.<br/>'
+    alt_cheater: Cheater
+    th_score: Score
+    th_nick: Nickname
+    th_multi: Multi
+    th_length: Length
+    hs_title: Snake Highscore
+    hs_info: 'The snake highscore.<br/>Hero of the day: <b>{hero}</b>.<br/>To delete all cheaters, <a href="{count}">press
+      this button</a>.'
+    solved_note: Very well done! I will delete your entry now, because your values might spoil it! Please do not create spoiling
+      cheating entries, to keep it more difficult.
+    msg_del_cheaters: Successfully deleted {deleted} cheaters!
+    alt_bananas: Bananas
+    alt_cherries: Cherries
+    alt_hemps: Hemps
+  de:
+    title: Snake Für Arme
+    info_html: 'Deine Aufgabe ist es, genau {score} Punkte zu erreichen. Du kannst <a href="{highscore}">hier die Höchstpunktzahlen
+      einsehen</a>.<br/><br/><b>Spielanleitung</b>:<br/>- Klicke auf das Applet zum fokussieren. Danach drücke P oder F4 um
+      das Spiel zu starten.<br/>- Benutze CrsrLinks und CrsrRechts um die Schlange zu drehen.<br/>- Benutze CrsrHoch und CrsrRunter
+      um die Geschwindigkeit leicht anzupassen.<br/>- Krieche nicht in deine eigene Scheisse.<br/>- Die Schlange verhungert
+      wenn du sie nicht fütterst.<br/>- Wenn du Hanf gefressen hast, ist die Steuerung vertauscht.<br/>- Sammele Buchstaben
+      für Punkte-Multiplikator.<br/>- Hanf erhöht die Wahrscheinlichkeit auf Bonus-Buchstaben.<br/><br/><b>Notizen</b>:<br/>-
+      Das Spiel bemerkt wenn du versuchst zu schummeln. Deine Aufgabe beinhaltet auch, dies zu umgehen.<br/>- Falls du <a
+      href="{snake}">das alte Snake Applet</a> schon kennst: Die ''Schummel-Erkennung'' ist hier recht clever. Du kannst aber
+      auch <a href="{cgi}">erstmal dein Glück mit der alten Highscore versuchen</a>, für leichtere Bedingungen.<br/>- Hier
+      geht es nicht um eine SQL-Injection oder ähnliche Fehler, nur die ''Schummel-Erkennung''.<br/>- Drogen missbrauchen
+      ist nicht gut für Dein geistiges Wohlbefinden.<br/><br/><b>Credits</b>:<br/>- 3D Früchte wurden von <i>Lazer</i> erstellt.<br/>-
+      Der Hanf-Sound stammt mit freundlicher Genehmigung von <i>Kapt`n Olga - Molkerei auf der Bounty</i>.<br/>- Der Mampf-Sound
+      stammt ohne Genehmigung aus <i>FTL`s Dungeon Master</i>.<br/>- livinskull (und andere) für das testen der Challenge.<br/>'
+    alt_cheater: Schummler
+    th_score: Punkte
+    th_nick: Spitzname
+    th_multi: Multi
+    th_length: Länge
+    hs_title: Snake Höchstpunktzahlen
+    hs_info: 'Die Snake Highscore.<br/>Held des Tages: <b>{hero}</b>.<br/>Um alle Schummler zu löschen, <a href="{count}">klicke
+      hier</a>.'
+    solved_note: Sehr gut gemacht! Ich lösche deinen Eintrag nun, weil er zuviel von der Challenge verrät. Bitte erzeuge keine
+      Einträge die Rückschlüsse auf die Lösung erlauben, um das Challenge möglichst schwierig zu erhalten.
+    msg_del_cheaters: Es wurden erfolgreich {deleted} Schummler gelöscht!
+    alt_bananas: Bananen
+    alt_cherries: Kirschen
+    alt_hemps: Hanf
+  fi:
+    title: Snake 4 Poors
+    info_html: 'Sinun tehtäväsi on saavuttaa tarkalleen {score}-pistettä. Voit <a href="{highscore}"> katsella huipputulos
+      taulukkoa tästä.</a>.<br/><br/><b>Peli ohjeet</b>:<br/>- Klikkaa applet keskittyä, paina P tai F4.<br/>- Käytä nuolinäppäimistön
+      vasenta- ja oikeaanuolta kiertääksesi käärmettä.<br/>- Käytä nuolinäppäimistön ylös- ja alasnuolia säätääksesi nopeutta
+      hieman.<br/>- Älä kävele omaan kakkaasi.<br/>- Käärme kuolee nälkään jos sinulla et ruoki sitä.<br/>- Hampun syöminen  vaihtaa
+      oikean vasemmalle ja vasemman oikalle ohjauksessa.<br/>- Kerää kirjaimia saadaksesi pistekertoimia.<br/>- Hamppu lisää
+      kirjainten ilmestymistiheyttä.<br/><br/><b>Huomioitavaa</b>:<br/>- Peli tunnistaa, jos olet huijannut oman huipputulos
+      merkintäsi. Sinun tehtäväsi on myös kukistaa huijaus tunnistus.<br/>- Jos tiedät jo <a href="{snake}"> vanhan appletin
+      </ a>: huijaaminen havaitseminen on viisaampi tässä. Mutta voit silti yrittää hakata <a href="{cgi}"> vanha huipputulos
+      </ a>, ja helpompi versio.<br/>- Ei ole SQL Injection tai muut todelliset virhe, vain huijausta havaitsemista.<br/>-
+      Huumeiden käyttöä ei ole hyväksi mielenterveydelle.<br/><br/><b>Credits</b>:<br/>- 3D hedelmät kehitti ystäväni<i>Lazer</i>.<br/>-
+      Hamppu ääni otettiin luvalla<i>Kapt`n Olga - Molkerei auf der Bounty:stä</i>.<br/>-  Gulp syöminen ääni tehtiin ilman
+      lupaa <i>FTL`s Dungeon Master:stä</i>.<br/>- Livinskull (ja muut) haasten testaamisesta.<br/>'
+    alt_cheater: Cheater
+    th_score: Score
+    th_nick: Nickname
+    th_multi: Multi
+    th_length: Length
+    hs_title: Snake Highscore
+    hs_info: 'The snake highscore.<br/>Päivän sankari: <b>{hero}</b>.<br/>Postaaksesi kaikki huijarit, <a href="{count}">paina
+      tästä napista</a>.'
+    solved_note: Erittäin hyvin tehty! Poistan nyt tuloksesi, koska pisteesi voisivat paljastaa sen muille! Älä luo avauksia
+      foorumeille, tai muuten kerro muille, säilyttäksesi haasteen muillekin.
+    msg_del_cheaters: Onnistuneesti poistettu {deleted} huijaria!
+    alt_bananas: Banaanit
+    alt_cherries: Kirsikat
+    alt_hemps: Hamput
+  it:
+    title: 'Snake 4 Poors '
+    info_html: 'La tua missione è di ottenere esattamente {score} punti. Puoi <a href="{highscore}">dare un occhiata alla
+      tabella dei punteggi qui</a>.<br/><br/><b>Istruzioni del gioco</b>:<br/>- Clicca sull''applet per rendere le finestra
+      attiva, poi premi P o F4.<br/>- Usa la freccia sinistra e la freccia destra per ruotare il serpente.<br/>- Usa la freccia
+      su e freccia giu per aggiustare la velocità.<br/>- Non calpestare la tua scia.<br/>- Il serpente morirà di fame se non
+      si nutre.<br/>- Mangiare canapa farà invertire il movimento.<br/>- Colleziona lettere bonus per avere un moltiplicatore
+      punteggio.<br/>- La canapa aumenta le probabilità di lettere bonus.<br/><br/><b>Note</b>:<br/>- Il gioco controllerà
+      se hai barato sul punteggio. La tua missione è quella di sconfiggere il meccanismo di rilevazione delle manomissioni.<br/>-
+      Nel caso conoscessi già <a href="{snake}">il vecchio applet</a>: La rilevazione è molto più avanzata. Ma puoi cercare
+      ancora di barare nella <a href="{cgi}">vecchia classifica</a>, per una versione più facile.<br/>- Non c''è nessuna possibilità
+      di SQL injection o altro, solo la rilevazione di una eventuale manomissione del punteggio.<br/>- (Ab)usare di droghe
+      non fa bene alla tua salute mentale.<br/><br/><b>Crediti</b>:<br/>- I frutti 3D sono stati creati dal mio amico <i>Lazer</i>.<br/>-
+      Il suono della canapa è stato preso, con permesso, da <i>Kapt`n Olga - Molkerei auf der Bounty</i>.<br/>- Il suono dell''ingoioè
+      stato preso, con permesso, da <i>FTL`s Dungeon Master</i>.<br/>- livinskull (e altri) per aver testato la sfida.<br/>'
+    alt_cheater: Baro
+    th_score: Punteggio
+    th_nick: Nome utente
+    th_multi: 'Multi '
+    th_length: Lunghezza
+    hs_title: Classifica di Snake
+    hs_info: 'La classifica di Snake.<br/>Eroe del giorno: <b>{hero}</b>.<br/>Per cancellare tutti i bari, <a href="{count}">premi
+      questo bottone</a>.'
+    solved_note: Ben fatto! Cancellerò il tuo punteggio ora, perché il valore potrebbe rovinare la sfida agli altri! Per favore,
+      non fare nulla che possa rivelare informazioni sul modo in cui risolvere la sfida, per mantenerla difficile per tutti.
+    msg_del_cheaters: '{deleted} bari sono stati cancellati!'
+    alt_bananas: Banane
+    alt_cherries: Ciliegie
+    alt_hemps: Canapa
