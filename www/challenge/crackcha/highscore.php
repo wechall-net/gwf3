@@ -23,12 +23,12 @@ $from = GWF_PageMenu::getFrom($page, $ipp);
 $pagemenu = GWF_PageMenu::display($page, $nPages, sprintf('highscore.php?by=%s&dir=%s&page=%%PAGE%%', urlencode($by), urlencode($dir)));
 
 $headers = array(
-	array($chall->lang('th_start'), 'wccc_start'),
-	array($chall->lang('th_user'), 'user_name'),
-	array($chall->lang('th_time'), 'wccc_time'),
-	array($chall->lang('th_count'), 'wccc_count'),
-	array($chall->lang('th_solved'), 'wccc_solved'),
-	array($chall->lang('th_rate'), 'wccc_rate'),
+	array($chall->trans('th_start'), 'wccc_start'),
+	array($chall->trans('th_user'), 'user_name'),
+	array($chall->trans('th_time'), 'wccc_time'),
+	array($chall->trans('th_count'), 'wccc_count'),
+	array($chall->trans('th_solved'), 'wccc_solved'),
+	array($chall->trans('th_rate'), 'wccc_rate'),
 );
 
 if (false === ($result = $table->select('*', '', $orderby, array('wccc_uid'), $ipp, $from))) {

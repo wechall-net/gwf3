@@ -9,7 +9,10 @@ function crackcha_reset(WC_Challenge $chall)
 	GWF_Session::set('WCC_CRACKCHA_SOLVED', 0);
 	GWF_Session::remove('WCC_CRACKCHA_CHARS');
 	
-	return $chall->lang('msg_reset', array(WCC_CRACKCHA_TIME, WCC_CRACKCHA_NEED));
+	return WCChallenge::trans($chall, 'msg_reset', array(
+		'timeout' => WCC_CRACKCHA_TIME,
+		'count' => WCC_CRACKCHA_NEED,
+	));
 }
 
 function crackcha_increase_count()
@@ -60,7 +63,7 @@ function crackcha_next(WC_Challenge $chall)
 			echo GWF_HTML::lang('ERR_DATABASE', array(__FILE__, __LINE__));
 			return;
 		} else {
-			echo $chall->lang('msg_insert_high').PHP_EOL;
+			echo WCChallenge::trans($chall, 'msg_insert_high').PHP_EOL;
 			echo crackcha_reset($chall);
 			return;
 		}
@@ -79,12 +82,12 @@ function crackcha_next(WC_Challenge $chall)
 function crackcha_answer(WC_Challenge $chall)
 {
 	if ('' === ($answer = Common::getGetString('answer', ''))) {
-		echo $chall->lang('err_no_answer');
+		echo WCChallenge::trans($chall, 'err_no_answer');
 		return;
 	}
 	
 	if (false === ($solution = GWF_Session::getOrDefault('WCC_CRACKCHA_CHARS', false))) {
-		echo $chall->lang('err_no_problem');
+		echo WCChallenge::trans($chall, 'err_no_problem');
 		return;
 	}
 	
@@ -92,7 +95,10 @@ function crackcha_answer(WC_Challenge $chall)
 	{
 		crackcha_increase_solved();
 		
-		echo $chall->lang('msg_success', array(GWF_Session::getOrDefault('WCC_CRACKCHA_SOLVED', 0), WCC_CRACKCHA_NEED));
+		echo WCChallenge::trans($chall, 'msg_success', array(
+		'solved' => GWF_Session::getOrDefault('WCC_CRACKCHA_SOLVED', 0),
+		'needed' => WCC_CRACKCHA_NEED,
+	));
 		
 		if (crackcha_solved())
 		{
@@ -103,7 +109,10 @@ function crackcha_answer(WC_Challenge $chall)
 	}
 	else
 	{
-		echo $chall->lang('msg_failed', array($answer, $solution));
+		echo WCChallenge::trans($chall, 'msg_failed', array(
+		'answer' => $answer,
+		'solution' => $solution,
+	));
 	}
 	
 	GWF_Session::remove('WCC_CRACKCHA_CHARS');
