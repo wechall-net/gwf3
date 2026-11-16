@@ -1,0 +1,43 @@
+id: special.Old_Years_Eve_2020
+title: Old Years Eve 2020
+score: 5
+creators: [gizmore]
+tags: [Special, Crypto]
+solution:
+  type: require
+  path: password.php
+translations:
+  en:
+    title: Old Years Eve 2020
+    info_html: |
+      Hello {name},<br/>
+      <br/>
+      Rumors say that the &quot;Revolution Elite Agency&quot; has been involved in a time travelling event. This is true.<br/>
+      Apparently a time traveller has stranded and they got their hands on them.<br/>
+      Our own agents were able to infiltrate the revel network and copy a file of a floppy disk the visitor brought with them.<br/>
+      Please <a href="file">examine it</a> for any data you can find.<br/>
+      <br/>
+      Good Luck!<br/>
+      <br/>
+      <hr/>
+      <br/>
+      Big thanks to Dr_Blutig for implementing the challenge.<br/>
+      <br/>
+      We all wish you a Happy New Year 2020!
+  de:
+    title: Altjahrestag 2020
+    info_html: |
+      Hallo {name},<br/>
+      <br/>
+      Es geht das Gerücht um, die &quot;Revolution Elite Agentur&quot; ist in eine Zeitreise verwickelt. Dies stellte sich als wahr heraus.<br/>
+      Anscheinend ist ein Zeitreisender gestrandet, und Sie konnten dieser Person habhaft werden.<br/>
+      Unsere eigenen Agenten konnten das RevEl Netzwerk infiltrieren und eine Datei von einer Diskette kopieren, die der Besucher mit sich brachte.<br/>
+      Bitte <a href="file">untersuche diese</a> auf jede Art von Daten die Du finden kannst.<br/>
+      <br/>
+      Viel Glück!<br/>
+      <br/>
+      <hr/>
+      <br/>
+      Vielen Dank an Dr_Blutig für das Implementieren dieser Challenge.<br/>
+      <br/>
+      Wir wünschen Euch ein Frohes neues Jahr 2020=>2021!
