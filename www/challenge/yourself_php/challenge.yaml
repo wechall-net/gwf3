@@ -1,0 +1,46 @@
+id: yourself_php
+title: Yourself PHP
+score: 4
+creators: [Gizmore, Kender]
+tags: [PHP, Exploit, XSS]
+solution: false
+solution_box: false
+source_code:
+  source:
+    file: index.php
+    title: index.php
+    direct: true
+placeholders:
+  source_url: index.php?highlight=christmas
+translations:
+  de:
+    title: Dein Self-PHP
+    info_html: 'Deine Aufgabe ist es, &lt;script&gt;alert(1);&lt;/script&gt; in <a href="{source_url}">dieses script</a> &quot;zu
+      injecten&quot;, und ein javascript alert fenster aufpoppen zu lassen.<br/>Die checkit() Funktion prüft deinen eingeschleusten
+      Text auf ein paar feste Lösungen.<br/>Bitte benutze so wenig Zeichen wie möglich und schleuse den exakten Text von oben
+      ein.<br/><br/>Notiz: Dieses Challenge ist <b>simuliert</b>, und es wird aber nur auf einige Lösungen geprüft.<br/>Die
+      echte XSS Lücke wurde aus Sicherheitsgründen heimlich gestopft. Danke an noother!<br/>Wenn du den richtigen code sendest
+      um die Lücke auszunutzen wird dieser nicht mehr ausgeführt.'
+  en:
+    title: Yourself PHP
+    info_html: 'Your mission is to inject &lt;script&gt;alert(1);&lt;/script&gt; into <a href="{source_url}">this script</a>,
+      and make it popup a javascript alert.<br/>The checkit() function tests your injected string for a few static solutions.<br/>Please
+      try to use as less characters as possible and inject the exact same string as above.<br/><br/>Note: This challenge is
+      <b>simulated</b>, and does only check for a few static solutions.<br/>The real XSS flaw got silently fixed, because
+      of security concerns. Thanks noother!<br/>So even if you inject the right code, it will not execute anymore.'
+  fr:
+    title: Yourself PHP
+    info_html: 'Votre mission est d''injecter &lt;script&gt;alert(1);&lt;/script&gt; dans <a href="{source_url}">ce script</a>,
+      et d''obtenir un popup javascript.<br/>La fonction checkit() teste votre chaîne de caractères injectée et n''accepte
+      que quelques solutions.<br/>Essayez d''utiliser le moins de caractères possible, et injectez en suivant l''exemple ci-dessus.<br/><br/>Note
+      : ce challenge est <b>simulé</b>, il sera donc seulement validé pour les quelques solutions prévues.<br/>Il n''y a en
+      réalité pas de faille XSS pour des raisons de sécurité (merci Noother !), donc même si vous injectez le bon code, il
+      ne sera pas exécuté pour autant.'
+  it:
+    title: Te stesso in PHP
+    info_html: 'La tua missione è quella di iniettare &lt;script&gt;alert(1);&lt;/script&gt; in <a href="{source_url}">questo
+      script</a>, e creare una finestra di popup tramite javascript (alert).<br/>La funzione checkit() testa la stringa inviata
+      per alcune soluzioni statiche.<br/>Cerca di utilizzare il minor numero possibile di caratteri ed iniettare esattamente
+      la stringa sovrastante.<br/><br/>Nota: Questa sfida è <b>simulata</b>, e controlla solo un certo numero di soluzioni
+      statiche.<br/>La vera vulnerabilità XSS è stata corretta silenziosamente, per problemi di sicurezza. Grazie a noother!<br/>Per
+      cui, anche se inietti il codice giusto, non verrà più eseguito.'
