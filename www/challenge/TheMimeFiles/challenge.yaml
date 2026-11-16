@@ -1,0 +1,35 @@
+id: TheMimeFiles
+title: The Mime Files
+score: 3
+creators: [gizmore]
+tags: [Exploit]
+placeholders:
+  mime_url: http://themimefiles.warchall.net
+  source_url: https://github.com/wechall-net/gwf3/tree/master/www/challenge/TheMimeFiles/www
+solution:
+  type: require
+  path: www/solution.php
+translations:
+  en:
+    title: The Mime Files
+    info_html: |
+      Hello Hacker,<br/><br/>
+      As you know, I am constantly developing great new websites.<br/><br/>
+      But this time, I am puzzled...<br/>
+      Somehow, hackers broke into my new site &quot;<a href="{mime_url}">The Mime Files</a>&quot; and read the contents of solution.php.<br/><br/>
+      OUCH!<br/><br/>
+      Can you help me to find the vulnerability?<br/><br/>
+      To help you out you can peek at the source again on <a href="{source_url}">github</a>.<br/>
+      - gizmore<br/><br/>Shouts go out to the wechall admins; dloser, tehron and livinskull :)
+  de:
+    title: Die Mime Files
+    info_html: |
+      Hallo Hacker,<br/><br/>
+      Wie Du weisst entwickle ich stetig fantastische Webseiten.<br/><br/>
+      Aber diesmal bin ich verwirrt...<br/>
+      Irgendwie sind Hacker in meine neue Website, &quot;<a href="{mime_url}">The Mime Files</a>&quot; eingedrungen und haben den Inhalt der solution.php ausgelesen.<br/><br/>
+      VERDAMMT!<br/><br/>
+      Kannst Du mir helfen die Lücke zu finden?<br/><br/>
+      Um es Dir leichter zu machen kannst Du Dir den Quelltext auf <a href="{source_url}">github</a> ansehen.<br/>
+      - gizmore<br/><br/>
+      Viele Grüße an die WeChall Admins; dloser, tehron und livinskull :)
