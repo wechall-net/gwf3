@@ -40,7 +40,7 @@ final class WCChallenge
         $hasSubmission = isset($_POST['answer']) || isset($_POST['submit']) || isset($_POST['solve']) || isset($_POST['try']) || isset($_POST['go']);
         if ($hasSubmission && isset($callbacks['request']))
         {
-            $result = call_user_func($callbacks['request'], $chall, $definition);
+            $result = call_user_func($callbacks['request'], $chall, $definition, $translations);
             if ($result !== null)
             {
                 self::displayCheckResult($result, $chall, $definition);
