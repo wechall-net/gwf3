@@ -7,6 +7,10 @@ final class WCChallenge
     public static function run($challengeDir, array $placeholders = array(), array $callbacks = array())
     {
         $definition = self::loadDefinition($challengeDir);
+        $placeholders = array_merge(
+            isset($definition['placeholders']) && is_array($definition['placeholders']) ? $definition['placeholders'] : array(),
+            $placeholders
+        );
         $wwwDir = dirname(__DIR__);
         $challengePath = self::challengePath($challengeDir, $wwwDir);
 
