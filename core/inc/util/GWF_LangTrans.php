@@ -197,7 +197,7 @@ final class GWF_LangTrans
 			$path = $this->base_path.'_'.GWF_DEFAULT_LANG.'.php';
 			if (false === Common::isFile($path))
 			{
-				die(GWF_Debug::backtrace(sprintf("A language file is completely missing: %s\n", htmlspecialchars($path)), false));
+				return $this->loadYamlLanguage($iso);
 			}
 		}
 
@@ -206,5 +206,29 @@ final class GWF_LangTrans
 		$this->trans[$iso] = $lang;
 		return true;
 	}
-}
 
+	private function loadYamlLanguage($iso)
+	{
+		$challengeDir = dirname(dirname($this->base_path));
+		$yamlFile = $challengeDir.'/challenge.yaml';
+		$autoload = dirname(dirname(dirname(__DIR__))).'/vendor/autoload.php';
+		if (!Common::isFile($yamlFile) || !Common::isFile($autoload))
+		{
+			die(GWF_Debug::backtrace(sprintf("A language file is completely missing: %s\n", htmlspecialchars($this->base_path.'_'.GWF_DEFAULT_LANG.'.php')), false));
+		}
+		require_once $autoload;
+		$definition = Symfony\Component\Yaml\Yaml::parseFile($yamlFile);
+		$translations = isset($definition['translations']) ? $definition['translations'] : array();
+		if (isset($translations[$iso]) && is_array($translations[$iso]))
+		{
+			$this->trans[$iso] = $translations[$iso];
+			return true;
+		}
+		if (isset($translations[GWF_DEFAULT_LANG]) && is_array($translations[GWF_DEFAULT_LANG]))
+		{
+			$this->trans[$iso] = $translations[GWF_DEFAULT_LANG];
+			return false;
+		}
+		return false;
+	}
+}
