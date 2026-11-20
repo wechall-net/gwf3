@@ -1,0 +1,23 @@
+title: Brainfucked
+score: 5
+creators: [Gizmore]
+tags: [Special]
+solution:
+  type: require
+  path: solution.php
+placeholders:
+  source: index.php?highlight=source
+source_code:
+  source:
+    file: sourcecode.php
+    title: sourcecode.php
+    language: javascript
+translations:
+  en:
+    title: Brainfucked
+    hint: source code
+    info_html: |
+      I found something exciting today, and it was easy to put it into a challenge.<br/>
+       I hope you hate <a href="{source}">it</a>! >;-)<br/>
+      <br/>
+      {hintlink}<br/> gizmore<br/>
