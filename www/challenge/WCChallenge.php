@@ -83,7 +83,7 @@ final class WCChallenge
         $info = self::text($translations, 'info', $challengeDir, $placeholders);
         if (array_key_exists('challenge_trailer', $placeholders))
         {
-            $info .= self::replacePlaceholders('{challenge_end}', $placeholders);
+            $info .= self::replacePlaceholders('{challenge_trailer}', $placeholders);
         }
         echo GWF_Box::box($info, self::text($translations, 'title', $challengeDir, $placeholders));
         if (isset($callbacks['challenge_after']))
