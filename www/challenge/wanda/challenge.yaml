@@ -1,0 +1,26 @@
+id: wanda
+title: Wanda
+score: 2
+creators: [Gizmore]
+tags: [Fun, Exploit]
+solution:
+  type: hash
+  algorithm: md5
+  value: E1C2C91B0C1AFCF97FCFF0EFE148D5C8
+translations:
+  en:
+    title_html: Wanda &ndash; The little grasshopper
+    info_html: |
+      Hello Hacker,<br/><br/>
+      Long story short; I quit my job to focus on art.<br/>
+      Please take a look at <a href="{href}">my work</a>, which I turned into a challenge for marketing reasons.<br/><br/>
+      Enjoy!
+  de:
+    title_html: Wanda &ndash; Die kleine Heuschrecke
+    info_html: |
+      Hallo Hacker,<br/>
+      <br/>
+      Kurz und Knapp; Ich kündigte um mich der Kunst zuzuwenden.<br/>
+      Wirf einen Blick auf <a href="{href}">meine Arbeit</a>, die ich aus Marketinggründen in eine Challenge lenkte.<br/>
+      <br/>
+      Viel Spaß!

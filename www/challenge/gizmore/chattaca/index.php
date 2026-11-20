@@ -1,27 +1,6 @@
 <?php
-$secret = require 'secret.php';
-chdir('../../../');
-define('GWF_PAGE_TITLE', "ChATTACA");
-require_once('challenge/html_head.php');
-require(GWF_CORE_PATH.'module/WeChall/solutionbox.php');
-if (false === ($chall = WC_Challenge::getByTitle(GWF_PAGE_TITLE)))
-{
-    $chall = WC_Challenge::dummyChallenge(GWF_PAGE_TITLE, 3, 'challenge/gizmore/chattaca/index.php', $secret);
-}
-
-$chall->showHeader();
-
-$chall->onCheckSolution();
-
-$user = GWF_User::getStaticOrGuest();
-$name = $user->isGuest() ? 'hacker' : $user->displayUsername();
-$pygdoURL = 'https://github.com/gizmore/pygdo';
-$connectURL = 'https://mogwai.mira-gpt.org/connect.overview.html';
-$miraURL = 'https://mira-gpt.org';
-$ghURL = 'https://github.com/mira-gpt';
-$info = $chall->lang('info', array($name, $pygdoURL, $connectURL, $miraURL, $ghURL));
-$title = $chall->lang('title');
-echo GWF_Box::box($info, $title);
-formSolutionbox($chall);
-echo $chall->copyrightFooter();
-require_once('challenge/html_foot.php');
+require_once dirname(__DIR__, 2).'/WCChallenge.php';
+WCChallenge::run(__DIR__, array('name' => function() {
+    $user = GWF_User::getStaticOrGuest();
+    return $user->isGuest() ? 'hacker' : $user->displayUsername();
+}));

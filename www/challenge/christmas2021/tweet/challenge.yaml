@@ -1,0 +1,15 @@
+id: christmas2021.tweet
+title: 2021 Christmas Tweet
+score: 2
+creators: [gizmore]
+tags: [Encoding]
+solution:
+  type: require
+  path: solution.php
+translations:
+  en:
+    title: 2021 Christmas Tweet
+    info_html: |
+      quangntenemy and gizmore secretly talk to santa via a covert channel.<br/>
+      Now <a href="{tweet}">Twitter</a> seems to be the carrier wave.<br/><br/>
+      We wish you a merry Christmas 2021!<br/>

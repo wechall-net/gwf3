@@ -8,6 +8,17 @@ use Symfony\Component\Yaml\Yaml;
 
 final class WCChallenge
 {
+    public static function sourceCode($file, $language = 'php', $title = null)
+    {
+        $isPhp = strtolower($language) === 'php';
+        $tag = $isPhp ? 'php' : 'code lang='.$language;
+        if ($title !== null)
+        {
+            $tag .= ' title='.$title;
+        }
+        return GWF_Message::display('['.$tag.']'.file_get_contents($file).'[/'.($isPhp ? 'php' : 'code').']');
+    }
+
     public static function run($challengeDir, array $placeholders = array(), array $callbacks = array())
     {
         $definition = self::loadDefinition($challengeDir);
@@ -44,7 +55,7 @@ final class WCChallenge
         $hasSubmission = isset($_POST['answer']) || isset($_POST['submit']) || isset($_POST['solve']) || isset($_POST['try']) || isset($_POST['go']);
         if ($hasSubmission && isset($callbacks['request']))
         {
-            $result = call_user_func($callbacks['request'], $chall, $definition);
+            $result = call_user_func($callbacks['request'], $chall, $definition, $translations);
             if ($result !== null)
             {
                 self::displayCheckResult($result, $chall, $definition);
@@ -77,17 +88,17 @@ final class WCChallenge
             }
         }
 
-        if (array_key_exists('challenge_end', $placeholders))
+        if (array_key_exists('challenge_trailer', $placeholders))
         {
-            if (is_callable($placeholders['challenge_end']))
+            if (is_callable($placeholders['challenge_trailer']))
             {
-                $placeholders['challenge_end'] = call_user_func($placeholders['challenge_end'], $translations, $placeholders);
+                $placeholders['challenge_trailer'] = call_user_func($placeholders['challenge_trailer'], $translations, $placeholders);
             }
         }
         $info = self::text($translations, 'info', $challengeDir, $placeholders);
-        if (array_key_exists('challenge_end', $placeholders))
+        if (array_key_exists('challenge_trailer', $placeholders))
         {
-            $info .= self::replacePlaceholders('{challenge_end}', $placeholders);
+            $info .= self::replacePlaceholders('{challenge_trailer}', $placeholders);
         }
         echo GWF_Box::box($info, self::text($translations, 'title', $challengeDir, $placeholders));
         if (isset($callbacks['challenge_after']))

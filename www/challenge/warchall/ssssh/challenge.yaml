@@ -1,0 +1,19 @@
+id: warchall.ssssh
+title: SSH... Z is sleeping
+score: 3
+creators: [Z]
+tags: [Linux, Exploit]
+solution:
+  type: require
+  path: solution.php
+input_maxlength: 14
+warchall_ads: true
+translations:
+  en:
+    title: SSH... Z is sleeping
+    info_html: |
+      Z is sleeping, if you hurry you can steal his SSH key and log in as level8 on the <a href="{warchall}">warchall box</a>
+  it:
+    title: SSH... Z stà dormendo
+    info_html: Z sta dormendo, se ti sbrighi puoi rubare la sua chiave SSH ed accedere come level8 sulla <a href="{warchall}">warchall
+      box</a>

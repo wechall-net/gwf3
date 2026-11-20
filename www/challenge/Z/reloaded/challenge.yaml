@@ -1,0 +1,128 @@
+id: Z.reloaded
+title: Z - Reloaded
+score: 6
+creators: [Z, Gizmore]
+tags: [Exploit, Simulated, Storyline]
+solution: false
+solution_box: false
+translations:
+  en:
+    title: Go to the challenge
+    info_html: Before starting the challenge I suggest you to save every information and solution,<br/>because later in the
+      challenge it is likely that you will need them again.<br/>Especially if you see passwords in the narrator box.<br/><br/><a
+      href="{challenge}" title="Start the challenge">Start the challenge</a>
+    your_box: Your box
+    narr_1: 'In this challenge you play the role of Trinity, from the famous movie Matrix: Reloaded. In the beginning of this
+      challenge, your mission is the same as in the movie: Power down the whole city. To begin the hack, you have to do a
+      stealth verbose nmap scan against 10.2.2.2 .<br/><br/>You can reset the challenge anytime by typing ''reset''.'
+    narr_2: Find the vulnerable service, read more about the famous exploit, and name the source file which contains the security
+      bug.
+    narr_3: Good job Trinity, now use the famous command (as seen in the movie) to exploit the vulnerable service.
+    narr_4: Oops, looks like your job becomes harder than seen in the movie, because you can not shut down the power grid
+      from this node. Your next job will be to attack the central ms sql database server. It is not reachable from your net,
+      so you have to port forward your local ms sql port via 10.2.2.2 (gateway) to the ms sql port on 192.168.10.2 (using
+      your new ssh account). You are root on your box, so you don't have to provide the username.
+    narr_5: 'Enter password:'
+    narr_6: You are root on 10.2.2.2 (gateway server), and have a working ssh tunnel between localhost and the database server
+      (192.168.10.2). You have also added your ssh public key to /root/.ssh/authenticated_keys, so you do not have to type
+      the password in the future. Your next job will be to login to the ms sql server 2000 with the command line client of
+      ms sql (osql). You have to exploit a famous vulnerability in ms sql to do it. It is really easy.
+    narr_7: Nice job, you are system admin on the central database server. Your next job will be to add a windows user called
+      trinity with password Z1ON0101 to the system - with one ms sql command.
+    narr_8: Add her to the administrators local group - again with one ms sql command.
+    narr_9: You have to setup a new port forward from your local remote desktop port to the database servers (192.168.10.2)
+      remote desktop port - through the gateway server (10.2.2.2).
+    narr_10: It is not that hard, is it? :) Now you can login to the database server remote desktop with "rdesktop 127.0.0.1
+      -u trinity -p Z1ON0101" (it is done, so this is not the solution to type in). You fire up a new console on your localhost,
+      and do another port forward. Any connection to 10.2.2.2 (gateway) port 222 has to be forwarded to your host 164.109.44.69
+      port 22.
+    narr_11: Consider scp client is on the database server (same as on Unix), and scp server is on your local box. Your job
+      is to copy the /home/trinity/nasty_virus file to the database server c:\ directory. Username trinity, password MyL0v315N30
+    narr_12: Oh, a prompt.
+    narr_13: Your nasty virus is doing a good job against the power grid, it will take days to recover the whole database
+      - and the power grid. Nice work Trinity, mission accomplished :)
+    after_1: ' '
+    after_2: |
+      Starting nmap V. 2.54BETA25
+      Insufficient responses for TCP sequencing (3), OS detection may be less accurate
+      Interesting ports on 10.2.2.2:
+      (The 1539 ports scanned but not shown below are in state: closed)
+      Port    State           Service         Version
+      22/tcp  open            ssh             OpenSSH 2.2.0 (protocol 1.0)
+      ...
+      No exact OS matches for host
+      ...
+      Nmap run completed -- 1 IP address (1 host up) scanneds
+    after_3: Right :)
+    after_4: |
+      Connecting to 10.2.2.2:ssh ... successful.
+      Attempting to exploit SSHv1 CRC32 ... successful.
+      Reseting root password to "Z1ON0101".
+      System open: Access Level <9>
+    after_5: 'Password:'
+    after_6: Welcome to the gateway server, root.
+    after_7: Welcome to MSSQL. We put the screws in your database!
+    after_8: Added user trinity.
+    after_9: Added user trinity to group administrators
+    after_10: Port Forward 1 done.
+    after_11: Port Forward 2 done.
+    after_12: 'Password:'
+    after_13: OWNED
+    cmd_help: This is no Shell. It is more like a trivia - Question and Answer game. Have fun with your research.
+  it:
+    title: Vai alla sfida
+    info_html: Prima di inizare la sfida ti consiglio di salvere tutte le informazioni e le soluzioni che riceverai,<br/>poichè
+      poi ti serviranno, molto probabilmente, nelle parti successive della sfida.<br/>Specialmente se vedi delle password
+      nella casella del narratore.<br/><br/><a href="{challenge}" title="Start the challenge">Inizia la sfida</a>
+    your_box: Il tuo computer
+    narr_1: 'In questa sfida impersonerai Trinity, dal famoso film Matrix: Reloaded. All''inizio di questa sfida, la tua missione
+      è la stessa del film: Togliere corrente all''intera città. per iniziare l''hack, devi eseguire un scan nmap verboso
+      contro 10.2.2.2.<br/><br/>You can reset the challenge anytime by typing ''reset''.'
+    narr_2: Trova il servizio vulnerabile, informati sul famoso exploit, e invia il nome del file sorgente che contiene il
+      problema di sicurezza.
+    narr_3: Buon lavoro Trinity, ora usa il famoso comando (come visto nel film) per sfruttare il servizio vulnerabile.
+    narr_4: Oops, sembra che il tuo lavoro sia diventato più arduo rispetto al film, poichè non puoi disattivare la rete elettrica
+      da questo nodo. Il tuo prossimo compito sarà quello di attaccare il server del database MS SQL centrale. Non è raggiungibile
+      dal tuo segmento di rete, per cui dovrai eseguire un port-forwarding dalla tua porta locale MS SQL verso 10.2.2.2 (gateway)
+      alla porta MS SQL su 192.168.10.2 (usando il tuo nuovo account SSH). Tu sei root sulla tua macchina, per cui non devi
+      fornire il nome utente.
+    narr_5: 'Inserisci la password:'
+    narr_6: Sei root su 10.2.2.2 (server gateway), e hai un tunnel SSH funzionante tra localhost e il server del database
+      (192.168.10.2). Hai inoltre aggiunto la tua chiave pubblica SSH a /root/.ssh/authenticated_keys, così da non dover ridigitare
+      la tua password in futuro. Il tuo prossimo compito è quello di effettuare il login al database MS SQL server 2000 con
+      il client da linea di comando di MS SQL (osql). Devi sfruttare una famosa vulnerabilità in MS SQL per farlo. E' molto
+      semplice.
+    narr_7: Bel lavoro, ora sei un amministratore di sistema sul server del database centrale. Il tuo prossimo compito consiste
+      nell'aggiungere un utente windows chiamato trinity con passowrd Z1ON0101 al sistema - tutto con un singolo comando MS
+      SQL.
+    narr_8: Aggiungi l'utente creato in precedenza al gruppo administrators locale - ancora con un unico comando MS SQL.
+    narr_9: Devi impostare un nuovo port-forwarding dalla tua porta locale di remote desktop alla porta di remote desktop
+      del server del database (192.168.10.2) - attraverso il server gateway (10.2.2.2).
+    narr_10: Non è così difficile, no? :) Ora puoi accedere al desktop remoto del del server del database con "rdesktop 127.0.0.1
+      -u trinity -p Z1ON0101" (è già stato eseguito, questa non è la soluzione da inserire). Lanci una nuova console su localhost,
+      e fai un nuovo port forward. Qualsiasi connessione a 10.2.2.2 (gateway) sulla porta 222 deve essere indirizzato al tuo
+      host 164.109.44.69 sulla porta 22.
+    narr_11: 'Considera che il client scp è sul server del database (come su Unix), ed il server scp è sulla tua postazione
+      locale. Il tuo compito è di copiare il file maligno /home/trinity/nasty_virus sul server del database in  c:\ directory.
+      Nome utente: trinity, password: MyL0v315N30'
+    narr_12: Oh, un prompt.
+    narr_13: Il tuo fastidioso virus sta facendo un gran bel lavoro contro la rete elettrica, ci metteranno giorni per recuperare
+      l'intero database - e la rete elettrica. Bel lavoro Trinity, missione compiuta :)
+    after_1: '  '
+    after_2: "Starting nmap V. 2.54BETA25\nInsufficient responses for TCP sequencing (3), OS detection may be less accurate\n\
+      Interesting ports on 10.2.2.2:\n(The 1539 ports scanned but not shown below are in state: closed)\nPort    State   \
+      \        Service         Version\n22/tcp  open            ssh             OpenSSH 2.2.0 (protocol 1.0)\n...\nNo exact\
+      \ OS matches for host\n...\nNmap run completed -- 1 IP address (1 host up) scanneds \n"
+    after_3: 'Right :) '
+    after_4: "Connecting to 10.2.2.2:ssh ... successful.\nAttempting to exploit SSHv1 CRC32 ... successful.\nReseting root\
+      \ password to \"Z1ON0101\".\nSystem open: Access Level <9> \n"
+    after_5: 'Password: '
+    after_6: 'Welcome to the gateway server, root. '
+    after_7: 'Welcome to MSSQL. We put the screws in your database! '
+    after_8: 'Added user trinity. '
+    after_9: 'Added user trinity to group administrators '
+    after_10: 'Port Forward 1 done. '
+    after_11: 'Port Forward 2 done. '
+    after_12: 'Password: '
+    after_13: 'OWNED '
+    cmd_help: Questa non è una Shell. E' più simile a trivia - un gioco di domande e risposte. Buon divertimento con la ricerca.

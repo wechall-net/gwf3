@@ -1,0 +1,34 @@
+id: noother.stop_us
+title: Stop us
+score: 3
+creators: [noother, gizmore]
+tags: [Exploit, PHP]
+solution: false
+solution_box: false
+placeholders:
+  table_file: noothtable.php
+translations:
+  en:
+    title: You cannot stop us!
+    info_html: |
+      Noother has created a business to sell .xyz domains for some bucks.<br/>
+      Your job is to find a hole in the script that would allow purchases without paying for it.<br/>
+      You can <a href="{test}">test the script here</a>.<br/>
+      To help you in debugging, you can take a <a href="{source}">look at the sourcecode</a>, also as <a href="{highlight}">highlighted version</a>.<br/>
+      There is a second file involved for the purchase table: <a href="{table}">{table_file}</a>, also as <a href="{table_highlight}">hightlighted version</a>, but you probably don't need it.<br/>
+      <br/>
+      Good luck!<br/>
+      <br/>
+      Thanks go out to {jjk} and {dloser} for testing the challenge.<br/>
+  it:
+    title: Non puoi fermarci!
+    info_html: |
+      Noother ha creato un'azienda per vendere domini .xyz a qualche dollaro.<br/>
+      Il tuo obiettivo è quello di trovare un bug nello script per effettuare acquisti senza pagarli.<br/>
+      Puoi testare <a href="{test}">lo script qui</a>.<br/>
+      Per aiutarti nel debugging, puoi dare un occhiata al <a href="{source}">codice sorgente</a>, anche <a href="{highlight}">versione evidenziata</a>.<br/>
+      C'è un secondo file che viene utilizzato durante l'acquisto: <a href="{table}">{table_file}</a>, anche <a href="{table_highlight}">versione evidenziata</a>, ma probabilmente non ti serve.<br/>
+      <br/>
+      Buona fortuna!<br/>
+      <br/>
+      Grazie a {jjk} e {dloser} per aver testato la sfida.<br/>

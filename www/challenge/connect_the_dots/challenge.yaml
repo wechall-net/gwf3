@@ -1,0 +1,18 @@
+id: connect_the_dots
+title: Connect the Dots
+score: 1
+solution: false
+translations:
+  en:
+    title: Connect the Dots
+    info_html: This is a stegano challenge from <a href="{profile}">galen</a>.<br/>Can you see the solution?
+    img_alt: The Challenge
+  de:
+    img_alt: Das Challenge
+    info_html: Dies ist eine Stegano Challenge von <a href="{profile}">galen</a>.<br/>Kannst du die Lösung sehen?
+  fi:
+    img_alt: Haaste
+    info_html: Tämä on stegano haaste <a href="{profile}">galeninlta</a>.<br/>Näetkö ratkaisua?
+  it:
+    img_alt: La sfida
+    info_html: Questa è una sfida di steganografia ideata da <a href="{profile}">galen</a>.<br/>Puoi vedere la soluzione?

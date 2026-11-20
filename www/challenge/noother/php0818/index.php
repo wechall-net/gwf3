@@ -1,28 +1,17 @@
 <?php
 if (isset($_GET['show']) && is_string($_GET['show']))
 {
-	header('Content-Type: text/plain; charset=UTF-8;');
-	die(file_get_contents('php0818.php'));
+    header('Content-Type: text/plain; charset=UTF-8;');
+    die(file_get_contents(__DIR__.'/php0818.php'));
 }
-chdir('../../../');
-define('GWF_PAGE_TITLE', 'PHP 0818');
-require_once('challenge/html_head.php');
-if (false === ($chall = WC_Challenge::getByTitle(GWF_PAGE_TITLE))) {
-	$chall = WC_Challenge::dummyChallenge(GWF_PAGE_TITLE, 3, 'challenge/noother/php0818/index.php', false);
-}
-$chall->showHeader();
-# -------------------------- #
-$href1 = 'index.php?show=source';
-$href2 = 'index.php?highlight=christmas';
-echo GWF_Box::box($chall->lang('info', array($href1, $href2, 'php0818.php')), $chall->lang('title'));
-# -------------------------- #
-if (isset($_GET['highlight']))
-{
-	$message = '[PHP title=PHP0818]'.file_get_contents('challenge/noother/php0818/php0818.php').'[/PHP]';
-	echo GWF_Box::box(GWF_Message::display($message));
-}
-# -------------------------- #
-echo $chall->copyrightFooter();
-require_once('challenge/html_foot.php');
-?>
-
+require_once dirname(__DIR__, 2).'/WCChallenge.php';
+WCChallenge::run(__DIR__, array(
+    'source' => 'index.php?show=source',
+    'highlight' => 'index.php?highlight=christmas',
+    'live' => 'php0818.php',
+), array(
+    'challenge_after' => function() {
+        if (!isset($_GET['highlight'])) { return ''; }
+        return GWF_Box::box(WCChallenge::sourceCode(__DIR__.'/php0818.php', 'php', 'PHP0818'));
+    },
+));

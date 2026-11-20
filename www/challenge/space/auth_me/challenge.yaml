@@ -1,0 +1,26 @@
+id: space.auth_me
+title: AUTH me
+score: 2
+creators: [Gizmore]
+tags: [HTTP, Training]
+solution: false
+solution_box: false
+translations:
+  en:
+    title: AUTH me
+    info_html: |-
+      A coworker has uploaded a weird <a href="{conf}">apache.conf</a> to secure a server, and now nobody can connect anymore.<br/>
+      He is on holidays right now, but he said that we surely can connect to <a href="{httpd}">the box</a>, as everything required is available online.<br/>
+      <br/>
+      Well, nobody of your coworkers has any idea what is up with that httpd and how to connect, and it is your turn to give it a try!<br/>
+      <br/>
+      Good Luck!
+  de:
+    title: Erkenne Mich
+    info_html: |-
+      Ein Arbeitskollege hat eine komische <a href="{conf}">apache.conf</a> hochgeladen um einen Server abzusichern, und nun kann sich niemand mehr verbinden.<br/>
+      Jetzt hat er auch noch Urlaub, aber angeblich ist alles was zum <a href="{httpd}">verbinden</a> benötigt wird bereits hochgeladen.<br/>
+      <br/>
+      Nunja, keiner deiner Kollegen hat eine Idee was mit dem Apache los ist, und wie man sich verbinden kann, und Du darfst nun dein Glück versuchen!<br/>
+      <br/>
+      Viel Erfolg!

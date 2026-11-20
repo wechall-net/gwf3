@@ -1,0 +1,56 @@
+id: subversive.history
+title: Repeating History
+score: 4
+creators: [space, Gizmore]
+tags: [Research]
+solution:
+  type: plaintext
+  value: 2bda2998d9b0ee197da142a0447f6725
+  case_sensitive: true
+  trim: true
+input_maxlength: 14
+placeholders:
+  wechall_challenges_url: https://www.wechall.net/challenge
+  gwf3_url: https://github.com/wechall-net/gwf3
+  kwisatz_profile_url: /profile/kwisatz
+translations:
+  en:
+    title: Repeating History
+    info_html: |
+      This challenge is about researching the <a href="{wechall_challenges_url}">WeChall challenges</a> and the <a href="{gwf3_url}">GWF3 codebase</a>.<br/>
+      I have put 2 passwords somewhere, but ....<br/>
+      <b>where the hack did I put them?!</b><br/>
+      The first password is obvious and the second is very subversive. Both are near. Combine them without any separator.<br/><br/>
+      Good luck on your research!<br/>
+      space and gizmore<br/><br/>
+      Greets to <a href="{kwisatz_profile_url}">kwisatz</a>. Thank you for motivation :)
+  de:
+    title: Die Vergangenheit Wiederholt Sich
+    info_html: |
+      In dieser Aufgabe geht es darum sich den Aufbau der <a href="{wechall_challenges_url}">WeChall Challenges</a> und der <a href="{gwf3_url}">GWF3 Codebase</a> genauer anzusehen.<br/>
+      Ich habe zwei Passwörter in dieser Aufgabe versteckt ...<br/>
+      <b>aber wo zum Geier sind die?!</b><br/>
+      Das erste Passwort ist offensichtlich, das zweite etwas subversiv. Beide sind nah. Kombiniere beide ohne Trennzeichen.<br/><br/>
+      Viel Erfolg bei Deinen Nachforschungen!<br/>
+      space und gizmore<br/><br/>
+      Gruß an <a href="{kwisatz_profile_url}">kwisatz</a>. Danke für Deine Motivation :)
+  fr:
+    title: L'histoire se répète
+    info_html: |
+      L'objectif de cette épreuve est de rechercher parmi les <a href="{wechall_challenges_url}">épreuves de WeChall</a> et la <a href="{gwf3_url}">GWF3 codebase</a>.<br/>
+      J'ai mis 2 mots de passe quelque part, mais ...<br/>
+      <b>où bon dieu les ai-je mis?!</b><br/>
+      Le premier mot de passe est évident et le second est très subversif. Les deux sont proches. Combinez-les sans séparateurs.<br/><br/>
+      Bonne chance!<br/>
+      space et gizmore<br/><br/>
+      Greets à <a href="{kwisatz_profile_url}">kwisatz</a>. Merci pour la motivation :)
+  it:
+    title: Storie Ripetute
+    info_html: |
+      Questa sfida riguarda la ricerca delle <a href="{wechall_challenges_url}">sfide WeChall</a> e <a href="{gwf3_url}">codebase di GWF3</a>.<br/>
+      Ho inserito due password da qualche parte, ma...<br/>
+      <b>Dove diamine le ho messe?!</b><br/>
+      La prima password è ovvia, la seconda è molto subversiva. Entrambe sono vicine. Combinale senza alcun separatore.<br/><br/>
+      Buona fortuna nella tua ricerca!<br/>
+      space e gizmore<br/><br/>
+      Un ringraziamento a <a href="{kwisatz_profile_url}">kwisatz</a>. Grazie per la motivazione :)
