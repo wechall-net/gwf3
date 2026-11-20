@@ -52,7 +52,7 @@ echo GWF_Website::getDefaultOutput();
 
 
 $self = GWF_User::getStaticOrGuest()->displayUsername();
-$quan = '<a href="/profile/quangntenemy">quangntenemy</a>';
+$quan = '<a href="'.GWF_WEB_ROOT.'profile/quangntenemy">quangntenemy</a>';
 $href = "?letterbox=santa.php";
 
 echo GWF_Box::box($chall->lang('info1', array($self, $quan, $href)), $chall->lang('title1'));

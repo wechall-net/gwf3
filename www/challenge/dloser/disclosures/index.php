@@ -15,7 +15,7 @@ $chall->onCheckSolution();
 $user = GWF_User::getStaticOrGuest();
 $box_content = $chall->lang('info', array(
 	($user->isGuest() ? $chall->lang('hacker') : $user->displayUsername()),
-	'<a href="/profile/dloser" title="WeChall Profile of dloser">dloser</a>',
+	'<a href="'.GWF_WEB_ROOT.'profile/dloser" title="WeChall Profile of dloser">dloser</a>',
 	'www/home.php',
 	'www/viewer.php?f=home.php',
 ));
