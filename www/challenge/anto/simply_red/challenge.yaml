@@ -1,0 +1,34 @@
+title: Simply Red
+score: 3
+creators: [anto]
+tags: [Image, Stegano]
+solution:
+  type: require
+  path: solution.php
+placeholders:
+  image: op.png
+translations:
+  de:
+    info_html: Finde das Lösungswort in mir oder ich muss Dich vernichten.
+    info2: |
+      <img src="{image}" alt="the challenge" title="Der Name ist ein Hinweis, oder?" />
+      <hr/>
+      &quot;Kein Opfer ist zu groß im Dienst der Freiheit.&quot;<br/>
+  en:
+    info_html: Find the sentence hidden in me or I'll have to destroy you.
+    info2: |
+      <img src="{image}" alt="the challenge" title="The name is a hint, isn`t it?" />
+      <hr/>
+      &quot;No sacrifice is too great in the service of freedom.&quot;<br/>
+  fi:
+    info_html: Etsi minuun piilotettu lause, tai tuhoan sinut.
+    info2: |
+      <img src="{image}" alt="Haaste" title="Nimi on vihe, eikö olekin?" />
+      <hr/>
+      &quot;Yksikään uhraus ei ole liian iso vapuden palvelussa.&quot;<br/>
+  it:
+    info_html: Trova la frase nascosta in me o dovrò distruggerti.
+    info2: |
+      <img src="{image}" alt="the challenge" title="Il nome è un aiuto, non è così?" />
+      <hr/>
+      &quot;Nessun sacrificio al servizio della libertà è troppo grande.&quot;<br/>
