@@ -1,0 +1,29 @@
+title: DropDaBass
+score: 4
+creators: [anto]
+tags: [Audio]
+solution:
+  type: global
+placeholders:
+  download: dropdabass.zip
+translations:
+  de:
+    title: Drop Da Bass
+    info_html: Hoffentlich magst du <a href="{download}">dieses Lied</a> (1.12 MB); Es ist eine brandneue, private Komposition.
+      Kannst du die versteckte Nachricht finden?...
+  en:
+    title: Drop Da Bass
+    info_html: We hope you like <a href="{download}">this music</a> (1.12 MB); This is a brand new personal composition. Can
+      you find out the message inside?...
+  fi:
+    title: Drop Da Bass
+    info_html: Toivottavasti pidät <a href="{download}">tästä musiikista</a> (1.12 MB); se on täysin uusi henkilökohtainen
+      sävellykseni. Löydätkö sen sanoman?...
+  fr:
+    title: Drop Da Bass
+    info_html: Nous espérons que vous aimez <a href="{download}">cette musique</a> (1.12 MB); C'est une toute nouvelle composition
+      personnelle. Pouvez-vous découvrir le message à l'intérieur?...
+  it:
+    title: 'Drop Da Bass '
+    info_html: Speriamo che ti piaccia <a href="{download}">questa musica</a> (1.12 MB). E' una nuova composizione personale.
+      Puoi trovare il messaggio nascosto all'interno?
