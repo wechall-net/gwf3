@@ -31,7 +31,7 @@ if (isset($_POST['solve']))
 
 echo GWF_Website::getDefaultOutput();
 
-$noother = sprintf('<a href="/profile/noother">noother</a>');
+$noother = sprintf('<a href="'.GWF_WEB_ROOT.'profile/noother">noother</a>');
 echo GWF_Box::box($chall->lang('info', array($noother, 'reset.php', 'index.php?show=source', 'index.php?highlight=christmas')), $chall->lang('title'));
 
 if (Common::getGetString('highlight') === 'christmas')
@@ -75,4 +75,3 @@ function ttr2_submit(WC_Challenge $chall)
 }
 
 ?>
-
