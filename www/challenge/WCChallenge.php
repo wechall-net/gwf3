@@ -73,7 +73,7 @@ final class WCChallenge
             }
         }
 
-        if (array_key_exists('challenge_end', $placeholders))
+        if (array_key_exists('challenge_trailer', $placeholders))
         {
             if (is_callable($placeholders['challenge_end']))
             {
