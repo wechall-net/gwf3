@@ -81,7 +81,7 @@ final class WCChallenge
             }
         }
         $info = self::text($translations, 'info', $challengeDir, $placeholders);
-        if (array_key_exists('challenge_end', $placeholders))
+        if (array_key_exists('challenge_trailer', $placeholders))
         {
             $info .= self::replacePlaceholders('{challenge_end}', $placeholders);
         }
