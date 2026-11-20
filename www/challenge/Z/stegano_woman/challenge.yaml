@@ -1,0 +1,16 @@
+title: Stegano Woman
+score: 3
+creators: [Z]
+tags: [Stegano]
+solution:
+  type: require
+  path: solution.php
+placeholders:
+  download: stegano_woman.zip
+translations:
+  de:
+    info_html: Eine weitere Challenge von Z.<br/>Du kannst sie <a href="{download}">hier herunterladen</a>.<br/>
+  en:
+    info_html: Another challenge by Z.<br/>You can <a href="{download}">download it here</a>.<br/>
+  it:
+    info_html: Un'altra sfida di Z.<br/>Puoi scaricarla <a href="{download}">qui</a>.<br/>
