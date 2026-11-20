@@ -1,0 +1,69 @@
+title: Agent Larry
+score: 7
+creators: [Z]
+tags: [Internet, Forensics]
+solution:
+  type: require
+  path: solution.php
+placeholders:
+  traffic: dump.pcap
+  database: database.rar
+  oracle_dlls: oradlls.zip
+  example: example.txt
+translations:
+  en:
+    title: Agent Larry
+    info_html: One of our agents (codename Larry) was able to sniff Oracle network traffic deep in the Russian network.<br/>First
+      Larry obtained some traffic when users authenticated to the database, this traffic you can find<br/><a href="{traffic}">here</a><br/><br/>Afterwards,
+      Larry sniffed some traffic when the database made some network backup.<br/>When he realized how important this could
+      be, the agent immediately forwarded the traffic<br/>to the headquarter, but unfortunately the transmission was stopped.<br/>We
+      could not make any contact to Larry anymore.<br/><br/>Our experts already analyzed this traffic, and were able to<br/>restore
+      the beginning of a database file, which you can find<br/><a href="{database}">here</a>.<br/><br/>Your goal is to obtain
+      a valid username - password - connect identifier in the following form<br/><br/><b>database_username/password@database_ip:port/database_name</b><br/><br/>This
+      challenge fits in the Internet/Forensics section, so use google to find the right tool for it.<br/>After you have found
+      the tool, you need a lot of oracle dll's.<br/>You can download it from Oracle official site (Oracle Database Client),<br/>but
+      I made a small client for this challenge, you can download it here:<br/><a href="{oracle_dlls}">Oracle DLLs</a><br/><br/>On
+      the headquarter you found some analyzed Oracle traffic, maybe it will help you to understand<br/>more Oracle TNS traffic.
+      You can download it here:<br/><a href="{example}">example.txt</a>.<br/><br/>And the last information for you, is that
+      the clients were connecting to the<br/>database via IP tunneling, but the traffic was captured after the tunneling was
+      terminated.<br/><br/>You don't have too much time to solve this, so you think brute force is not the way...<br/><br/>If
+      you cannot find the tool, don't worry, you will find it <br/>Sooner or Later :)
+  fr:
+    title: Agent Larry
+    info_html: Un de nos agents (qui a pour nom de code Larry) a été capable d'intercepter le trafic réseau d'Oracle au fin-fond
+      du réseau russe.<br/>D'abord Larry a obtenu  trafic quand les utilisateur s'authentifient à la base de données, que
+      vous pouvez trouver<br/><a href="{traffic}">ici</a><br/><br/>Ensuite, Larry a récupéré le trafic quand la base de données
+      faisait ses sauvergardes sur le réseau.<br/>Quand il a réalisé combien cela pouvait être important, il a immédiatement
+      transmis le trafic<br/>au quartier général, mais malheureusement la transmission a été coupée.<br/>Nous n'avons pas
+      réussi à reprendre contact avec Larry.<br/><br/>Nos experts ont déjà analysé ce trafic, et ont pu<br/>récupérer le début
+      d'un fichier de la base de données, que vous pouvez trouver<br/><a href="{database}">ici</a>.<br/><br/>Votre but est
+      d'obtenir un username et un password pour vous connecter à partir du formulaire suivant.<br/><br/><b>database_username/password@database_ip:port/database_name</b><br/><br/>Ce
+      challenge fait partie de la section Internet/Forensics, donc utilisez Google pour trouver le bon outil et réussir le
+      challenge.<br/>Après avoir trouvé l'outil, il vous faudra beaucoup de librairies oracle.<br/>Vous pouvez les télécharger
+      à partir du site officiel d'Oracle (Oracle Database Client),<br/>mais j'ai aussi fait un petit client, pour ce challenge,
+      que vous pouvez retrouver ici :<br/><a href="{oracle_dlls}">Oracle DLLs</a><br/><br/>Au quartier général vous avez trouvé
+      un peu de trafic d'Oracle analysé, peut-être que ça vous aidera à comprendre<br/>un peu plus le trafic Oracle TNS. Vous
+      pouvez le télécharger ici :<br/><a href="{example}">example.txt</a>.<br/><br/>Et votre dernière information est que
+      les clients été connectés à la<br/>base de données via un tunnel IP, mais le trafic a été capturé après que le tunnel
+      soit clos.<br/><br/>Vous avez peu de temps pour résoudre ceci, donc vous pensez que le bruteforce n'est pas la bonne
+      solution...<br/><br/>Si vous ne trouvez pas l'outil, pas d'inquiétude, vous le trouverez<br />"Sooner or Later", comme
+      on dit en anglais :)<br/>
+  it:
+    title: Agente Larry
+    info_html: 'Uno dei nostri agenti (nome in codice: Larry) è riuscito ad intercettare del traffico su una rete Oracle sulla
+      rete russa.<br/>Prima Larry ha ottenuto del traffico quando degli utenti si sono identificato al database, e puoi trovarlo
+      <br/><a href="{traffic}">qui</a><br/><br/>Dopodichè, Larry ha intercettato del traffico quando il database ha fatto
+      un backup della rete.<br/>Una volta realizzato quanto importante questo fosse, l''agente ha immediatamente trasmesso
+      il traffico<br/>al quartier generale, ma sfortunatamente la trasmissione è stata bloccata.<br/>Non abbiamo più potuto
+      contattare Larry.<br/><br/>I nostri esperti hanno analizzato il traffico e sono stati in grado di <br/>ripristinare
+      l''inizio di un file del database, che puoi trovare<br/><a href="{database}">qui</a>.<br/><br/>Il tuo obiettivo è di
+      trovare un identificativo nome utente - password - connessione valido nella forma seguente<br/><br/><b>utente_database/password@ip_database:porta/nome_database</b><br/><br/>Questa
+      sfida rientra nella sezione Internet/Forensics, per cui utilizza Google per trovare il programma adatto allo scopo.<br/>Dopo
+      aver trovato il programm, ti servono molto dll di Oracle.<br/>Puoi scaricarle dal sito ufficiale di Oracle (Oracle Database
+      Client),<br/>ma ho scritto un piccolo client per questa sfida, che puoi scaricare qui:<br/><a href="{oracle_dlls}">DLL
+      Oracle</a><br/><br/>Al quartier generale hai trovato del traffico Oracle analizzato, forse ti potrà servire per capire
+      di più<br/>sul traffico TNS di Oracle. Puoi scaricarlo qui:<br/><a href="{example}">example.txt</a>.<br/><br/>E, come
+      ultima informazione, gli utenti si connettevano al database tramite IP tunneling,<br/>ma il traffico è stato catturato
+      dopo che il tunneling era terminato.<br/><br/>Non hai molto tempo per risolvere questo problema, per cui utilizzare
+      tecniche di bruteforcing non è un opzione...<br/><br/>Se non trovi il programma giusto, non preoccuparti, lo troverai<br/>prima
+      o poi :)'
