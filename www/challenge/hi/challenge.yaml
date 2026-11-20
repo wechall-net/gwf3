@@ -1,0 +1,144 @@
+title: hi
+score: 4
+creators: [Gizmore]
+tags: [Math]
+solution:
+  type: require
+  path: solution.php
+translations:
+  de:
+    info_html: |-
+      Hi, Stell dir vor:<br/>
+      Es gibt einen IRC channel #wechall auf irc.wechall.net.<br/>
+      <br/>
+      Der Server versendet die Nachrichten an alle Teilnehmer im channel, auch zurück zum Absender.<br/>
+      Wenn jede Minute ein weiterer Teilnehmer hinzukommt, und &quot;Hi&quot; sagt,<br/>
+      Wieviele &quot;Hi&quot; Nachrichten wurden nach 0xfffbadc0ded Minuten gesendet?<br/>
+      Niemand verlässt den channel, also nehmen am Ende 0xfffbadc0ded Personen an der Unterhaltung teil.<br/>
+      <br/>
+      Beispiel für 3 Minuten:<br/>
+      Der #channel ist leer und es wurden 0 Nachrichten gesendet.<br/>
+      1. Person kommt hinzu, schreibt &quot;hi&quot;, der Server sendet &quot;hi&quot; zurück an eine Person.<br/>
+      2. Person kommt hinzu, schreibt &quot;hi&quot;, der Server sendet &quot;hi&quot; zurück an zwei Personen.<br/>
+      3. Person kommt hinzu, schreibt &quot;hi&quot;, der Server sendet &quot;hi&quot; zurück an drei Personen.<br/>
+      <br/>
+      Minute 1: 2 Nachrichten gesendet<br/>
+      Minute 2: 3 Nachrichten gesendet<br/>
+      Minute 3: 4 Nachrichten gesendet<br/>
+      Zählt man diese zusammen erhält man als Lösung 9 Nachrichten gesendet nach drei Minuten.<br/>
+      <br/>
+      Hinweis zur Umrechnung: 0xfffbadc0ded ist Hexadezimal. Umgerechnet in das Dezimalsystem ergibt sich 17.591.026.060.781 (ca. 20 Billionen Minuten).<br/>Bitte gib deine Lösung im Dezimalsystem an.
+  en:
+    info_html: |-
+      Hi, imagine this situation.<br/>
+      There is an IRC channel #wechall on irc.wechall.net.<br/>
+      <br/>
+      The server sends the messages to all people in the channel, also back to the sender himself.<br/>
+      When every minute one person joins and says hi,<br/>
+      how many &quot;hi&quot; messages were totally sent for this channel after 0xfffbadc0ded minutes ?<br/>
+      No one ever leaves the channel, so there are 0xfffbadc0ded people at the end ;)<br/>
+      <br/>
+      Further explanation for 3 minutes:<br/>
+      the channel is empty and there have been sent 0 messages
+      1st person joins, sends hi, the server sends hi back to 1 persons.<br/>
+      2nd person joins, sends hi, the server sends hi back to 2 persons.<br/>
+      3rd person joins, sends hi, the server sends hi back to 3 persons.<br/>
+      <br/>
+      Minute 1: 2 messages sent<br/>
+      Minute 2: 3 messages sent<br/>
+      Minute 3: 4 messages sent<br/>
+      Adding these up means for 3 minutes are 9 messages sent.<br/>
+      <br/>
+      Conversion Notes: 0xfffbadc0ded is hexadecimal which converts to 17.591.026.060.781 (Thats around 20 trillion minutes).Please submit your solution in the decimal system.
+  fi:
+    info_html: |-
+      Hei, kuvaile tätä tilannetta.<br/>
+      IRC-kanavamme on #wechall irc.wechall.net:ssä.<br/>
+      <br/>
+      Serveri lähettää viestin kaikille käyttäjillä kanavalla ja myös lähettäjälle itselleen.<br/>
+      Jokainen minuutti kun jäsen liittyy se sanoo hei,<br/>
+      kuinka monta &quot;hei&quot; viestiä on yhteensä lähetetty 0xfffbadc0ded minuuttia ?<br/>
+      Kukaan ei ikinä lähde kanavalta joten täällä on lopulta 0xfffbadc0ded henkilöä ;)<br/>
+      <br/>
+      Samanlainen selitys 3 minuutille:<br/>
+      Kanava on tyhjä ja siellä on 0 jäsentä
+      1 jäsen liittyy, sanoo hei, serveri sanoo hei takaisin 1 jäsenelle.<br/>
+      2 jäsentä liittyy, kummatkin sanoo hei, silloin serveri lähettää sen 2 jäsenelle.<br/>
+      3 jäsen liittyy ja sama jatkuu.<br/>
+      <br/>
+      Minuutti 1: 2 viestiä lähetetty<br/>
+      Minuutti 2: 3 viestiä lähetetty<br/>
+      Minuutti 3: 4 viestiä lähetetty<br/>
+      Ja jos nämä lisätään 3 minuuttia tekee 9 viestiä.<br/>
+      <br/>
+      Huomautuksia: 0xfffbadc0ded on hexademikaalinen luvun 17.591.026.060.781 (Tämä on noin 20 triljoonaa minuuttia).Lähetä sinun vastauksesi meille.
+  fr:
+    info_html: |
+      Bonjour, imaginez la situation suivante.<br/>
+      Il y a un canal IRC sur irc.wechall.net nommé #wechall.<br/>
+      <br/>
+      Lorsque le serveur reçoit un message à transmettre, il l'envoit à chacune des personnes présentes dans le canal (l'expéditeur inclus).<br/>
+      Lorsqu'à chaque minute une personne s'inscrit et dit bonjour,<br/>
+      combien de messages &quot;bonjour&quot; au total sont envoyés dans ce canal après 0xfffbadc0ded minutes ?<br/>
+      Une fois inscrit, personne ne quitte le canal ; il y a donc 0xfffbadc0ded personnes à la fin ;)<br/>
+      <br/>
+      Voici un exemple sur une durée de 3 minutes :<br/>
+      Le canal est initialement vide et 0 message a été envoyé.<br/>
+      La 1ère personne s'inscrit, dit bonjour, le serveur envoie le message à 1 personne.<br/>
+      La 2e personne s'inscrit, dit bonjour, le serveur envoie le message à 2 personnes.<br/>
+      La 3e personne s'inscrit, dit bonjour, le serveur envoie le message à 3 personnes.<br/>
+      <br/>
+      <br/>
+      Minute #1: 2 messages sont envoyés<br/>
+      Minute #2: 3 messages sont envoyés<br/>
+      Minute #3: 4 messages sont envoyés<br/>
+      En additionnant ceux-ci pour une durée de 3 minutes, on obtient que 9 messages ont été envoyés par le serveur.<br/>
+      <br/>
+      Notes à propos de la conversion d'unités : 0xfffbadc0ded est la représentation hexadécimale qui se convertie en base 10 en 17'591'026'060'781 (C'est environ 20 billion de minutes).<br/>
+      Veuillez soumettre votre solution dans le système décimale (base 10).
+  it:
+    info_html: |-
+      Ciao, immagina questa situazione.<br/>
+      C'è un canale IRC #wechall su irc.wechall.net.<br/>
+      <br/>
+      Il server invia un messaggio a tutte le persone nel canale, ed inoltre ne invia uno al mittente.<br/>
+      Se ogni minuto una persona si unisce e dice 'Ciao',
+      quanti messaggi &quot;Ciao&quot; sarebbero inviati in totale su questo canale dopo 0xfffbadc0ded minuti?<br/>
+      Nessuno lascia mai il canale, quindi ci sono 0xfffbadc0ded persone alla fine ;)<br/>
+      <br/>
+      Un'ulteriore spiegazione per 3 minuti:<br/>
+      il canale è vuoto, quindi sono stati inviati 0 messaggi
+      - la prima pesona si unisce, invia 'Ciao' e il server invia 'Ciao' a 1 persona.<br/>
+      - la seconda pesona si unisce, invia 'Ciao' e il server invia 'Ciao' a 2 persone.<br/>
+      - la terza persona si unisce, invia 'Ciao' e il server invia 'Ciao' a 3 persone.<br/>
+      <br/>
+      Minuto 1: 2 messaggi inviati<br/>
+      Minuto 2: 3 messaggi inviati<br/>
+      Minuto 3: 4 messaggi inviati<br/>
+      Sommando il tutto, per 3 minuti, abbiamo un totale di 9 messaggi inviati.<br/>
+      <br/>
+      Note sulla conversione: 0xfffbadc0ded è un numero esadecimale che equivale a 17.591.026.060.781 (All'incirca 20 trilioni di minuti).Invia la tua soluzione in formato decimale.
+  ru:
+    info_html: |-
+      Здравствуйте, представьте себе такую ситуацию <br/>
+      Существует канал IRC # wechall на irc.wechall.net
+      <br/>
+      Cервер отправляет сообщения всем людям в канале, а также обратно к отправителю.<br/>
+      <br/>
+      Когда каждую минуту один человек присоединяется и говорит привет,<br/>
+      Сколько &quot;привет&quot; сообщения были полностью отправлены на этом канале после 0xfffbadc0ded минут? <br/>
+      Никто не покидает канал, получаетса 0xfffbadc0ded людей в конце;) <br/>
+      <br/>
+      Дополнительные разъяснения на 3 минути:<br/>
+      Канал пустой и было отправлено 0 сообщений<br/>
+      Первый пользователь присоединяется, передает привет, сервер посылает привет ему <br/>
+      Второй пользователь присоединяется, передает привет, сервер посылает привет ему <br/>
+      Третий пользователь присоединяется, передает привет, сервер посылает привет ему <br/>
+      <br/>
+      Минута 1: 2 отправленных сообщений, <br/>
+      Минута 2: 3 отправленных сообщений, <br/>
+      Минута 3: 4 отправленных сообщений, <br/>
+      Получаетса что  за 3 минута отправлены  9 сообщений <br/>
+      <br/>
+      Преобразование Примечания: 0xfffbadc0ded является шестнадцатеричной который преобразует в 17.591.026.060.781 (около 20 триллионов минут).<br/>
+      Пожалуйста, отправьте ваше решение в десятичной системе.
