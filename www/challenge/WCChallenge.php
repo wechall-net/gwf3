@@ -75,7 +75,7 @@ final class WCChallenge
 
         if (array_key_exists('challenge_trailer', $placeholders))
         {
-            if (is_callable($placeholders['challenge_end']))
+            if (is_callable($placeholders['challenge_trailer']))
             {
                 $placeholders['challenge_end'] = call_user_func($placeholders['challenge_end'], $translations, $placeholders);
             }
