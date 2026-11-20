@@ -1053,13 +1053,9 @@ final class WC_Challenge extends GDO
 	{
 		$now = date('Y');
 		$cye = intval(substr($this->getVar('chall_date'), 0, 4), 10);
-		$arr = array();
-		for ($y = $cye; $y <= $now; $y++)
-		{
-			$arr[] = $y;
-		}
+		$years = $cye == $now ? $now : $cye.'-'.$now;
 
-		return '<div class="box box_c">&copy;&nbsp;'.GWF_Array::implodeHuman($arr).'&nbsp;'.WC_HTML::lang('by').'&nbsp;'.$this->displayCreators().'</div>';
+		return '<div class="box box_c">&copy;&nbsp;'.$years.'&nbsp;'.WC_HTML::lang('by').'&nbsp;'.$this->displayCreators().'</div>';
 	}
 	
 	##############################
