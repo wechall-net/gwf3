@@ -4,6 +4,17 @@ use Symfony\Component\Yaml\Yaml;
 
 final class WCChallenge
 {
+    public static function sourceCode($file, $language = 'php', $title = null)
+    {
+        $isPhp = strtolower($language) === 'php';
+        $tag = $isPhp ? 'php' : 'code lang='.$language;
+        if ($title !== null)
+        {
+            $tag .= ' title='.$title;
+        }
+        return GWF_Message::display('['.$tag.']'.file_get_contents($file).'[/'.($isPhp ? 'php' : 'code').']');
+    }
+
     public static function run($challengeDir, array $placeholders = array(), array $callbacks = array())
     {
         $definition = self::loadDefinition($challengeDir);
