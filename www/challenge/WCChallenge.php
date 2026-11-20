@@ -77,7 +77,7 @@ final class WCChallenge
         {
             if (is_callable($placeholders['challenge_trailer']))
             {
-                $placeholders['challenge_end'] = call_user_func($placeholders['challenge_end'], $translations, $placeholders);
+                $placeholders['challenge_trailer'] = call_user_func($placeholders['challenge_trailer'], $translations, $placeholders);
             }
         }
         $info = self::text($translations, 'info', $challengeDir, $placeholders);
