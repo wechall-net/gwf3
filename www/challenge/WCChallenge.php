@@ -125,9 +125,10 @@ final class WCChallenge
         }
         if (isset($translations['disclaimer_html']) || isset($translations['disclaimer']))
         {
+            $disclaimerTitle = isset($translations['disc_title']) ? self::text($translations, 'disc_title', $challengeDir, $placeholders) : '';
             echo GWF_Box::box(
                 self::text($translations, 'disclaimer', $challengeDir, $placeholders),
-                self::text($translations, 'disc_title', $challengeDir, $placeholders)
+                $disclaimerTitle
             );
         }
         if (isset($callbacks['render']))
@@ -316,7 +317,7 @@ final class WCChallenge
         }
         if (!isset($translations[$key]))
         {
-            return htmlspecialchars($key, ENT_QUOTES, 'UTF-8');
+            return '';
         }
         return self::replacePlaceholders(nl2br(htmlspecialchars((string)$translations[$key], ENT_QUOTES, 'UTF-8')), $placeholders);
     }
