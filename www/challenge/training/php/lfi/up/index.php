@@ -45,7 +45,7 @@ function trainingPhpLfiAfter($code, $code2, $code_emulate_pnb, $translations, $p
     eval($code.$code_emulate_pnb); # Eval the first line.
 
     $output = '<div class="box">'.PHP_EOL;
-    $title = str_replace('{minus}', isset($placeholders['minus']) ? $placeholders['minus'] : '', $translations['example_title']);
+    $title = $translations['example_title'];
     $output .= '<div class="box_t">'.htmlspecialchars($title).' ('.htmlspecialchars($filename).')</div>'.PHP_EOL;
     $output .= '<div class="box_c">'.PHP_EOL;
     if (lfiIsSafeDir($filename) === true) { eval($code2); } # Eval the second line, when safe.
