@@ -13,7 +13,7 @@ placeholders:
   author: '{GWF_WEB_ROOT}pm/send/to/Z'
 translations:
   en:
-    index_info: You, Chell want to destroy GLaDOS. For this mission you have to steal the cookie from GLaDOS in order to get
+    index_info_html: You, Chell want to destroy GLaDOS. For this mission you have to steal the cookie from GLaDOS in order to get
       access to the mainframe in the Enrichment Center. If you can access the mainframe, you can shutdown GLaDOS and you will
       be rescued.<br/><br/>You have found a source code for a web application, which is vulnerable to sql-injection and xss
       attacks. This web application runs on the <a href="{experience}">mainframe (accessible only from the internal network).</a>
@@ -29,7 +29,7 @@ translations:
       and GLaDOS itself, you will receive your cake. I mean your cookie. Good luck!<br/><br/><b>Additional information:</b><br/><b>magic_quotes_gpc
       is off on the mainframe</b><br/>
   it:
-    index_info: Tu, Chell vuoi distruggere GLaDOS. Per questa missione dovrai rubare il cookie da GLaDOS per ottenere l'accesso
+    index_info_html: Tu, Chell vuoi distruggere GLaDOS. Per questa missione dovrai rubare il cookie da GLaDOS per ottenere l'accesso
       al mainframe nel Centro di Arricchimento. Se puoi accedere al mainframe, puoi spegnere GLaDOS e sarai recuperato.<br/><br/>Hai
       trovato il sorgente di una Web Application, vulnerabile a SQL injection e attacchi XSS. Questa Web Application gira
       sul <a href="{experience}">mainframe (accessibile solo dalla rete interna).</a> <a href="{experience_source}"> Qui puoi
