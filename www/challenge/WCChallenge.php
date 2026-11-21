@@ -105,7 +105,12 @@ final class WCChallenge
         {
             $info .= self::replacePlaceholders('{challenge_trailer}', $placeholders);
         }
-        echo GWF_Box::box($info, self::text($translations, 'title', $challengeDir, $placeholders));
+        $titleKey = isset($definition['title_key']) ? $definition['title_key'] : 'title';
+        $boxTitle = isset($translations[$titleKey]) ? self::text($translations, $titleKey, $challengeDir, $placeholders) : $definition['title'];
+        if (!isset($definition['info_box']) || $definition['info_box'])
+        {
+            echo GWF_Box::box($info, $boxTitle);
+        }
         if (isset($callbacks['challenge_after']))
         {
             echo call_user_func($callbacks['challenge_after'], $translations, $placeholders);
