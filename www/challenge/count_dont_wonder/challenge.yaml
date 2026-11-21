@@ -5,3 +5,6 @@ tags: [Stegano]
 solution: false
 placeholders:
   challenge_trailer: <br/><img src="bytes.jpg" alt="bytes.jpg" title="bytes.jpg" />
+translations:
+  en:
+    info_html: ''
