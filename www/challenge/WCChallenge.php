@@ -117,9 +117,10 @@ final class WCChallenge
         }
         if (isset($translations['credits_html']) || isset($translations['credits']))
         {
+            $creditsTitle = isset($translations['credits_title']) ? self::text($translations, 'credits_title', $challengeDir, $placeholders) : '';
             echo GWF_Box::box(
                 self::text($translations, 'credits', $challengeDir, $placeholders),
-                self::text($translations, 'credits_title', $challengeDir, $placeholders)
+                $creditsTitle
             );
         }
         if (isset($translations['disclaimer_html']) || isset($translations['disclaimer']))
