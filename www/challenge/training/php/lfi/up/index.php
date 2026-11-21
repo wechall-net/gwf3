@@ -54,7 +54,11 @@ function trainingPhpLfiAfter($code, $code2, $code_emulate_pnb, $translations, $p
     $output .= '</div>'.PHP_EOL.'</div>'.PHP_EOL;
     GWF_Debug::setMailOnError(true);
     GWF_Debug::setDieOnError(true);
-    $credits = str_replace('{minus}', isset($placeholders['minus']) ? $placeholders['minus'] : '', $translations['credits']);
+    $minus = isset($placeholders['minus']) ? $placeholders['minus'] : '';
+    if (is_callable($minus)) {
+        $minus = call_user_func($minus);
+    }
+    $credits = str_replace('{minus}', $minus, $translations['credits']);
     $output .= GWF_Box::box($credits);
     return $output;
 }
