@@ -105,11 +105,16 @@
                 {"type": "array", "items": {"type": ["string", "integer"]}}
               ]
             },
-            "trim": {
-              "type": "boolean"
-            },
             "case_sensitive": {
               "type": "boolean"
+            },
+            "no_spaces": {
+              "type": "boolean",
+              "description": "Remove spaces from submitted answers before checking."
+            },
+            "hashed_password": {
+              "type": "boolean",
+              "description": "Apply the repeated-hash password checking mode."
             }
           },
           "additionalProperties": false,

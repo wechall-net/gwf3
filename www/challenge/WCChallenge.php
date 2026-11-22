@@ -43,7 +43,7 @@ final class WCChallenge
                 $definition['score'],
                 'challenge/' . $challengePath . '/index.php',
                 false,
-                0,
+                self::solutionOptions($definition['solution']),
                 $definition['creators'],
                 $definition['tags']
             );
@@ -79,13 +79,24 @@ final class WCChallenge
             {
                 $chall->onCheckSolution();
             }
-            elseif (self::matches($answer, $definition['solution'], $challengeDir))
-            {
-                $chall->onChallengeSolved(GWF_Session::getUserID());
-            }
             else
             {
-                echo WC_HTML::error('err_wrong');
+                if ((string)$chall->getID() === '0' && is_array($definition['solution']))
+                {
+                    $dummySolution = self::readSolution($definition['solution'], $challengeDir);
+                    $caseInsensitive = isset($definition['solution']['case_sensitive']) && !$definition['solution']['case_sensitive'];
+                    $chall->setSolution($dummySolution, $caseInsensitive);
+                }
+                if (is_array($definition['solution']) && isset($definition['solution']['type']) && $definition['solution']['type'] === 'hash')
+                {
+                    $algorithm = isset($definition['solution']['algorithm']) ? $definition['solution']['algorithm'] : 'md5';
+                    if (!in_array($algorithm, hash_algos(), true))
+                    {
+                        throw new RuntimeException('Unknown hash algorithm: ' . $algorithm);
+                    }
+                    $answer = hash($algorithm, $answer);
+                }
+                $chall->onCheckSolution($answer);
             }
         }
 
@@ -211,11 +222,7 @@ final class WCChallenge
         {
             $solution = is_array($callbackSolution) && array_key_exists('solution', $callbackSolution) ? $callbackSolution['solution'] : $callbackSolution;
         }
-        $options = 0;
-        if (is_array($definition['solution']) && isset($definition['solution']['case_sensitive']) && !$definition['solution']['case_sensitive'])
-        {
-            $options = WC_Challenge::CHALL_CASE_I;
-        }
+        $options = self::solutionOptions($definition['solution']);
         if (is_array($callbackSolution) && isset($callbackSolution['options']))
         {
             $options = $callbackSolution['options'];
@@ -256,6 +263,28 @@ final class WCChallenge
         }
         $definition += array('creators' => array(), 'tags' => array());
         return $definition;
+    }
+
+    private static function solutionOptions($solution)
+    {
+        if (!is_array($solution))
+        {
+            return 0;
+        }
+        $options = 0;
+        if (isset($solution['case_sensitive']) && !$solution['case_sensitive'])
+        {
+            $options |= WC_Challenge::CHALL_CASE_I;
+        }
+        if (!empty($solution['no_spaces']))
+        {
+            $options |= WC_Challenge::CHALL_NO_SPACES;
+        }
+        if (!empty($solution['hashed_password']))
+        {
+            $options |= WC_Challenge::CHALL_HASHED_PW;
+        }
+        return $options;
     }
 
     private static function translations(array $definition, $challengeDir)
@@ -363,35 +392,6 @@ final class WCChallenge
             $tag = $language === 'php' ? 'php title=' . $title : 'code title=' . $title;
             return GWF_Message::display('[' . $tag . ']' . htmlspecialchars($source, ENT_QUOTES, 'UTF-8') . '[/' . ($language === 'php' ? 'php' : 'code') . ']');
         }, (string)$text);
-    }
-
-    private static function matches($answer, array $solution, $challengeDir)
-    {
-        if (isset($solution['type']) && $solution['type'] === 'hash')
-        {
-            $expected = self::readSolution($solution, $challengeDir);
-            $algorithm = isset($solution['algorithm']) ? $solution['algorithm'] : 'md5';
-            if (!in_array($algorithm, hash_algos(), true))
-            {
-                throw new RuntimeException('Unknown hash algorithm: ' . $algorithm);
-            }
-            if (!empty($solution['trim']))
-            {
-                $answer = trim($answer);
-            }
-            return hash_equals(strtolower((string)$expected), strtolower(hash($algorithm, $answer)));
-        }
-        $expected = self::readSolution($solution, $challengeDir);
-        if (!empty($solution['trim']))
-        {
-            $answer = trim($answer);
-            $expected = trim($expected);
-        }
-        if (isset($solution['case_sensitive']) && !$solution['case_sensitive'])
-        {
-            return hash_equals(strtolower($answer), strtolower($expected));
-        }
-        return hash_equals((string)$expected, (string)$answer);
     }
 
     private static function readSolution(array $solution, $challengeDir)

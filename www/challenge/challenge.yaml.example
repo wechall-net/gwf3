@@ -31,8 +31,9 @@ solution:
   path: solution.php
   # extract: flag       # key returned by solution.php
   # extract: [1]        # numeric index returned by solution.php
-  # trim: true          # ignore leading/trailing whitespace in answers
   # case_sensitive: false
+  # no_spaces: true     # remove all spaces before checking the answer
+  # hashed_password: true # apply the legacy repeated-hash password check
 
 # Use false when the answer is checked by challenge-specific logic or changes
 # per session. Other supported types are global, hash, and file.

@@ -732,13 +732,13 @@ final class WC_Challenge extends GDO
 			echo $error;
 			return false;
 		}
+		if ($this->isSpacesRemoved()) {
+			$answer = str_replace(' ', '', $answer);
+		}
 		
 		if ($this->isHashedPassword()) {
 			if ($this->isCaseI()) {
 				$answer = mb_strtolower($answer);
-			}
-			if ($this->isSpacesRemoved()) {
-				$answer = str_replace(' ', '');
 			}
 			for ($i = 0; $i < 313370612; $i++) {
 				$answer = mb_strtolower(sha1($answer));
