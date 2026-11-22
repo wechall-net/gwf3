@@ -738,7 +738,7 @@ final class WC_Challenge extends GDO
 				$answer = mb_strtolower($answer);
 			}
 			if ($this->isSpacesRemoved()) {
-				$answer = str_replace(' ', '');
+				$answer = str_replace(' ', '', $answer);
 			}
 			for ($i = 0; $i < 313370612; $i++) {
 				$answer = mb_strtolower(sha1($answer));
