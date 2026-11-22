@@ -12,7 +12,7 @@ if (!GWF_User::isAdminS())
 
 
 $title = GWF_PAGE_TITLE;
-$solution = '';
+$solution = require 'solution.php';
 $score = 7;
 $url = 'challenge/world_of_wonders/index.php';
 $creators = 'Gizmore';

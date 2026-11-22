@@ -8,7 +8,7 @@ if (!GWF_User::isAdminS())
 {
 	return htmlSendToLogin('Better be admin !');
 }
-$solution = 'E1C2C91B0C1AFCF97FCFF0EFE148D5C8';
+$solution = require 'solution.php';
 $score = 2;
 $url = 'challenge/wanda/index.php';
 $creators = 'Gizmore';
