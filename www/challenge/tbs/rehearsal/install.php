@@ -1,5 +1,5 @@
 <?php
-$solution = 'secret.php';
+$solution = require 'solution.php';
 chdir('../../../');
 require_once('challenge/html_head.php');
 define('GWF_PAGE_TITLE', "TBS Rehearsal");
