@@ -1,0 +1,14 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-yaml
+        files: ^www/challenge/(?:.*/)?challenge\.yaml$
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.39.0
+    hooks:
+      - id: check-jsonschema
+        files: ^www/challenge/(?:.*/)?challenge\.yaml$
+        args:
+          - --schemafile
+          - www/challenge/challenge.schema.json
