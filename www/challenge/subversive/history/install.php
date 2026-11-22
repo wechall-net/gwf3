@@ -9,7 +9,7 @@ if (!GWF_User::isAdminS())
 	return htmlSendToLogin("Better be admin !");
 }
 
-$solution = '2bda2998d9b0ee197da142a0447f6725';
+$solution = require 'solution.php';
 $score = 2;
 $url = 'challenge/subversive/history/index.php';
 $creators = 'space,Gizmore';
