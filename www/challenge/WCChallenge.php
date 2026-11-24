@@ -19,16 +19,125 @@ final class WCChallenge
         return GWF_Message::display('['.$tag.']'.file_get_contents($file).'[/'.($isPhp ? 'php' : 'code').']');
     }
 
+    public static function redirectToIndex()
+    {
+        header('Location: index.php');
+        exit;
+    }
+
+    public static function showSource($file)
+    {
+        if (!is_file($file))
+        {
+            http_response_code(404);
+            exit;
+        }
+        header('Content-Type: text/plain; charset=UTF-8');
+        readfile($file);
+        exit;
+    }
+
+    private static function sourceEntry(array $definition, $name)
+    {
+        if (!isset($definition['source_code']) || !is_array($definition['source_code']))
+        {
+            return null;
+        }
+        $sources = $definition['source_code'];
+        if (!isset($sources[$name]))
+        {
+            return null;
+        }
+        $entry = is_string($sources[$name]) ? array('file' => $sources[$name]) : $sources[$name];
+        return is_array($entry) && isset($entry['file']) ? $entry : null;
+    }
+
+    private static function requestedSource(array $definition)
+    {
+        $name = false;
+        $raw = false;
+        if (isset($_GET['show']) && is_string($_GET['show']))
+        {
+            $name = $_GET['show'] === 'source' ? 'source' : $_GET['show'];
+            $raw = true;
+        }
+        elseif (isset($_GET['highlight']) && is_string($_GET['highlight']))
+        {
+            $name = $_GET['highlight'];
+        }
+        if ($name === false)
+        {
+            return null;
+        }
+        $entry = self::sourceEntry($definition, $name);
+        if ($entry === null && $name !== 'source')
+        {
+            $entry = self::sourceEntry($definition, 'source');
+        }
+        if ($entry === null && isset($definition['source_code']['default']))
+        {
+            $entry = is_string($definition['source_code']['default'])
+                ? array('file' => $definition['source_code']['default'])
+                : $definition['source_code']['default'];
+        }
+        if ($entry === null)
+        {
+            return null;
+        }
+        $raw = $raw && (!isset($entry['direct']) || $entry['direct']);
+        return array($entry, $raw);
+    }
+
+    private static function sourcePath($challengeDir, array $entry)
+    {
+        $root = realpath($challengeDir);
+        $path = realpath($challengeDir . '/' . $entry['file']);
+        if ($path === false || strpos($path, $root . DIRECTORY_SEPARATOR) !== 0)
+        {
+            throw new RuntimeException('Source path is outside the challenge directory');
+        }
+        return $path;
+    }
+
+    public static function trans($challenge, $key, array $placeholders = array())
+    {
+        $challengeDir = self::challengeDirectory($challenge);
+        $definition = is_file($challengeDir . '/challenge.yaml') ? self::loadDefinition($challengeDir) : array();
+        $translations = self::translations($definition, $challengeDir);
+        $templateKey = isset($translations[$key . '_html']) ? $key . '_html' : $key;
+        $template = isset($translations[$templateKey]) && is_string($translations[$templateKey]) ? $translations[$templateKey] : '';
+        preg_match_all('/\{([a-z][a-z0-9_]*)\}/i', $template, $matches);
+        $names = array_values(array_unique($matches[1]));
+        $normalized = array();
+        foreach ($placeholders as $name => $value)
+        {
+            $normalized[is_int($name) ? (isset($names[$name]) ? $names[$name] : 'arg' . ($name + 1)) : $name] = $value;
+        }
+        return self::text($translations, $key, $challengeDir, $normalized);
+    }
+
     public static function run($challengeDir, array $placeholders = array(), array $callbacks = array())
     {
         $definition = self::loadDefinition($challengeDir);
         $placeholders = array_merge(
-            array('GWF_WEB_ROOT' => function() { return GWF_WEB_ROOT; }),
+            array(
+                'GWF_WEB_ROOT' => function() { return GWF_WEB_ROOT; },
+                'username' => function() {
+                    $user = GWF_User::getStaticOrGuest();
+                    return $user->isGuest() ? 'hacker' : $user->displayUsername();
+                },
+            ),
             isset($definition['placeholders']) && is_array($definition['placeholders']) ? $definition['placeholders'] : array(),
             $placeholders
         );
         $wwwDir = dirname(__DIR__);
         $challengePath = self::challengePath($challengeDir, $wwwDir);
+
+        $sourceRequest = self::requestedSource($definition);
+        if ($sourceRequest !== null && $sourceRequest[1])
+        {
+            self::showSource(self::sourcePath($challengeDir, $sourceRequest[0]));
+        }
 
         define('GWF_PAGE_TITLE', $definition['title']);
         chdir($wwwDir);
@@ -41,7 +150,7 @@ final class WCChallenge
             $chall = WC_Challenge::dummyChallenge(
                 $definition['title'],
                 $definition['score'],
-                'challenge/' . $challengePath . '/index.php',
+                isset($definition['url']) ? $definition['url'] : 'challenge/' . $challengePath . '/index.php',
                 false,
                 self::solutionOptions($definition['solution']),
                 $definition['creators'],
@@ -95,6 +204,8 @@ final class WCChallenge
                         throw new RuntimeException('Unknown hash algorithm: ' . $algorithm);
                     }
                     $answer = hash($algorithm, $answer);
+                    $expectedHash = self::readSolution($definition['solution'], $challengeDir);
+                    $answer = strtoupper((string)$expectedHash) === (string)$expectedHash ? strtoupper($answer) : strtolower($answer);
                 }
                 $chall->onCheckSolution($answer);
             }
@@ -107,12 +218,16 @@ final class WCChallenge
                 $placeholders['challenge_trailer'] = call_user_func($placeholders['challenge_trailer'], $translations, $placeholders);
             }
         }
-        $info = self::text($translations, 'info', $challengeDir, $placeholders);
+        $info = self::text($translations, 'info', $challengeDir, $placeholders, $translations);
         if (array_key_exists('challenge_trailer', $placeholders))
         {
             $info .= self::replacePlaceholders('{challenge_trailer}', $placeholders);
         }
-        $boxTitle = isset($translations['title']) ? self::text($translations, 'title', $challengeDir, $placeholders) : $definition['title'];
+        $boxTitle = isset($translations['title']) ? self::text($translations, 'title', $challengeDir, $placeholders, $translations) : $definition['title'];
+        if (isset($translations['subtitle']))
+        {
+            $boxTitle .= ' – ' . self::text($translations, 'subtitle', $challengeDir, $placeholders, $translations);
+        }
         if (!isset($definition['info_box']) || $definition['info_box'])
         {
             echo GWF_Box::box($info, $boxTitle);
@@ -120,6 +235,13 @@ final class WCChallenge
         if (isset($callbacks['challenge_after']))
         {
             echo call_user_func($callbacks['challenge_after'], $translations, $placeholders);
+        }
+        if ($sourceRequest !== null && !$sourceRequest[1])
+        {
+            $entry = $sourceRequest[0];
+            $title = isset($entry['title']) ? $entry['title'] : $entry['file'];
+            $language = isset($entry['language']) ? $entry['language'] : 'php';
+            echo GWF_Box::box(self::sourceCode(self::sourcePath($challengeDir, $entry), $language, $title), $title);
         }
         if (isset($translations['credits_html']) || isset($translations['credits']))
         {
@@ -139,7 +261,7 @@ final class WCChallenge
         }
         if (isset($callbacks['render']))
         {
-            $rendered = call_user_func($callbacks['render'], $chall, $definition);
+            $rendered = call_user_func($callbacks['render'], $chall, $definition, $translations);
             if ($rendered !== null)
             {
                 echo $rendered;
@@ -231,7 +353,7 @@ final class WCChallenge
             $definition['title'],
             $solution,
             $definition['score'],
-            'challenge/' . $challengePath . '/index.php',
+            isset($definition['url']) ? $definition['url'] : 'challenge/' . $challengePath . '/index.php',
             implode(',', $definition['creators']),
             implode(',', $definition['tags']),
             true,
@@ -263,6 +385,21 @@ final class WCChallenge
         }
         $definition += array('creators' => array(), 'tags' => array());
         return $definition;
+    }
+
+    private static function challengeDirectory($challenge)
+    {
+        if (!defined('GWF_WWW_PATH'))
+        {
+            throw new RuntimeException('GWF_WWW_PATH is not defined');
+        }
+        $root = realpath(GWF_WWW_PATH);
+        $path = realpath(GWF_WWW_PATH . ltrim((string)$challenge->getVar('chall_url'), '/'));
+        if ($path === false || strpos($path, $root . DIRECTORY_SEPARATOR) !== 0)
+        {
+            throw new RuntimeException('Challenge path is invalid');
+        }
+        return dirname($path);
     }
 
     private static function solutionOptions($solution)
@@ -332,28 +469,28 @@ final class WCChallenge
         return $translations;
     }
 
-    private static function text(array $translations, $key, $challengeDir, array $placeholders = array())
+    private static function text(array $translations, $key, $challengeDir, array $placeholders = array(), array $context = array())
     {
         $htmlKey = $key . '_html';
         if (isset($translations[$htmlKey]))
         {
-            return self::replacePlaceholders(self::renderSourcePlaceholders($translations[$htmlKey], $challengeDir), $placeholders);
+            return self::replacePlaceholders(self::renderSourcePlaceholders($translations[$htmlKey], $challengeDir), $placeholders, $context);
         }
         if (!isset($translations[$key]))
         {
             return '';
         }
-        return self::replacePlaceholders(nl2br(htmlspecialchars((string)$translations[$key], ENT_QUOTES, 'UTF-8')), $placeholders);
+        return self::replacePlaceholders(nl2br(htmlspecialchars((string)$translations[$key], ENT_QUOTES, 'UTF-8')), $placeholders, $context);
     }
 
-    private static function replacePlaceholders($text, array $placeholders)
+    private static function replacePlaceholders($text, array $placeholders, array $context = array())
     {
         $values = array();
         foreach ($placeholders as $name => $value)
         {
             if (is_callable($value))
             {
-                $value = call_user_func($value);
+                $value = call_user_func($value, $context);
             }
             $value = preg_replace_callback('/\{([A-Z][A-Z0-9_]*)\}/', function($matches) {
                 if (in_array($matches[1], self::$constantPlaceholders, true) && defined($matches[1]))
