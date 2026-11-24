@@ -39,8 +39,24 @@ solution:
 # per session. Other supported types are global, hash, and file.
 
 # Optional static values used by {name} placeholders in translations.
+# WCChallenge also provides {username}: `hacker` for guests and the current
+# display name for logged-in users. A challenge-specific value with the same
+# name overrides this default.
+# Uppercase constants such as {GWF_WEB_ROOT} are expanded inside these values.
 placeholders:
   download: challenge.zip
+  related_challenge: '{GWF_WEB_ROOT}challenge/example/related/index.php'
+
+# Optional source files. `?show=source` displays the source entry as plain text;
+# `?highlight=source` or `?highlight=<name>` renders it in a separate source box.
+# Unknown highlight names, including the legacy `?highlight=christmas`, fall
+# back to the `source` entry.
+source_code:
+  source:
+    file: challenge.php
+    title: challenge.php
+    language: php
+    direct: true
 
 # Optional input and layout controls.
 # input_maxlength: 32        # maximum number of characters accepted

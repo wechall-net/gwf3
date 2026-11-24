@@ -41,9 +41,29 @@
     },
     "placeholders": {
       "type": "object",
-      "description": "Static replacement values for translation placeholders.",
+      "description": "Static replacement values for translation placeholders. Uppercase constants such as GWF_WEB_ROOT are expanded inside values. The runtime also provides username for the current user unless overridden.",
       "additionalProperties": {
         "type": ["string", "number", "boolean"]
+      }
+    },
+    "source_code": {
+      "type": "object",
+      "description": "Named source files. Use ?highlight=<name> to render a file and ?show=source to display the default source as text. Unknown highlight names fall back to source for legacy URLs such as ?highlight=christmas.",
+      "additionalProperties": {
+        "oneOf": [
+          {"type": "string", "minLength": 1},
+          {
+            "type": "object",
+            "required": ["file"],
+            "properties": {
+              "file": {"type": "string", "minLength": 1},
+              "title": {"type": "string"},
+              "language": {"type": "string"},
+              "direct": {"type": "boolean"}
+            },
+            "additionalProperties": false
+          }
+        ]
       }
     },
     "translations": {
