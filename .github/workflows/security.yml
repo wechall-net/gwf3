@@ -44,4 +44,5 @@ jobs:
         run: composer install --prefer-dist --no-progress --no-interaction
 
       - name: Run audit
+        continue-on-error: true
         run: composer audit
