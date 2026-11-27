@@ -152,6 +152,7 @@ $lang = array(
 	'tt_challs_from' => '%s %s Rejtvény %s hozzájárulásával',
 
 	# Form Titles
+	'source_code_hint' => 'A vonatkozó forráskód ehhez a kihíváshoz érhető el.',
 	'ft_solution' => 'A te megoldásod %s',
 	'ft_edit_chall' => 'Rejtvény szerkesztése',
 	'ft_link_site' => 'kapcsolj egy oldalt a profilodhoz',

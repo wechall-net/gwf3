@@ -1,0 +1,85 @@
+# WeChall Challenge definition template
+# Copy this file to a challenge directory as challenge.yaml.
+# The corresponding JSON Schema is challenge.schema.json.
+#
+# YAML values are static challenge metadata and configuration.
+
+# Optional stable identifier. Dots are commonly used for grouped challenges.
+id: example.my_challenge
+
+# Required. The public challenge name.
+title: My Challenge
+
+# Required. Difficulty/score from 1 (easy) to 10 (hard).
+score: 1
+
+# Optional. WeChall usernames of the challenge authors.
+creators: [wechall_username]
+
+# Optional. Use one or more topical labels. Existing labels include:
+# Coding, Crypto, Encoding, Exploit, Forensics, Fun, HTTP, Image, Linux,
+# Logic, Math, Network, PHP, Programming, Python, Regex, Research, Reverse,
+# SQL, Stegano, Training, Web, Windows, XSS, YAML.
+tags: [Coding]
+
+# Optional link associated with the challenge.
+# url: challenge/example/my_challenge/index.php
+
+# Required. The usual solution is a local PHP file returning the answer.
+solution:
+  type: require
+  path: solution.php
+  # extract: flag       # key returned by solution.php
+  # extract: [1]        # numeric index returned by solution.php
+  # case_sensitive: false
+  # no_spaces: true     # remove all spaces before checking the answer
+  # hashed_password: true # apply the legacy repeated-hash password check
+
+# Use false when the answer is checked by challenge-specific logic or changes
+# per session. Other supported types are global, hash, and file.
+
+# Optional static values used by {name} placeholders in translations.
+placeholders:
+  download: challenge.zip
+  related_challenge: '{GWF_WEB_ROOT}challenge/example/related/index.php'
+# Optional HTML inside the info box, before or after the description.
+# challenge_pre_content: '<p>Additional content before the description.</p>'
+# challenge_post_content: '<p>Additional content after the description.</p>'
+# Optional source files. `?show=source` displays the source entry as plain text;
+# `?highlight=source` or `?highlight=<name>` renders it in a separate source box.
+source_code:
+  source:
+    file: challenge.php
+    title: challenge.php
+    language: php
+    direct: true
+# Optional input and layout controls.
+# input_maxlength: 32        # maximum number of characters accepted
+# info_box: true             # show the information box
+# solution_box: true         # show the answer form
+# warchall_ads: false        # show the Warchall advertisement block
+
+# source_buttons: true
+# English is the fallback language. A locale can either contain a mapping of
+# translation keys or point to a YAML file relative to this challenge directory.
+# Use *_html when the value intentionally contains HTML.
+translations:
+  en:
+    title: My Challenge
+    info_html: |
+      Explain the challenge here.
+      Static placeholders such as {download} are replaced at runtime.
+    # credits_html: |
+    #   Challenge author and acknowledgements.
+    # disclaimer_html: |
+    #   Optional disclaimer.
+    # disc_title: Disclaimer
+
+  # de:
+  #   title: Meine Challenge
+  #   info_html: |
+  #     Deutsche Beschreibung.
+
+# Custom request/check/render behavior cannot be declared in YAML. Implement
+# it in index.php and pass callbacks to WCChallenge::run(), for example:
+# WCChallenge::run(__DIR__, $placeholders, array('request' => $callback));

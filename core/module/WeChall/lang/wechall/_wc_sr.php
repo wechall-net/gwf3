@@ -153,6 +153,7 @@ $lang = array(
 	'tt_challs_from' => '%s %s Challenges contributed by %s',
 
 	# Form Titles
+	'source_code_hint' => 'Одговарајући изворни код доступан је за овај изазов.',
 	'ft_solution' => 'Ваше решење за %s',
 	'ft_edit_chall' => 'Измените овај Challenge',
 	'ft_link_site' => 'Повежите сајт на Ваш налог',

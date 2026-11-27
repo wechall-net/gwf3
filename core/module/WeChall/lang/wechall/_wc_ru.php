@@ -197,6 +197,7 @@ $lang = array(
     'tt_challs_from' => '%s %s Проблемы предоставлены %s',
 
     # Form Titles
+    'source_code_hint' => 'Исходный код этой задачи доступен.',
     'ft_solution' => 'Ваше решение для %s',
     'ft_edit_chall' => 'Редактировать это задание',
     'ft_link_site' => 'Ссылка на сайт с вашим аккаунтом',
